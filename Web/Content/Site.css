@@ -1,0 +1,87 @@
+﻿body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+nav {
+    background: #8e24aa;
+}
+
+div.nav-wrapper a, div.nav-wrapper i
+{
+    color: #ffffff;
+}
+
+a.menu-shopping-cart {
+    margin: 0px 18px;
+}
+
+
+ul.select-dropdown li span {
+    color: #8e24aa;
+}
+
+.page-footer {
+    padding-top: 0px !important;
+    background-color: #8e24aa;
+}
+
+[type="radio"]:checked+label:after, 
+[type="radio"].with-gap:checked+label:after,
+[type="checkbox"].filled-in:checked+label:after
+{
+    background-color: #8e24aa;
+}
+
+[type="checkbox"]:checked+label:before {
+    border-right: 2px solid #8e24aa;
+    border-bottom: 2px solid #8e24aa;
+}
+
+[type="radio"]:checked+label:after, 
+[type="radio"].with-gap:checked+label:before, 
+[type="radio"].with-gap:checked+label:after,
+[type="checkbox"].filled-in:checked+label:after
+{
+    border: 2px solid #8e24aa;
+}
+
+input:not([type]):focus:not([readonly]), 
+input[type=text]:focus:not([readonly]), 
+input[type=password]:focus:not([readonly]), 
+input[type=email]:focus:not([readonly]), 
+input[type=url]:focus:not([readonly]), 
+input[type=time]:focus:not([readonly]), 
+input[type=date]:focus:not([readonly]), 
+input[type=datetime]:focus:not([readonly]), 
+input[type=datetime-local]:focus:not([readonly]), 
+input[type=tel]:focus:not([readonly]), 
+input[type=number]:focus:not([readonly]), 
+input[type=search]:focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]) 
+{
+    border-bottom: 1px solid #8e24aa;
+    box-shadow: 0 1px 0 0 #8e24aa;
+}
+
+input:not([type]):focus:not([readonly])+label, 
+input[type=text]:focus:not([readonly])+label, 
+input[type=password]:focus:not([readonly])+label, 
+input[type=email]:focus:not([readonly])+label, 
+input[type=url]:focus:not([readonly])+label, 
+input[type=time]:focus:not([readonly])+label, 
+input[type=date]:focus:not([readonly])+label, 
+input[type=datetime]:focus:not([readonly])+label, 
+input[type=datetime-local]:focus:not([readonly])+label, 
+input[type=tel]:focus:not([readonly])+label, 
+input[type=number]:focus:not([readonly])+label, 
+input[type=search]:focus:not([readonly])+label, 
+textarea.materialize-textarea:focus:not([readonly])+label 
+{
+    color: #8e24aa;
+}

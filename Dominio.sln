@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "Migrations\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{BAC6A4C4-CC8A-46F1-9385-68BAA6D3A6AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{BE2CF293-EABB-4ACA-8E41-3CBCCDEFC78B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BAC6A4C4-CC8A-46F1-9385-68BAA6D3A6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC6A4C4-CC8A-46F1-9385-68BAA6D3A6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAC6A4C4-CC8A-46F1-9385-68BAA6D3A6AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2CF293-EABB-4ACA-8E41-3CBCCDEFC78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2CF293-EABB-4ACA-8E41-3CBCCDEFC78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2CF293-EABB-4ACA-8E41-3CBCCDEFC78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2CF293-EABB-4ACA-8E41-3CBCCDEFC78B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
