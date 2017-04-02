@@ -1,0 +1,36 @@
+﻿@using Web.Helpers
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h4>Home</h4>
+<div class="row">
+    <div class="input-field col s12 m6 l6">
+        @Html.TextBox("ExemploText", "")
+        @Html.Label("Exemplo textbox", new { @for = "ExemploText" })
+    </div>
+    <div class="input-field col s12 m6 l6">
+        @Html.DropDownList("ExemploDropdown", new SelectListItem[] {
+                new SelectListItem { Text = "Opção 1", Value="1" },
+                new SelectListItem { Text = "Opção 2", Value="2" },
+                new SelectListItem { Text = "Opção 3", Value="3" }
+            }, "Selecione uma opção")
+        @Html.Label("Exemplo Dropdown", new { @for = "ExemploDropdown" })
+    </div>
+    <div class="col s12 m6 l6">
+        <p>
+            @Html.RadioButton("ExemploRadio", "C", false, new { @class = "with-gap", @id = "radio1" })
+            @Html.Label("Exemplo Radio 1", new { @for = "radio1" })
+        </p>
+        <p>
+            @Html.RadioButton("ExemploRadio", "D", false, new { @class = "with-gap", @id = "radio2" })
+            @Html.Label("Exemplo Radio 2", new { @for = "radio2" })
+        </p>
+    </div>
+    <div class="col s12 m6 l6">
+        <p>
+            @Html.CheckBoxSimple("ExemploCheckbox", new { @class = "filled-in" })
+            @Html.Label("Exemplo Checkbox", new { @for = "ExemploCheckbox" })
+        </p>
+    </div>
+</div>
