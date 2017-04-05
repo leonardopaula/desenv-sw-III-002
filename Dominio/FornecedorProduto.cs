@@ -2,6 +2,6 @@
 {
     public class FornecedorProduto
     {
-        public long IdFornecedorProduto { get; set; }
+        private long IdFornecedorProduto { get; set; }
     }
 }

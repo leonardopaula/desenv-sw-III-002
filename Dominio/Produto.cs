@@ -6,13 +6,13 @@ namespace Dominio
     {
         public Produto() { }
 
-        public long IdProduto { get; set; }
-        public string Nome { get; set; }
-        public float Peso { get; set; }
-        public int QuantidadeEmEstoque { get; set; }
-        public int QuantidadeEstoqueMinimo { get; set; }
-        public string Referencia { get; set; }
+        private long IdProduto { get; set; }
+        private string Nome { get; set; }
+        private float Peso { get; set; }
+        private int QuantidadeEmEstoque { get; set; }
+        private int QuantidadeEstoqueMinimo { get; set; }
+        private string Referencia { get; set; }
 
-        public List<Fornecedor> Fornecedores { get; set; }
+        private List<Fornecedor> Fornecedores { get; set; }
     }
 }

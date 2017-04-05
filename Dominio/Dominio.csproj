@@ -40,12 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compra.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="CompraProduto.cs" />
+    <Compile Include="Faturamento.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="NotaFiscal.cs" />
+    <Compile Include="Pagamento.cs" />
+    <Compile Include="PedidoCliente.cs" />
+    <Compile Include="PedidoFornecedor.cs" />
+    <Compile Include="Compra.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="FornecedorProduto.cs" />
+    <Compile Include="PedidoItemFornecedor.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
