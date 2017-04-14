@@ -2,3 +2,4 @@ C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projet
 C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Dominio\bin\Debug\Dominio.pdb
 C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Dominio\obj\Debug\Dominio.dll
 C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Dominio\obj\Debug\Dominio.pdb
+C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapeamento\ProdutoMap.cs" />
     <Compile Include="Mapeamento\CompraMap.cs" />
     <Compile Include="Mapeamento\CompraProdutoMap.cs" />
     <Compile Include="Mapeamento\FornecedorMap.cs" />
@@ -56,7 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
