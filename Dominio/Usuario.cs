@@ -10,10 +10,10 @@ namespace Dominio
     {
         public Usuario() { }
 
-        private long idUsuario { get; set; }
-        private String nome { get; set; }
-        private String usuario { get; set; }
-        private String senha { get; set; }
-        private String email { get; set; }
+        public long idUsuario { get; set; }
+        public String nome { get; set; }
+        public String usuario { get; set; }
+        public String senha { get; set; }
+        public String email { get; set; }
     }
 }

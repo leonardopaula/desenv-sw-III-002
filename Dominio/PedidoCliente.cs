@@ -10,13 +10,13 @@ namespace Dominio
     {
         public PedidoCliente() { }
 
-        private long idPedidoCliente { get; set; }
-        private List<Produto> produtos {get; set; }
-        private String codigoRastreio { get; set; }
-        private int status { get; set; }
-        private int numero { get; set; }
-        private int numDocPag { get; set; }
-        private long idClient { get; set; }
-        private DateTime data { get; set; }
+        public long idPedidoCliente { get; set; }
+        public List<Produto> produtos {get; set; }
+        public String codigoRastreio { get; set; }
+        public int status { get; set; }
+        public int numero { get; set; }
+        public int numDocPag { get; set; }
+        public long idClient { get; set; }
+        public DateTime data { get; set; }
     }
 }

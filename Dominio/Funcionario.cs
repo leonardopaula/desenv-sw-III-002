@@ -10,7 +10,7 @@ namespace Dominio
     {
         public Funcionario () { }
 
-        private long idFuncionario { get; set; }
-        private long matricula { get; set; }
+        public long idFuncionario { get; set; }
+        public long matricula { get; set; }
     }
 }

@@ -6,10 +6,10 @@ namespace Dominio
     {
         public Fornecedor() { }
 
-        private long IdFornecedor { get; set; }
-        private string Nome { get; set; }
-        private string Email { get; set; }
+        public long IdFornecedor { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
 
-        private List<Produto> Produtos { get; set; }
+        public List<Produto> Produtos { get; set; }
     }
 }

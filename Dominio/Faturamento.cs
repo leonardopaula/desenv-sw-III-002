@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
+    public class Faturamento
     {
         public Faturamento() { }
 
-        private long idFaturamento { get; set; }
-        private PedidoCliente pedido { get; set; }
-        private Pagamento pagamento { get; set; }
-        private NotaFiscal notaFiscal { get; set; }
+        public long idFaturamento { get; set; }
+        public PedidoCliente pedido { get; set; }
+        public Pagamento pagamento { get; set; }
+        public NotaFiscal notaFiscal { get; set; }
     }
 }

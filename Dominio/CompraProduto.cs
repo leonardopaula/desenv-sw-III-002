@@ -13,4 +13,3 @@ namespace Dominio
         public long IdCompraProduto { get; set; }
     }
 }
-}

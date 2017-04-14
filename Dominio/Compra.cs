@@ -7,12 +7,12 @@ namespace Dominio
     {
         public Compra() { }
 
-        private long IdCompra { get; set; }
-        private int NumeroNF { get; set; }
-        private DateTime Data { get; set; }
+        public long IdCompra { get; set; }
+        public int NumeroNF { get; set; }
+        public DateTime Data { get; set; }
 
-        private List<Produto> Produtos { get; set; }
+        public List<Produto> Produtos { get; set; }
 
-        private long IdPedidoFornecedor { get; set; }
+        public long IdPedidoFornecedor { get; set; }
     }
 }

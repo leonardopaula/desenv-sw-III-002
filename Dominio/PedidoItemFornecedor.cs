@@ -10,10 +10,10 @@ namespace Dominio
     {
         public PedidoItemFornecedor() { }
 
-        private long idPedidoItemFornecedor { get; set; }
-        private Produto produto { get; set; }
-        private Fornecedor fornecedor { get; set; }
-        private int quantidade { get; set; }
-        private DateTime dataPrevista { get; set; }
+        public long idPedidoItemFornecedor { get; set; }
+        public Produto produto { get; set; }
+        public Fornecedor fornecedor { get; set; }
+        public int quantidade { get; set; }
+        public DateTime dataPrevista { get; set; }
     }
 }

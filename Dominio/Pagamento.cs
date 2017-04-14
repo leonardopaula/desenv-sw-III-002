@@ -10,9 +10,9 @@ namespace Dominio
     {
         public Pagamento () { }
 
-        private long idPagamento { get; set; }
-        private int meioPagamento { get; set; }
-        private DateTime data { get; set; }
-        private long origem { get; set; }
+        public long idPagamento { get; set; }
+        public int meioPagamento { get; set; }
+        public DateTime data { get; set; }
+        public long origem { get; set; }
     }
 }

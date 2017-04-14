@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace Dominio
 {
     public class PedidoFornecedor
-
     {
         public PedidoFornecedor() { }
 
-        private long idPedidoFornecedor { get; set; }
-        private int status { get; set; }
+        public long idPedidoFornecedor { get; set; }
+        public int status { get; set; }
     }
 }
