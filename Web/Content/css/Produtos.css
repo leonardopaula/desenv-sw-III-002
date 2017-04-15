@@ -1,0 +1,21 @@
+﻿div.produto-listagem
+{
+    
+}
+
+div.produto-listagem-inner
+{
+    padding: 5px 0px;
+}
+
+img.img-produto
+{
+    height: 220px;
+    width: 100%;
+    max-width: 240px;
+}
+
+.preco-produto span
+{
+    font-size: 24px;
+}

@@ -13,8 +13,10 @@ namespace Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/css/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css")
+                    .Include("~/Content/css/site.css")
+                    .Include("~/Content/css/Produtos.css")
+                );
 
             bundles.Add(new ScriptBundle("~/Scripts/scripts").Include(
                 "~/Scripts/Site.js"));
