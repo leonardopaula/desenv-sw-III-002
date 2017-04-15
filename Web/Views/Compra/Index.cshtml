@@ -38,9 +38,21 @@
 <div id="modal-fornecedor" class="modal modal-fornecedor">
     <div class="modal-content">
         <h4>IPHONE 5S</h4>
-        <p>A bunch of text</p>
-    </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="input-field col s12 m6 l6">
+                    @Html.TextBox("quantidade", "")
+                    @Html.Label("Quantidade necessária", new { @for = "quantidade" })
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    @Html.DropDownList("fornecedores", new SelectListItem[] {
+                    }, "Selecione uma opção")
+                    @Html.Label("Fornecedor", new { @for = "fornecedores" })
+                </div>
+            </form>
+        </div>
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="javascript:void(0);" class="waves-effect waves-light btn"><i class="material-icons right">done</i>Salvar</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
     </div>
 </div>
