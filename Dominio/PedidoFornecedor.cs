@@ -1,10 +1,12 @@
-﻿namespace Dominio
+﻿using Dominio.Enums;
+
+namespace Dominio
 {
     public class PedidoFornecedor
     {
         public PedidoFornecedor() { }
 
         public long IdPedidoFornecedor { get; set; }
-        public int Status { get; set; }
+        public StatusPedidoFornecedor Status { get; set; }
     }
 }

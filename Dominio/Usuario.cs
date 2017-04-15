@@ -6,7 +6,7 @@ namespace Dominio
     {
         public Usuario() { }
 
-        public long IdUsuario { get; set; }
+        public long Id { get; set; }
         public String Nome { get; set; }
         public String Login { get; set; }
         public String Senha { get; set; }

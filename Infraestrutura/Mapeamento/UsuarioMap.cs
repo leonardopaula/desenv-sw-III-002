@@ -8,7 +8,7 @@ namespace Infraestrutura.Mapeamento
         public UsuarioMap()
         {
             ToTable("Usuario");
-            HasKey(u => u.IdUsuario);
+            HasKey(u => u.Id);
             Property(u => u.Nome).HasMaxLength(250).IsRequired();
             Property(u => u.Login).HasMaxLength(50).IsRequired();
             Property(u => u.Senha).HasMaxLength(200).IsRequired();

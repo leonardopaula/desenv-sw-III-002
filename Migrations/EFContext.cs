@@ -8,7 +8,7 @@ namespace Migrations
     public class EFContext : DbContext
     {
         public EFContext()
-                     : base("DataContext")//nome da connection string utilizada
+                     : base("Contexto")//nome da connection string utilizada
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
@@ -45,11 +45,18 @@ namespace Migrations
                .Where(p => p.Name == "Id" + p.ReflectedType.Name)
                .Configure(p => p.IsKey());
 
+            modelBuilder.Configurations.Add(new ClienteMap());
             modelBuilder.Configurations.Add(new CompraMap());
-            modelBuilder.Configurations.Add(new ProdutoMap());
-            modelBuilder.Configurations.Add(new CompraProdutoMap());
+            modelBuilder.Configurations.Add(new FaturamentoMap());
             modelBuilder.Configurations.Add(new FornecedorMap());
-            modelBuilder.Configurations.Add(new FornecedorProdutoMap());
+            modelBuilder.Configurations.Add(new FuncionarioMap());
+            modelBuilder.Configurations.Add(new NotaFiscalMap());
+            modelBuilder.Configurations.Add(new PagamentoMap());
+            modelBuilder.Configurations.Add(new PedidoClienteMap());
+            modelBuilder.Configurations.Add(new PedidoFornecedorMap());
+            modelBuilder.Configurations.Add(new PedidoItemFornecedorMap());
+            modelBuilder.Configurations.Add(new ProdutoMap());
+            modelBuilder.Configurations.Add(new UsuarioMap());
         }
 
 

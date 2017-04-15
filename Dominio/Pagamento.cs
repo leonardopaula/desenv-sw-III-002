@@ -11,5 +11,7 @@ namespace Dominio
         public MeioPagamento MeioPagamento { get; set; }
         public DateTime Data { get; set; }
         public long Origem { get; set; }
+
+        public Faturamento Faturamento { get; set; }
     }
 }

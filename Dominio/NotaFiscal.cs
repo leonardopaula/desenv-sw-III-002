@@ -7,7 +7,9 @@ namespace Dominio
         public NotaFiscal() { }
 
         public long IdNotaFiscal { get; set; }
-        public ICustomFormatter Impostos { get; set; }
-        public ICustomFormatter ValorTotal { get; set; }
+        public decimal Impostos { get; set; }
+        public decimal ValorTotal { get; set; }
+
+        public Faturamento Faturamento { get; set; }
     }
 }
