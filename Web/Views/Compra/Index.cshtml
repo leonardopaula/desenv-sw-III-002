@@ -5,13 +5,14 @@
 
 <h4>Reposição de estoque</h4>
 <div class="row">
-    <div class="col s12">
+    <div class="col s12 lista-produtos">
         <table>
             <thead>
                 <tr>
                     <td>#</td>
-                    <th>Produto</th>
-                    <th>Quantidade</th>
+                    <th colspan="2">Produto</th>
+                    <th>Estoque</th>
+                    <th>Requerido</th>
                     <th>Ação</th>
                 </tr>
             </thead>
@@ -19,11 +20,27 @@
             <tbody>
                 <tr>
                     <td>#125</td>
-                    <td><img src="~/Content/images/" /></td>
-                    <td>$0.87</td>
-                    <td>$0.87</td>
+                    <td><img src="~/Content/images/produtos/notfound.png" /></td>
+                    <td>
+                        <span>Iphone 5s</span>
+                    </td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>
+                        <a data-id="125" class="waves-effect waves-light btn" href="#modal-fornecedor"><i class="material-icons right">queue</i>Repor</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+<!-- Modal Reposição -->
+<div id="modal-fornecedor" class="modal modal-fornecedor">
+    <div class="modal-content">
+        <h4>IPHONE 5S</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
 </div>

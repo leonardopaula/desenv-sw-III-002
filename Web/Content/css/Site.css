@@ -85,3 +85,10 @@ textarea.materialize-textarea:focus:not([readonly])+label
 {
     color: #8e24aa;
 }
+
+.lista-produtos tbody tr td span{
+    padding-left:10px;
+}
+.lista-produtos tbody tr td img{
+    float:left;
+}
