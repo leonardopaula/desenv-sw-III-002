@@ -4,7 +4,8 @@ $(document).ready(function () {
     $('select').material_select();
     $('.modal-fornecedor').modal({
         ready: function (modal, trigger) {
-            $.getJSON(base_url + 'Compra/get_product_info', function (json) {
+            $.getJSON(base_url + 'Compra/GetProductInfo', function (json) {
+                Compra.salva_item();
             });
         }
     });
@@ -12,6 +13,9 @@ $(document).ready(function () {
 
 Compra = {
     get_fornecedores : function(p){
+
+    },
+    salva_item: function (p) {
 
     }
 }
