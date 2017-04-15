@@ -14,7 +14,7 @@ namespace Web
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css"));
+                      "~/Content/css/site.css"));
 
             bundles.Add(new ScriptBundle("~/Scripts/scripts").Include(
                 "~/Scripts/Site.js"));
