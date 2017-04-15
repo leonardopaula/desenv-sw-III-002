@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="CompraProduto.cs" />
+    <Compile Include="Enums\MeioPagamento.cs" />
+    <Compile Include="Enums\StatusPedido.cs" />
+    <Compile Include="Enums\StatusPedidoFornecedor.cs" />
     <Compile Include="Faturamento.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="NotaFiscal.cs" />

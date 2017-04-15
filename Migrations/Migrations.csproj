@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFContext.cs" />
+    <Compile Include="Migrations\201704151958011_Criacao_Banco.cs" />
+    <Compile Include="Migrations\201704151958011_Criacao_Banco.Designer.cs">
+      <DependentUpon>201704151958011_Criacao_Banco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +66,15 @@
       <Project>{fdc2c8cb-22af-4440-bcc0-a957e5744eee}</Project>
       <Name>Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infraestrutura\Infraestrutura.csproj">
+      <Project>{BAC6A4C4-CC8A-46F1-9385-68BAA6D3A6AD}</Project>
+      <Name>Infraestrutura</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704151958011_Criacao_Banco.resx">
+      <DependentUpon>201704151958011_Criacao_Banco.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
