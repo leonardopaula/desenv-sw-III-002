@@ -49,11 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapeamento\ClienteMap.cs" />
+    <Compile Include="Mapeamento\FaturamentoMap.cs" />
+    <Compile Include="Mapeamento\FuncionarioMap.cs" />
+    <Compile Include="Mapeamento\NotaFiscalMap.cs" />
+    <Compile Include="Mapeamento\PagamentoMap.cs" />
+    <Compile Include="Mapeamento\PedidoClienteMap.cs" />
+    <Compile Include="Mapeamento\PedidoFornecedorMap.cs" />
+    <Compile Include="Mapeamento\PedidoItemFornecedorMap.cs" />
     <Compile Include="Mapeamento\ProdutoMap.cs" />
     <Compile Include="Mapeamento\CompraMap.cs" />
-    <Compile Include="Mapeamento\CompraProdutoMap.cs" />
     <Compile Include="Mapeamento\FornecedorMap.cs" />
-    <Compile Include="Mapeamento\FornecedorProdutoMap.cs" />
+    <Compile Include="Mapeamento\UsuarioMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
