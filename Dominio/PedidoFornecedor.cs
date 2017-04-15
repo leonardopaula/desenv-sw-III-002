@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dominio
+﻿namespace Dominio
 {
     public class PedidoFornecedor
     {
         public PedidoFornecedor() { }
 
-        public long idPedidoFornecedor { get; set; }
-        public int status { get; set; }
+        public long IdPedidoFornecedor { get; set; }
+        public int Status { get; set; }
     }
 }

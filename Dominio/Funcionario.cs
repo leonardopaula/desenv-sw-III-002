@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dominio
+﻿namespace Dominio
 {
     public class Funcionario: Usuario
     {
         public Funcionario () { }
 
-        public long idFuncionario { get; set; }
-        public long matricula { get; set; }
+        public long IdFuncionario { get; set; }
+        public long Matricula { get; set; }
     }
 }

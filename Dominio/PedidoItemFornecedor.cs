@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dominio
 {
@@ -10,10 +6,10 @@ namespace Dominio
     {
         public PedidoItemFornecedor() { }
 
-        public long idPedidoItemFornecedor { get; set; }
-        public Produto produto { get; set; }
-        public Fornecedor fornecedor { get; set; }
-        public int quantidade { get; set; }
-        public DateTime dataPrevista { get; set; }
+        public long IdPedidoItemFornecedor { get; set; }
+        public Produto Produto { get; set; }
+        public Fornecedor Fornecedor { get; set; }
+        public int Quantidade { get; set; }
+        public DateTime DataPrevista { get; set; }
     }
 }

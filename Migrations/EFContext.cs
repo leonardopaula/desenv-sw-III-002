@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Infraestrutura.Mapeamento;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
@@ -12,10 +13,7 @@ namespace Migrations
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
         }
-        public DbSet<Compra> Compra { get; set; }
-        public DbSet<Fornecedor> Fornecedor { get; set; }
-        public DbSet<Produto> Produto { get; set; }
-
+        
         /// <summary>
         /// Definições para todo o contexto
         /// </summary>
@@ -46,6 +44,14 @@ namespace Migrations
             modelBuilder.Properties()
                .Where(p => p.Name == "Id" + p.ReflectedType.Name)
                .Configure(p => p.IsKey());
+
+            modelBuilder.Configurations.Add(new CompraMap());
+            modelBuilder.Configurations.Add(new ProdutoMap());
+            modelBuilder.Configurations.Add(new CompraProdutoMap());
+            modelBuilder.Configurations.Add(new FornecedorMap());
+            modelBuilder.Configurations.Add(new FornecedorProdutoMap());
         }
+
+
     }
 }

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dominio
+﻿namespace Dominio
 {
     public class Faturamento
     {
         public Faturamento() { }
 
-        public long idFaturamento { get; set; }
-        public PedidoCliente pedido { get; set; }
-        public Pagamento pagamento { get; set; }
-        public NotaFiscal notaFiscal { get; set; }
+        public long IdFaturamento { get; set; }
+        public PedidoCliente Pedido { get; set; }
+        public Pagamento Pagamento { get; set; }
+        public NotaFiscal NotaFiscal { get; set; }
     }
 }

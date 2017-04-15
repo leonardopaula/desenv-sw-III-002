@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dominio
 {
@@ -10,8 +6,8 @@ namespace Dominio
     {
         public NotaFiscal() { }
 
-        public long idNotaFiscal { get; set; }
-        public ICustomFormatter impostos { get; set; }
-        public ICustomFormatter valorTotal { get; set; }
+        public long IdNotaFiscal { get; set; }
+        public ICustomFormatter Impostos { get; set; }
+        public ICustomFormatter ValorTotal { get; set; }
     }
 }

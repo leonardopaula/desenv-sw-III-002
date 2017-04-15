@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Dominio.Enums;
+using System;
 
 namespace Dominio
 {
@@ -10,9 +7,9 @@ namespace Dominio
     {
         public Pagamento () { }
 
-        public long idPagamento { get; set; }
-        public int meioPagamento { get; set; }
-        public DateTime data { get; set; }
-        public long origem { get; set; }
+        public long IdPagamento { get; set; }
+        public MeioPagamento MeioPagamento { get; set; }
+        public DateTime Data { get; set; }
+        public long Origem { get; set; }
     }
 }
