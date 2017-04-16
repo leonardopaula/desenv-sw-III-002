@@ -3,7 +3,7 @@ using Infraestrutura.Mapeamento;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace Migrations
+namespace Infraestrutura
 {
     public class EFContext : DbContext
     {
@@ -13,7 +13,20 @@ namespace Migrations
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
         }
-        
+
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Compra> Compra { get; set; }
+        public DbSet<Faturamento> Faturamento { get; set; }
+        public DbSet<Fornecedor> Fornecedor { get; set; }
+        public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<NotaFiscal> NotaFiscal { get; set; }
+        public DbSet<Pagamento> Pagamento { get; set; }
+        public DbSet<PedidoCliente> PedidoCliente { get; set; }
+        public DbSet<PedidoFornecedor> PedidoFornecedor { get; set; }
+        public DbSet<PedidoItemFornecedor> PedidoItemFornecedor { get; set; }
+        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+
         /// <summary>
         /// Definições para todo o contexto
         /// </summary>

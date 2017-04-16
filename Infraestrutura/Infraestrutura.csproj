@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\CompraConsulta.cs" />
+    <Compile Include="Consultas\FornecedorConsulta.cs" />
+    <Compile Include="Consultas\ProdutoConsulta.cs" />
+    <Compile Include="EFContext.cs" />
     <Compile Include="Mapeamento\ClienteMap.cs" />
     <Compile Include="Mapeamento\FaturamentoMap.cs" />
     <Compile Include="Mapeamento\FuncionarioMap.cs" />

@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EFContext.cs" />
     <Compile Include="Migrations\201704151958011_Criacao_Banco.cs" />
     <Compile Include="Migrations\201704151958011_Criacao_Banco.Designer.cs">
       <DependentUpon>201704151958011_Criacao_Banco.cs</DependentUpon>

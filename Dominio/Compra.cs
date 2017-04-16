@@ -13,6 +13,7 @@ namespace Dominio
 
         public List<Produto> Produtos { get; set; }
 
+        public PedidoFornecedor PedidoFornecedor { get; set; }
         public long IdPedidoFornecedor { get; set; }
     }
 }

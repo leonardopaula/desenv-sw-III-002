@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
-    <Compile Include="CompraProduto.cs" />
     <Compile Include="Enums\MeioPagamento.cs" />
     <Compile Include="Enums\StatusPedido.cs" />
     <Compile Include="Enums\StatusPedidoFornecedor.cs" />
@@ -53,7 +52,6 @@
     <Compile Include="PedidoFornecedor.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="Fornecedor.cs" />
-    <Compile Include="FornecedorProduto.cs" />
     <Compile Include="PedidoItemFornecedor.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
