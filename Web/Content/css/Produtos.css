@@ -1,6 +1,6 @@
-﻿div.produto-listagem
+﻿div.produto-listagem:hover
 {
-    
+    background: #dbdbdb;
 }
 
 div.produto-listagem-inner
