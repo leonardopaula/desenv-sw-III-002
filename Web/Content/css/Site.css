@@ -33,7 +33,9 @@ ul.select-dropdown li span {
 
 [type="radio"]:checked+label:after, 
 [type="radio"].with-gap:checked+label:after,
-[type="checkbox"].filled-in:checked+label:after
+[type="checkbox"].filled-in:checked+label:after,
+.btn:hover, .btn-large:hover, .btn,
+.btn:focus, .btn-large:focus, .btn-floating:focus
 {
     background-color: #8e24aa;
 }
