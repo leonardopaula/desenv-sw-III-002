@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\CompraConsulta.cs" />
-    <Compile Include="Consultas\FornecedorConsulta.cs" />
-    <Compile Include="Consultas\ProdutoConsulta.cs" />
+    <Compile Include="Cadastros\CompraCadastro.cs" />
+    <Compile Include="Cadastros\FornecedorCadastro.cs" />
+    <Compile Include="Cadastros\ProdutoCadastro.cs" />
     <Compile Include="EFContext.cs" />
     <Compile Include="Mapeamento\ClienteMap.cs" />
     <Compile Include="Mapeamento\FaturamentoMap.cs" />
