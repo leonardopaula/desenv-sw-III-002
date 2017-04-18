@@ -192,6 +192,20 @@
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Venda\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{fdc2c8cb-22af-4440-bcc0-a957e5744eee}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestrutura\Infraestrutura.csproj">
+      <Project>{bac6a4c4-cc8a-46f1-9385-68baa6d3a6ad}</Project>
+      <Name>Infraestrutura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Migrations\Migrations.csproj">
+      <Project>{392405c9-e4b3-40be-ae68-7d96ec378a40}</Project>
+      <Name>Migrations</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

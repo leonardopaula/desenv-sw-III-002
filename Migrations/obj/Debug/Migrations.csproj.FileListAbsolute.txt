@@ -26,3 +26,7 @@ C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desen
 C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Criacao_Banco.resources
 C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
+C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Criacao_Banco.resources
+C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
+C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.dll
+C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.pdb

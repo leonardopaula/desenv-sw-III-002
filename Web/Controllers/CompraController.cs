@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Infraestrutura.Cadastros;
 
 namespace Web.Controllers
 {
     public class CompraController : Controller
     {
+        private CompraCadastro cc = new CompraCadastro();
+
         // GET: Compra
         public ActionResult Index()
         {
-            return View();
+            var p = cc.BuscarProdutosEstoqueBaixo();
+
+            return View(p);
         }
     }
 }

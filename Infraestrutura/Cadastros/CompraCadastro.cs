@@ -13,6 +13,14 @@ namespace Infraestrutura.Cadastros
             contexto = new EFContext();
         }
 
+        public List<Produto> BuscarProdutosEstoqueBaixo()
+        {
+            IQueryable<Produto> produtos = from produto in contexto.Produto
+                                     where produto.QuantidadeEmEstoque < produto.QuantidadeEstoqueMinimo
+                                     select produto;
+            return produtos.ToList();
+        }
+
         public List<Compra> BuscarTodosAguardandoRecebimento()
         {
             IQueryable<Compra> compras = from compra in contexto.Compra.Include("PedidoFornecedor")
