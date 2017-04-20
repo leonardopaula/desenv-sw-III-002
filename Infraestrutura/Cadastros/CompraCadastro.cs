@@ -23,9 +23,8 @@ namespace Infraestrutura.Cadastros
 
         public Produto BuscarDetalhesProduto(long IdProduto)
         {
-            var prod = contexto.Produto.Where(p => p.IdProduto == IdProduto);
-
-            return (Produto)prod;
+            Produto prod = contexto.Produto.Where(p => p.IdProduto == IdProduto).First();
+            return prod;
         }
 
         public List<Compra> BuscarTodosAguardandoRecebimento()
