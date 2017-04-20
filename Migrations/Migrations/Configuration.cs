@@ -30,12 +30,11 @@ namespace Migrations
             lfornecedores.Add(new Dominio.Fornecedor { IdFornecedor = 2, Nome = "Odebrecht", Email = "comercial@cx2.com.br" });
             context.Fornecedor.AddOrUpdate(lfornecedores[0]);
             context.Fornecedor.AddOrUpdate(lfornecedores[1]);
-            context.SaveChanges();
 
             context.Produto.AddOrUpdate(
-                p => p.Nome,
                 new Dominio.Produto { IdProduto = 1, Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI001", Peso = 100.0f, Fornecedores = lfornecedores },
-                new Dominio.Produto { IdProduto = 2, Nome = "Blusa", QuantidadeEmEstoque = 0, QuantidadeEstoqueMinimo = 1, Referencia = "CI002", Peso = 50.0f, Fornecedores = lfornecedores });
+                new Dominio.Produto { IdProduto = 2, Nome = "Blusa", QuantidadeEmEstoque = 0, QuantidadeEstoqueMinimo = 1, Referencia = "CI002", Peso = 50.0f, Fornecedores = lfornecedores }
+            );
 
             try
             {
