@@ -18,18 +18,21 @@
             </thead>
 
             <tbody>
+                @foreach (var product in ViewBag.produtos)
+                {
                 <tr>
-                    <td>#125</td>
+                    <td>#@product.IdProduto</td>
                     <td><img src="~/Content/images/produtos/notfound.png" /></td>
                     <td>
-                        <span>Iphone 5s</span>
+                        <span>@product.Nome</span>
                     </td>
-                    <td>5</td>
+                    <td>@product.QuantidadeEmEstoque</td>
                     <td>0</td>
                     <td>
-                        <a data-id="125" class="waves-effect waves-light btn" href="#modal-fornecedor"><i class="material-icons right">queue</i>Repor</a>
+                        <a data-id="@product.IdProduto" class="waves-effect waves-light btn" href="#modal-fornecedor"><i class="material-icons right">queue</i>Repor</a>
                     </td>
                 </tr>
+                }
             </tbody>
         </table>
     </div>

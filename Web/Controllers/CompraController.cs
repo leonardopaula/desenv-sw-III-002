@@ -10,9 +10,14 @@ namespace Web.Controllers
         // GET: Compra
         public ActionResult Index()
         {
-            var p = cc.BuscarProdutosEstoqueBaixo();
+            ViewBag.produtos = cc.BuscarProdutosEstoqueBaixo();
 
-            return View(p);
+            return View();
+        }
+
+        public JsonResult GetProductInfo(string IdProduto)
+        {
+            return Json(cc.BuscarDetalhesProduto(int.Parse(IdProduto)), JsonRequestBehavior.AllowGet);
         }
     }
 }

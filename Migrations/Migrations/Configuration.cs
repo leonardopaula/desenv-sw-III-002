@@ -1,5 +1,6 @@
 namespace Migrations
 {
+    using System;
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
 
@@ -33,9 +34,26 @@ namespace Migrations
 
             context.Produto.AddOrUpdate(
                 p => p.Nome,
-                new Dominio.Produto { IdProduto = 1, Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Fornecedores = lfornecedores },
-                new Dominio.Produto { IdProduto = 2, Nome = "Blusa", QuantidadeEmEstoque = 0, QuantidadeEstoqueMinimo = 1, Fornecedores = lfornecedores });
-            context.SaveChanges();
+                new Dominio.Produto { IdProduto = 1, Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI001", Peso = 100.0f, Fornecedores = lfornecedores },
+                new Dominio.Produto { IdProduto = 2, Nome = "Blusa", QuantidadeEmEstoque = 0, QuantidadeEstoqueMinimo = 1, Referencia = "CI002", Peso = 50.0f, Fornecedores = lfornecedores });
+
+            try
+            {
+                context.SaveChanges();
+            }catch(System.Data.Entity.Validation.DbEntityValidationException e)
+            {
+                string mensagem = string.Empty;
+                foreach (var validationErrors in e.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        mensagem += String.Format( "Property: {0} Error: {1}",
+                                                validationError.PropertyName,
+                                                validationError.ErrorMessage);
+                    }
+}
+                throw new Exception(mensagem);
+            }
         }
     }
 }
