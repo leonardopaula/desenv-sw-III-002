@@ -2,6 +2,11 @@
 $(document).ready(function () {
     $(".button-collapse").sideNav();
     $('select').material_select();
+    $('#modal-relatorio').modal({
+        ready: function (modal, trigger) {
+            Compra.relatorio();
+        }
+    });
     $('.modal-fornecedor').modal({
         ready: function (modal, trigger) {
             idProduto = $(trigger).data('id');
@@ -28,7 +33,24 @@ Compra = {
         $('#qtde-' + prod).val($('#quantidade').val());
         $('#forn-' + prod).val($('#fornecedores').val());
         $('#lin-' + prod + ' td:eq(4)').html($('#quantidade').val());
+        $('#fnome-' + prod).val($('#fornecedores option[value="' + $('#fornecedores').val() + '"]').html());
 
         $('.modal-fornecedor').modal('close');
+    },
+
+    relatorio: function () {
+        tbl = '';
+        $('table tbody tr').each(function (k, v) {
+            id = $(v).attr('id').replace('lin-', '');
+            if ($('#forn-' + id).val() != "")
+            {
+                tbl += '<tr>';
+                tbl += '<td>' + $('#lin-' + id + ' td:eq(2)').html() + '</td>';
+                tbl += '<td>' + $('#qtde-' + id).val() + '</td>';
+                tbl += '<td>' + $('#fnome-' + id).val() + '</td>';
+                tbl += '</tr>';
+            }
+        });
+        $('#modal-relatorio table tbody').html(tbl);
     }
 }
