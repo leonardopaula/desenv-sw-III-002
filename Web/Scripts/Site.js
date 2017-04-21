@@ -4,8 +4,16 @@ $(document).ready(function () {
     $('select').material_select();
     $('.modal-fornecedor').modal({
         ready: function (modal, trigger) {
-            $.getJSON(base_url + 'Compra/GetProductInfo', function (json) {
-                Compra.salva_item();
+            idProduto = $(trigger).data('id');
+            $.getJSON(base_url + 'Compra/GetProductInfo/?IdProduto=' + idProduto, function (json) {
+                $('.modal-fornecedor .modal-content h4').html(json.Nome);
+                $('#fornecedores option').remove();
+                var options = '<option>Selecione</option>';
+                $.each(json.Fornecedores, function (i, o) {
+                    options += '<option value="' + o.IdFornecedor + '">' + o.Nome + '</option>';
+                });
+
+                $('#fornecedores').html(options).material_select();
             });
         }
     });
