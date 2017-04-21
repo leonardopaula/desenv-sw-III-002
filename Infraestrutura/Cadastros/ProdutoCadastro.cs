@@ -12,6 +12,14 @@ namespace Infraestrutura.Cadastros
             contexto = new EFContext();
         }
 
+        public Produto BuscarPeloId(long IdProduto)
+        {
+            IQueryable<Produto> prod = from produto in contexto.Produto
+                                       where produto.IdProduto == IdProduto
+                                      select produto;
+            return prod.FirstOrDefault();
+        }
+
         public List<Produto> BuscarTodos()
         {
             IQueryable<Produto> clientes = from cliente in contexto.Produto

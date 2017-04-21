@@ -8,7 +8,9 @@ namespace Web.Controllers
 {
     public class CompraController : Controller
     {
-        private CompraCadastro cc = new CompraCadastro();
+        private CompraCadastro cc  = new CompraCadastro();
+        private ProdutoCadastro pc = new ProdutoCadastro();
+        private FornecedorCadastro fc = new FornecedorCadastro();
 
         // GET: Compra
         public ActionResult Index()
@@ -31,16 +33,56 @@ namespace Web.Controllers
 
         public ActionResult Salva()
         {
+            List<Dominio.PedidoItemFornecedor> pi = new List<Dominio.PedidoItemFornecedor>();
+
             // Recebe os parâmetros do formulário e trata
             var form = Request.Form.AllKeys;
 
-            List<Dominio.PedidoItemFornecedor> pi;
-            //pi.Add(new Dominio.PedidoItemFornecedor)
+            string field = "", value = "", produto = "", qtde = "";
+            var prod = new Dominio.Produto();
+            var forn = new Dominio.Fornecedor();
 
-            var pf = new Dominio.PedidoFornecedor();
+            foreach (string key in form)
+            {
+                // Campo name do form
+                field = key;
 
-            var compra = new Dominio.Compra();
-            compra.Data = DateTime.Now;
+                // Valor do form
+                value = Request.Form[field];
+
+                // Limita a busca para fornecedores
+                if (field.IndexOf("forn_") == 0)
+                {
+                    // Caso esteja populado:
+                    if (value != "")
+                    {
+                        // produto
+                        produto = field.Replace("forn_", "");
+                        qtde = Request.Form["qtde_"+produto];
+                        prod = pc.BuscarPeloId(long.Parse(produto));
+                        forn = fc.BuscarPeloId(long.Parse(value));
+
+                        pi.Add(new Dominio.PedidoItemFornecedor
+                        {
+                            Fornecedor = forn,
+                            IdFornecedor = forn.IdFornecedor,
+                            Produto = prod,
+                            IdProduto = prod.IdProduto,
+                            Quantidade = int.Parse(qtde),
+                            DataPrevista = DateTime.Now // Vem do serviço
+                        });
+                    }
+                }
+            }
+
+            Dominio.Compra c =
+                new Dominio.Compra {
+                    Pedidos = pi,
+                    NumeroNF = 123123,
+                    Data = DateTime.Now,
+                    Status = Dominio.Enums.StatusCompra.AguardandoRecebimento // Vem do serviço
+                };
+            cc.Adicionar(c);
 
             return View();
         }

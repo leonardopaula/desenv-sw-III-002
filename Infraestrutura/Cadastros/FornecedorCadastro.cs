@@ -12,6 +12,14 @@ namespace Infraestrutura.Cadastros
             contexto = new EFContext();
         }
 
+        public Fornecedor BuscarPeloId(long IdFornecedor)
+        {
+            IQueryable<Fornecedor> forn = from fornecedor in contexto.Fornecedor
+                                           where fornecedor.IdFornecedor == IdFornecedor
+                                          select fornecedor;
+            return forn.FirstOrDefault();
+        }
+
         public List<Fornecedor> BuscarTodos()
         {
             IQueryable<Fornecedor> fornecedores = from fornecedor in contexto.Fornecedor
