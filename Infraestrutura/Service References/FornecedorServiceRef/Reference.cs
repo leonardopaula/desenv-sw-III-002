@@ -74,15 +74,108 @@ namespace Infraestrutura.FornecedorServiceRef {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RetornoRequisicao", Namespace="http://schemas.datacontract.org/2004/07/FornecedorService")]
+    [System.SerializableAttribute()]
+    public partial class RetornoRequisicao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DataEnvioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensagemField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuantidadeRequeridaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReferenciaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DataEnvio {
+            get {
+                return this.DataEnvioField;
+            }
+            set {
+                if ((this.DataEnvioField.Equals(value) != true)) {
+                    this.DataEnvioField = value;
+                    this.RaisePropertyChanged("DataEnvio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mensagem {
+            get {
+                return this.MensagemField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensagemField, value) != true)) {
+                    this.MensagemField = value;
+                    this.RaisePropertyChanged("Mensagem");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuantidadeRequerida {
+            get {
+                return this.QuantidadeRequeridaField;
+            }
+            set {
+                if ((this.QuantidadeRequeridaField.Equals(value) != true)) {
+                    this.QuantidadeRequeridaField = value;
+                    this.RaisePropertyChanged("QuantidadeRequerida");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Referencia {
+            get {
+                return this.ReferenciaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReferenciaField, value) != true)) {
+                    this.ReferenciaField = value;
+                    this.RaisePropertyChanged("Referencia");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="FornecedorServiceRef.IServiceFornecedor")]
     public interface IServiceFornecedor {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceFornecedor/ObterDisponibilidadeProduto", ReplyAction="http://tempuri.org/IServiceFornecedor/ObterDisponibilidadeProdutoResponse")]
-        bool ObterDisponibilidadeProduto(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto);
+        Infraestrutura.FornecedorServiceRef.RetornoRequisicao ObterDisponibilidadeProduto(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceFornecedor/ObterDisponibilidadeProduto", ReplyAction="http://tempuri.org/IServiceFornecedor/ObterDisponibilidadeProdutoResponse")]
-        System.Threading.Tasks.Task<bool> ObterDisponibilidadeProdutoAsync(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto);
+        System.Threading.Tasks.Task<Infraestrutura.FornecedorServiceRef.RetornoRequisicao> ObterDisponibilidadeProdutoAsync(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -112,11 +205,11 @@ namespace Infraestrutura.FornecedorServiceRef {
                 base(binding, remoteAddress) {
         }
         
-        public bool ObterDisponibilidadeProduto(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto) {
+        public Infraestrutura.FornecedorServiceRef.RetornoRequisicao ObterDisponibilidadeProduto(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto) {
             return base.Channel.ObterDisponibilidadeProduto(produto);
         }
         
-        public System.Threading.Tasks.Task<bool> ObterDisponibilidadeProdutoAsync(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto) {
+        public System.Threading.Tasks.Task<Infraestrutura.FornecedorServiceRef.RetornoRequisicao> ObterDisponibilidadeProdutoAsync(Infraestrutura.FornecedorServiceRef.ProdutoConsultado produto) {
             return base.Channel.ObterDisponibilidadeProdutoAsync(produto);
         }
     }

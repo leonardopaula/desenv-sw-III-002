@@ -11,7 +11,7 @@
   <xs:element name="ObterDisponibilidadeProdutoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="ObterDisponibilidadeProdutoResult" type="xs:boolean" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FornecedorService" minOccurs="0" name="ObterDisponibilidadeProdutoResult" nillable="true" type="q2:RetornoRequisicao" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

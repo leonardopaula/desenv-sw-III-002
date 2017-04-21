@@ -10,8 +10,6 @@ namespace Web.Controllers
     {
         public ActionResult Index()
         {
-            Infraestrutura.Util.FornecedorService servico = new Infraestrutura.Util.FornecedorService();
-            var disp = servico.ObterDisponibilidadeDeProduto("123", 2);
             return View();
         }
     }

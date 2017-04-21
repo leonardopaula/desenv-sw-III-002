@@ -47,3 +47,4 @@ C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrat
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
+C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources

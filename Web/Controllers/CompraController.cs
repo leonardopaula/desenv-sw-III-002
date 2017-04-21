@@ -62,15 +62,32 @@ namespace Web.Controllers
                         prod = pc.BuscarPeloId(long.Parse(produto));
                         forn = fc.BuscarPeloId(long.Parse(value));
 
-                        pi.Add(new Dominio.PedidoItemFornecedor
+                        var servicoFornecedor = new Infraestrutura.FornecedorServiceRef.ServiceFornecedorClient();
+                        var retornoServico = servicoFornecedor.ObterDisponibilidadeProduto(
+                            new Infraestrutura.FornecedorServiceRef.ProdutoConsultado()
+                            {
+                                QuantidadeRequerida = int.Parse(qtde),
+                                Referencia = prod.Referencia
+                            });
+
+                        if (retornoServico.DataEnvio.HasValue)
                         {
-                            Fornecedor = forn,
-                            IdFornecedor = forn.IdFornecedor,
-                            Produto = prod,
-                            IdProduto = prod.IdProduto,
-                            Quantidade = int.Parse(qtde),
-                            DataPrevista = DateTime.Now // Vem do serviço
-                        });
+                            pi.Add(new Dominio.PedidoItemFornecedor
+                            {
+                                Fornecedor = forn,
+                                IdFornecedor = forn.IdFornecedor,
+                                Produto = prod,
+                                IdProduto = prod.IdProduto,
+                                Quantidade = int.Parse(qtde),
+                                DataPrevista = retornoServico.DataEnvio.Value
+                            });
+                        }
+                        else
+                        {
+                            // Exibe mensagem retornada pelo serviço 
+                            // Volta a modal de escolha de fornecedor para alterar o fornecedor e/ou quantidade
+                        }
+                        
                     }
                 }
             }
