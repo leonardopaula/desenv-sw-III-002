@@ -29,13 +29,13 @@ namespace Infraestrutura.Cadastros
 
         }
 
-        public List<Compra> BuscarTodosAguardandoRecebimento()
+        /*public List<Compra> BuscarTodosAguardandoRecebimento()
         {
             IQueryable<Compra> compras = from compra in contexto.Compra.Include("PedidoFornecedor")
-                                         where compra.PedidoFornecedor.Status == Dominio.Enums.StatusPedidoFornecedor.AguardandoRecebimento
+                                         where compra.PedidoFornecedor.Status == Dominio.Enums.StatusCompra.AguardandoRecebimento
                                          select compra;
             return compras.ToList();
-        }
+        }*/
 
         public Compra Adicionar(Compra novaCompra)
         {

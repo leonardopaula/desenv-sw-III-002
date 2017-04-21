@@ -2,7 +2,7 @@
 
 namespace Dominio.Enums
 {
-    public enum StatusPedidoFornecedor
+    public enum StatusCompra
     {
         [Description("Aguardando recebimento")]
         AguardandoRecebimento = 1,

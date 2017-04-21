@@ -37,12 +37,24 @@ namespace Migrations
             context.Fornecedor.AddOrUpdate(lforn2[0]);
             context.Fornecedor.AddOrUpdate(lforn2[1]);
 
+            var prod = new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 };
             context.Produto.AddOrUpdate(
-                new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 },
                 new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
                 new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
-                new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 }
+                new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 },
+                prod
             );
+
+            List<Dominio.PedidoItemFornecedor> pi = new List<Dominio.PedidoItemFornecedor>();
+            pi.Add(new Dominio.PedidoItemFornecedor { Fornecedor = lforn1[0], Produto = prod, Quantidade = 100, DataPrevista = DateTime.Now.Date });
+
+            context.Compra.AddOrUpdate(new Dominio.Compra
+            {
+                Data = DateTime.Now.Date,
+                NumeroNF = 952287,
+                Pedidos = pi,
+                Status = Dominio.Enums.StatusCompra.AguardandoRecebimento
+            });
 
             try
             {
@@ -58,9 +70,11 @@ namespace Migrations
                                                 validationError.PropertyName,
                                                 validationError.ErrorMessage);
                     }
-}
+                }
                 throw new Exception(mensagem);
             }
+
+            
         }
     }
 }

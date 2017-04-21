@@ -9,7 +9,7 @@ namespace Infraestrutura.Mapeamento
         {
             ToTable("PedidoFornecedor");
             HasKey(p => p.IdPedidoFornecedor);
-            Property(p => p.Status).IsRequired();
+            //Property(p => p.Status).IsRequired();
 
         }
     }

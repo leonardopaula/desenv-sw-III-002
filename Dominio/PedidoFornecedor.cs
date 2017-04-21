@@ -8,6 +8,6 @@ namespace Dominio
         public PedidoFornecedor() { }
 
         public long IdPedidoFornecedor { get; set; }
-        public StatusPedidoFornecedor Status { get; set; }
+        //public StatusCompra Status { get; set; }
     }
 }

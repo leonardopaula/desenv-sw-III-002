@@ -43,7 +43,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Enums\MeioPagamento.cs" />
     <Compile Include="Enums\StatusPedido.cs" />
-    <Compile Include="Enums\StatusPedidoFornecedor.cs" />
+    <Compile Include="Enums\StatusCompra.cs" />
     <Compile Include="Faturamento.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="NotaFiscal.cs" />

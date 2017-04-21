@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201704151958011_Criacao_Banco.Designer.cs">
       <DependentUpon>201704151958011_Criacao_Banco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704210545243_Alteracao_Compra.cs" />
+    <Compile Include="Migrations\201704210545243_Alteracao_Compra.Designer.cs">
+      <DependentUpon>201704210545243_Alteracao_Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201704151958011_Criacao_Banco.resx">
       <DependentUpon>201704151958011_Criacao_Banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704210545243_Alteracao_Compra.resx">
+      <DependentUpon>201704210545243_Alteracao_Compra.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

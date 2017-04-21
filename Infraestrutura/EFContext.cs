@@ -22,7 +22,7 @@ namespace Infraestrutura
         public DbSet<NotaFiscal> NotaFiscal { get; set; }
         public DbSet<Pagamento> Pagamento { get; set; }
         public DbSet<PedidoCliente> PedidoCliente { get; set; }
-        public DbSet<PedidoFornecedor> PedidoFornecedor { get; set; }
+        //public DbSet<PedidoFornecedor> PedidoFornecedor { get; set; }
         public DbSet<PedidoItemFornecedor> PedidoItemFornecedor { get; set; }
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
