@@ -25,15 +25,23 @@ namespace Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            List<Dominio.Fornecedor> lfornecedores = new List<Dominio.Fornecedor>();
-            lfornecedores.Add(new Dominio.Fornecedor { IdFornecedor = 1, Nome = "Picareta", Email = "clube@picaretas.com.br" });
-            lfornecedores.Add(new Dominio.Fornecedor { IdFornecedor = 2, Nome = "Odebrecht", Email = "comercial@cx2.com.br" });
-            context.Fornecedor.AddOrUpdate(lfornecedores[0]);
-            context.Fornecedor.AddOrUpdate(lfornecedores[1]);
+            List<Dominio.Fornecedor> lforn1 = new List<Dominio.Fornecedor>();
+            List<Dominio.Fornecedor> lforn2 = new List<Dominio.Fornecedor>();
+            lforn1.Add(new Dominio.Fornecedor { Nome = "OAS S.A.", Email = "propina@oas.com.br" });
+            lforn1.Add(new Dominio.Fornecedor { Nome = "Odebrecht", Email = "comercial@cx2.com.br" });
+            context.Fornecedor.AddOrUpdate(lforn1[0]);
+            context.Fornecedor.AddOrUpdate(lforn1[1]);
+
+            lforn2.Add(new Dominio.Fornecedor { Nome = "ANDRADE GUTIERREZ", Email = "c2@ag.com.br" });
+            lforn2.Add(new Dominio.Fornecedor { Nome = "UTC", Email = "utc@utc.com.br" });
+            context.Fornecedor.AddOrUpdate(lforn2[0]);
+            context.Fornecedor.AddOrUpdate(lforn2[1]);
 
             context.Produto.AddOrUpdate(
-                new Dominio.Produto { IdProduto = 1, Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI001", Peso = 100.0f, Fornecedores = lfornecedores }
-                
+                new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 }
             );
 
             try
