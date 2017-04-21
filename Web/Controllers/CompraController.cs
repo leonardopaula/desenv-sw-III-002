@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Infraestrutura.Cadastros;
+using Newtonsoft.Json;
 
 namespace Web.Controllers
 {
@@ -10,9 +11,20 @@ namespace Web.Controllers
         // GET: Compra
         public ActionResult Index()
         {
-            var p = cc.BuscarProdutosEstoqueBaixo();
+            ViewBag.produtos = cc.BuscarProdutosEstoqueBaixo();
 
-            return View(p);
+            return View();
+        }
+
+        public ActionResult GetProductInfo(string IdProduto)
+        {
+            var prod = cc.BuscarDetalhesProduto(int.Parse(IdProduto));
+            var json = JsonConvert.SerializeObject(prod, Formatting.Indented,
+                            new JsonSerializerSettings
+                            {
+                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            });
+            return Content(json, "application/json");
         }
     }
 }

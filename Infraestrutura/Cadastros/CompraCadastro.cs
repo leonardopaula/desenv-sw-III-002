@@ -21,6 +21,14 @@ namespace Infraestrutura.Cadastros
             return produtos.ToList();
         }
 
+        public Produto BuscarDetalhesProduto(long IdProduto)
+        {
+            return contexto.Produto.Where(p => p.IdProduto == IdProduto)
+                .Include("Fornecedores")
+                .First();
+
+        }
+
         public List<Compra> BuscarTodosAguardandoRecebimento()
         {
             IQueryable<Compra> compras = from compra in contexto.Compra.Include("PedidoFornecedor")

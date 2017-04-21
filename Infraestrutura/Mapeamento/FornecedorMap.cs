@@ -13,11 +13,11 @@ namespace Infraestrutura.Mapeamento
             Property(f => f.Email).HasMaxLength(100).IsRequired();
 
             HasMany(f => f.Produtos)
-            .WithMany(x => x.Fornecedores)
+            .WithMany(f => f.Fornecedores)
             .Map(m =>
             {
-                m.MapLeftKey("IdProduto");
-                m.MapRightKey("IdFornecedor");
+                m.MapLeftKey("IdFornecedor");
+                m.MapRightKey("IdProduto");
                 m.ToTable("FornecedorProduto");
             });
         }
