@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="17068745-6909-4aa9-b470-7e494ed60469" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50926/ServiceFornecedor.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceFornecedor.xsd" MetadataType="Schema" ID="62e78176-c6c9-43de-b548-e59bf326eb0a" SourceId="1" SourceUrl="http://localhost:50926/ServiceFornecedor.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceFornecedor.disco" MetadataType="Disco" ID="3d023abf-bbe4-4bbd-95ee-57cd9c08e2ba" SourceId="1" SourceUrl="http://localhost:50926/ServiceFornecedor.svc?disco" />
+    <MetadataFile FileName="ServiceFornecedor1.xsd" MetadataType="Schema" ID="e4cd7a5e-4491-48fc-b489-601fc1ff6ca2" SourceId="1" SourceUrl="http://localhost:50926/ServiceFornecedor.svc?xsd=xsd0" />
+    <MetadataFile FileName="FornecedorService.wsdl" MetadataType="Wsdl" ID="9b67bcf6-d868-48e3-afa5-36c8287e0c50" SourceId="1" SourceUrl="http://localhost:50926/ServiceFornecedor.svc?wsdl" />
+    <MetadataFile FileName="ServiceFornecedor2.xsd" MetadataType="Schema" ID="145cf156-0c19-47b5-b5e7-ac6b1014d7f5" SourceId="1" SourceUrl="http://localhost:50926/ServiceFornecedor.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
