@@ -13,5 +13,6 @@ namespace Dominio
         public Fornecedor Fornecedor { get; set; }
         public int Quantidade { get; set; }
         public DateTime DataPrevista { get; set; }
+        public PedidoFornecedor PedidoFornecedor {get; set;}
     }
 }

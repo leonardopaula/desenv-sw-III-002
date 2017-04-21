@@ -1,6 +1,8 @@
 ﻿using System.Web.Mvc;
 using Infraestrutura.Cadastros;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 
 namespace Web.Controllers
 {
@@ -25,6 +27,22 @@ namespace Web.Controllers
                                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
                             });
             return Content(json, "application/json");
+        }
+
+        public ActionResult Salva()
+        {
+            // Recebe os parâmetros do formulário e trata
+            var form = Request.Form.AllKeys;
+
+            List<Dominio.PedidoItemFornecedor> pi;
+            //pi.Add(new Dominio.PedidoItemFornecedor)
+
+            var pf = new Dominio.PedidoFornecedor();
+
+            var compra = new Dominio.Compra();
+            compra.Data = DateTime.Now;
+
+            return View();
         }
     }
 }

@@ -7,7 +7,10 @@ $(document).ready(function () {
             idProduto = $(trigger).data('id');
             $.getJSON(base_url + 'Compra/GetProductInfo/?IdProduto=' + idProduto, function (json) {
                 $('.modal-fornecedor .modal-content h4').html(json.Nome);
+                $('#quantidade').val('');
                 $('#fornecedores option').remove();
+                $('#inp-produto').val(json.IdProduto);
+
                 var options = '<option>Selecione</option>';
                 $.each(json.Fornecedores, function (i, o) {
                     options += '<option value="' + o.IdFornecedor + '">' + o.Nome + '</option>';
@@ -20,10 +23,12 @@ $(document).ready(function () {
 });
 
 Compra = {
-    get_fornecedores : function(p){
+    pre_salva_item: function () {
+        var prod = $('#inp-produto').val();
+        $('#qtde-' + prod).val($('#quantidade').val());
+        $('#forn-' + prod).val($('#fornecedores').val());
+        $('#lin-' + prod + ' td:eq(4)').html($('#quantidade').val());
 
-    },
-    salva_item: function (p) {
-
+        $('.modal-fornecedor').modal('close');
     }
 }
