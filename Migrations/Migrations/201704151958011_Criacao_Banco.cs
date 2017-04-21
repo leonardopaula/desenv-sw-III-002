@@ -138,8 +138,8 @@ namespace Migrations
                         IdFornecedor = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => new { t.IdProduto, t.IdFornecedor })
-                .ForeignKey("dbo.Fornecedor", t => t.IdFornecedor)
-                .ForeignKey("dbo.Produto", t => t.IdProduto)
+                .ForeignKey("dbo.Fornecedor", t => t.IdProduto)
+                .ForeignKey("dbo.Produto", t => t.IdFornecedor)
                 .Index(t => t.IdProduto)
                 .Index(t => t.IdFornecedor);
             

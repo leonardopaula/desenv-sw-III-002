@@ -32,8 +32,8 @@ namespace Migrations
             context.Fornecedor.AddOrUpdate(lfornecedores[1]);
 
             context.Produto.AddOrUpdate(
-                new Dominio.Produto { IdProduto = 1, Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI001", Peso = 100.0f, Fornecedores = lfornecedores },
-                new Dominio.Produto { IdProduto = 2, Nome = "Blusa", QuantidadeEmEstoque = 0, QuantidadeEstoqueMinimo = 1, Referencia = "CI002", Peso = 50.0f, Fornecedores = lfornecedores }
+                new Dominio.Produto { IdProduto = 1, Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI001", Peso = 100.0f, Fornecedores = lfornecedores }
+                
             );
 
             try

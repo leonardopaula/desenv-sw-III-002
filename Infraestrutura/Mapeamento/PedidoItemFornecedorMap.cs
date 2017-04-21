@@ -14,9 +14,7 @@ namespace Infraestrutura.Mapeamento
             HasRequired(p => p.Produto).WithMany().HasForeignKey(p => p.IdProduto);
             HasRequired(p => p.Fornecedor).WithMany().HasForeignKey(p => p.IdFornecedor);
 
-            HasRequired(p => p.PedidoFornecedor)
-                .WithMany(p => p.PedidoItem)
-                .Map(m => m.MapKey("IdPedidoItem"));
+           
         }
     }
 }

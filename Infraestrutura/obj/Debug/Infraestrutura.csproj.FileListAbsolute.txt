@@ -22,3 +22,15 @@ C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projet
 C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.pdb
 C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.xml
 C:\Users\leonardo\Dropbox\Unisinos\2017-1\Desenvolvimento de Software III\Projeto\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll.config
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.pdb
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.dll
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.dll
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.pdb
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.xml
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
+C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb
