@@ -13,8 +13,6 @@ namespace Infraestrutura.Mapeamento
             Property(p => p.DataPrevista).IsRequired();
             HasRequired(p => p.Produto).WithMany().HasForeignKey(p => p.IdProduto);
             HasRequired(p => p.Fornecedor).WithMany().HasForeignKey(p => p.IdFornecedor);
-
-           
         }
     }
 }

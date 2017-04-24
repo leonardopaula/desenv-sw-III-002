@@ -99,7 +99,7 @@ namespace Web.Controllers
                     new Dominio.Compra
                     {
                         Pedidos = pi,
-                        NumeroNF = 123123,
+                        NumeroNF = new Random().Next(1, 1000000 + 1),
                         Data = DateTime.Now,
                         Status = Dominio.Enums.StatusCompra.AguardandoRecebimento // Vem do serviço
                 };
@@ -119,6 +119,14 @@ namespace Web.Controllers
                             });
                 return Content(json, "application/json");
             }
+        }
+
+        // GET: Relatorio
+        public ActionResult Relatorio(string IdCompra)
+        {
+            ViewBag.compra = cc.BuscarCompra(int.Parse(IdCompra));
+
+            return View();
         }
     }
 }

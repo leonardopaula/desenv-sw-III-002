@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Relatorio";
+}
+
+<h2>Relatorio #@ViewBag.compra.IdCompra</h2>
+<br/>
+<h5>Nota Fiscal: @ViewBag.compra.NumeroNF</h5>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Fornecedor</th>
+                <th>Previsão</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var pedido in ViewBag.compra.Pedidos)
+            {
+                <tr>
+                    <td>@pedido.Produto.Nome</td>
+                    <td>@pedido.Quantidade</td>
+                    <td>@pedido.Fornecedor.Nome</td>
+                    <td>@pedido.DataPrevista</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
