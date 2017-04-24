@@ -10,3 +10,9 @@ C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\FornecedorService\bin\Forne
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\FornecedorService\obj\Debug\FornecedorService.csprojResolveAssemblyReference.cache
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\FornecedorService\obj\Debug\FornecedorService.dll
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\FornecedorService\obj\Debug\FornecedorService.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\FornecedorService\bin\FornecedorService.dll.config
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\FornecedorService\bin\FornecedorService.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\FornecedorService\bin\FornecedorService.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\FornecedorService\obj\Debug\FornecedorService.csprojResolveAssemblyReference.cache
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\FornecedorService\obj\Debug\FornecedorService.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\FornecedorService\obj\Debug\FornecedorService.pdb

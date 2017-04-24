@@ -40,7 +40,8 @@ Compra = {
 
     relatorio: function () {
         tbl = '';
-        $('table tbody tr').each(function (k, v) {
+        $('table:eq(0) tbody tr').each(function (k, v) {
+            console.log($(v));
             id = $(v).attr('id').replace('lin-', '');
             if ($('#forn-' + id).val() != "")
             {
@@ -52,5 +53,25 @@ Compra = {
             }
         });
         $('#modal-relatorio table tbody').html(tbl);
+    },
+
+    salva_pedido: function () {
+        $.post(base_url + 'Compra/Salva'
+              , $('form:eq(0)').serialize()
+              , function (json) {
+                  if (json.IdCompra != undefined)
+                  {
+                      document.location = base_url + 'Compra/Relatorio/?IdCompra=' + json.IdCompra;
+                  } else {
+
+                      var msg = 'Verifique:\n';
+                      $.each(json, function (k, v) {
+                          msg += v.Referencia + ': ' + v.Mensagem;
+                      });
+
+                      alert(msg);
+                      $('#modal-relatorio').modal('close');
+                  }
+              });
     }
 }

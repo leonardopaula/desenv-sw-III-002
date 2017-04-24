@@ -41,6 +41,8 @@ namespace Web.Controllers
             string field = "", value = "", produto = "", qtde = "";
             var prod = new Dominio.Produto();
             var forn = new Dominio.Fornecedor();
+            List<Infraestrutura.FornecedorServiceRef.RetornoRequisicao> erros =
+                new List<Infraestrutura.FornecedorServiceRef.RetornoRequisicao>();
 
             foreach (string key in form)
             {
@@ -74,9 +76,9 @@ namespace Web.Controllers
                         {
                             pi.Add(new Dominio.PedidoItemFornecedor
                             {
-                                Fornecedor = forn,
+                                //Fornecedor = forn,
                                 IdFornecedor = forn.IdFornecedor,
-                                Produto = prod,
+                                //Produto = prod,
                                 IdProduto = prod.IdProduto,
                                 Quantidade = int.Parse(qtde),
                                 DataPrevista = retornoServico.DataEnvio.Value
@@ -84,24 +86,39 @@ namespace Web.Controllers
                         }
                         else
                         {
-                            // Exibe mensagem retornada pelo serviço 
-                            // Volta a modal de escolha de fornecedor para alterar o fornecedor e/ou quantidade
+                            // Exibe mensagem retornada pelo serviço caso ocorra erro
+                            erros.Add(retornoServico);
                         }
-                        
                     }
                 }
             }
 
-            Dominio.Compra c =
-                new Dominio.Compra {
-                    Pedidos = pi,
-                    NumeroNF = 123123,
-                    Data = DateTime.Now,
-                    Status = Dominio.Enums.StatusCompra.AguardandoRecebimento // Vem do serviço
+            if (erros.Count == 0)
+            {
+                Dominio.Compra c =
+                    new Dominio.Compra
+                    {
+                        Pedidos = pi,
+                        NumeroNF = 123123,
+                        Data = DateTime.Now,
+                        Status = Dominio.Enums.StatusCompra.AguardandoRecebimento // Vem do serviço
                 };
-            cc.Adicionar(c);
-
-            return View();
+                cc.Adicionar(c);
+                var json = JsonConvert.SerializeObject(c, Formatting.Indented,
+                            new JsonSerializerSettings
+                            {
+                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            });
+                return Content(json, "application/json");
+            } else
+            {
+                var json = JsonConvert.SerializeObject(erros, Formatting.Indented,
+                            new JsonSerializerSettings
+                            {
+                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            });
+                return Content(json, "application/json");
+            }
         }
     }
 }

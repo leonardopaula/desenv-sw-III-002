@@ -15,7 +15,7 @@ namespace FornecedorService
             {
                 retorno.Mensagem += "A referência é obrigatória";
             }
-            if (produto.Referencia.Equals("CI001"))
+            if (produto.Referencia.Equals("CI001") && produto.QuantidadeRequerida > 5)
             {
                 retorno.Mensagem += "Produto indisponível na quantidade requisitada";
             }

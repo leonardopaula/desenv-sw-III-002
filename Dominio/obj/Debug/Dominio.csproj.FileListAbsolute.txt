@@ -13,3 +13,8 @@ C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Dominio\bin\Debug\Dominio.p
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Dominio\obj\Debug\Dominio.dll
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Dominio\bin\Debug\Dominio.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Dominio\obj\Debug\Dominio.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Dominio\obj\Debug\Dominio.pdb
