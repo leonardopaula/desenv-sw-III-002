@@ -1,4 +1,5 @@
-# Desenvolvimento de Software III - Grupo 002
+# 4Web & Tabajara
+###*Desenvolvimento de Software III - Grupo 002*
 
 Repositório central do projeto
 
