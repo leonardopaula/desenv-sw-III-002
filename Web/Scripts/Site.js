@@ -1,5 +1,4 @@
-﻿var base_url = "http://localhost:62688/";
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $(".button-collapse").sideNav();
     $('select').material_select();
     $('#modal-relatorio').modal({
@@ -69,7 +68,7 @@ Compra = {
                           msg += v.Referencia + ': ' + v.Mensagem;
                       });
 
-                      alert(msg);
+                      Materialize.toast(msg, 4000);
                       $('#modal-relatorio').modal('close');
                   }
               });
