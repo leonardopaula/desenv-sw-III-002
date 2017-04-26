@@ -31,6 +31,28 @@ ul.select-dropdown li span {
     background-color: #8e24aa;
 }
 
+div.modal div.modal-content a.btn, div.modal div.modal-content input[type=button].btn, div.modal div.modal-content button.btn
+{
+    margin-left: 5px;
+}
+
+a.btn-gray, 
+button.btn-gray, 
+input[type=button].btn-gray,
+a.btn-gray:hover, 
+button.btn-gray:hover, 
+input[type=button].btn-gray:hover
+{
+    background: #cccccc;
+    color: #8e24aa;
+}
+
+@media only screen and (max-width: 800px) {
+    .btn {
+        margin: 0.5rem 0 0 auto;
+    }
+}
+
 [type="radio"]:checked+label:after, 
 [type="radio"].with-gap:checked+label:after,
 [type="checkbox"].filled-in:checked+label:after,
