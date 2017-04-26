@@ -19,3 +19,13 @@ img.img-produto
 {
     font-size: 24px;
 }
+
+div.detalhe-produto div
+{
+    margin-bottom: 1rem;
+}
+
+div.detalhe-produto div span
+{
+    font-size: 16pt;
+}

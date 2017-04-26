@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
     $(".button-collapse").sideNav();
     $('select').material_select();
+    $('.modal').modal();
+
     $('#modal-relatorio').modal({
         ready: function (modal, trigger) {
             Compra.relatorio();

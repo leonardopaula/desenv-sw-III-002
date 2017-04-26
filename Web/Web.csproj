@@ -168,6 +168,7 @@
     </Content>
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Site.js" />
+    <Content Include="Scripts\Venda.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -185,6 +186,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\" />
     <Folder Include="fonts\" />
+    <Folder Include="Images\Produtos\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +195,7 @@
     <Content Include="Views\Compra\Index.cshtml" />
     <Content Include="Views\Venda\Index.cshtml" />
     <Content Include="Views\Compra\Relatorio.cshtml" />
+    <Content Include="Views\Venda\_DetalheProduto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">

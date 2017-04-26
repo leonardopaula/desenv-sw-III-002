@@ -20,6 +20,9 @@ namespace Web
 
             bundles.Add(new ScriptBundle("~/Scripts/scripts").Include(
                 "~/Scripts/Site.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/venda").Include(
+                "~/Scripts/Venda.js"));
         }
     }
 }
