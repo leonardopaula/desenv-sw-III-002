@@ -166,9 +166,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Compra\index.js" />
+    <Content Include="Scripts\Compra\listagemNaoRecebidas.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Site.js" />
-    <Content Include="Scripts\Venda.js" />
+    <Content Include="Scripts\Venda\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
