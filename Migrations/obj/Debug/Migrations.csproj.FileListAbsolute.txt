@@ -66,3 +66,21 @@ C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Produto.resources
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll.config
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Migrations.pdb
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Dominio.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Dominio.pdb
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.pdb
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.xml
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csprojResolveAssemblyReference.cache
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Criacao_Banco.resources
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Produto.resources
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb

@@ -1,28 +1,42 @@
-﻿<!-- Modal Structure -->
-<div id="modalDetalheProduto" class="modal modal-fixed-footer">
-    <div class="modal-content">
-        <h4 class="truncate">Camiseta Tabajara Futebol Clube</h4>
-        <hr />
-        <div class="row">
-            <div class="col s12 m12 l4">
-                <img class="img-produto" src="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" data-zoom-image="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" />
-            </div>
-            <div class="col s12 m12 l8 detalhe-produto">
-                <div class="row">
-                    <div class="col s12">
-                        <span>Preço: R$ 129,90</span>
-                    </div>
-                    <div class="col s12">
-                        <span>Peso: 0,1KG</span>
-                    </div>
-                    <div class="col s12">
-                        <span>Referência</span>
+﻿@model Dominio.Produto
+
+<!-- Modal Structure -->
+<div class="modal-content">
+    @if (Model == null)
+    {
+        <h4 class="center">Produto Não Encontrado</h4>
+    }
+    else
+    {
+        <h4 class="truncate">@Model.Nome</h4>
+            <hr />
+            <div class="row">
+                <div class="col s12 m12 l4">
+                    <img class="img-produto" src="@Url.Content(Model.UrlImagem)" />
+                </div>
+                <div class="col s12 m12 l8 detalhe-produto">
+                    <div class="row">
+                        <div class="col s12">
+                            <span>Preço: R$ @Model.Preco.ToString("N2")</span>
+                        </div>
+                        <div class="col s12">
+                            <span>Peso: @Model.Peso g</span>
+                        </div>
+                        <div class="col s12">
+                            <span>Referência: @Model.Referencia</span>
+                        </div>
+                        <div class="col s12">
+                            <span>Unidades restantes: @Model.QuantidadeEmEstoque</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-action waves-effect btn btn-detalhe-comprar">Comprar</a>
-    </div>
+    }
+</div>
+<div class="modal-footer">
+    @if (Model != null)
+    {
+        <a class="modal-action waves-effect btn btn-detalhe-comprar">Comprar</a>
+    }
+    <a href="javascript:fecharModal();" class="modal-action modal-close waves-effect btn btn-gray">Fechar</a>
 </div>

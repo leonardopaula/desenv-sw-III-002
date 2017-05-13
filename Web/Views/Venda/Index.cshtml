@@ -1,86 +1,28 @@
 ﻿<h4>Produtos</h4>
 <div class="row">
-    <div class="produto-listagem col s12 m6 l3 hoverable">
-        <div class="row center produto-listagem-inner">
-            <div class="col s12">
-                <img class="img-produto" src="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" />
-            </div>
-            <div class="col s12">
-                <span title="Camiseta Tabajara Futebol Clube" class="truncate">Camiseta Tabajara Futebol Clube</span>
-            </div>
-            <div class="col s12 preco-produto">
-                <span>R$ 129,90</span>
-            </div>
-            <div class="col s12">
-                <button type="button" class="waves-effect waves-light btn botao-comprar" title="Comprar Camiseta Tabajara Futebol Clube">Comprar</button>
-            </div>
-        </div>
-    </div>
-    <div class="produto-listagem col s12 m6 l3 hoverable">
-        <div class="row center produto-listagem-inner">
-            <div class="col s12">
-                <img class="img-produto" src="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" />
-            </div>
-            <div class="col s12">
-                <span title="Camiseta Tabajara Futebol Clube" class="truncate">Camiseta Tabajara Futebol Clube</span>
-            </div>
-            <div class="col s12 preco-produto">
-                <span>R$ 129,90</span>
-            </div>
-            <div class="col s12">
-                <button type="button" class="waves-effect waves-light btn botao-comprar" title="Comprar Camiseta Tabajara Futebol Clube">Comprar</button>
+    @foreach (var produto in ViewBag.Produtos)
+    {
+        <div class="produto-listagem col s12 m6 l3 hoverable">
+            <div class="row center produto-listagem-inner">
+                <div class="col s12">
+                    <img class="img-produto" src="@Url.Content(produto.UrlImagem)" />
+                </div>
+                <div class="col s12">
+                    <span title="@produto.Nome" class="truncate">@produto.Nome</span>
+                </div>
+                <div class="col s12 preco-produto">
+                    <span>R$ @produto.Preco.ToString("N2")</span>
+                </div>
+                <div class="col s12">
+                    <button type="button" class="waves-effect waves-light btn botao-comprar" IdProduto="@produto.IdProduto" title="Comprar @produto.Nome">Comprar</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="produto-listagem col s12 m6 l3 hoverable">
-        <div class="row center produto-listagem-inner">
-            <div class="col s12">
-                <img class="img-produto" src="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" />
-            </div>
-            <div class="col s12">
-                <span title="Camiseta Tabajara Futebol Clube" class="truncate">Camiseta Tabajara Futebol Clube</span>
-            </div>
-            <div class="col s12 preco-produto">
-                <span>R$ 129,90</span>
-            </div>
-            <div class="col s12">
-                <button type="button" class="waves-effect waves-light btn botao-comprar" title="Comprar Camiseta Tabajara Futebol Clube">Comprar</button>
-            </div>
-        </div>
-    </div>
-    <div class="produto-listagem col s12 m6 l3 hoverable">
-        <div class="row center produto-listagem-inner">
-            <div class="col s12">
-                <img class="img-produto" src="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" />
-            </div>
-            <div class="col s12">
-                <span title="Camiseta Tabajara Futebol Clube" class="truncate">Camiseta Tabajara Futebol Clube</span>
-            </div>
-            <div class="col s12 preco-produto">
-                <span>R$ 129,90</span>
-            </div>
-            <div class="col s12">
-                <button type="button" class="waves-effect waves-light btn botao-comprar" title="Comprar Camiseta Tabajara Futebol Clube">Comprar</button>
-            </div>
-        </div>
-    </div>
-    <div class="produto-listagem col s12 m6 l3 hoverable">
-        <div class="row center produto-listagem-inner">
-            <div class="col s12">
-                <img class="img-produto" src="@Url.Content("~/Images/Produtos/camiseta tabajara.jpg")" />
-            </div>
-            <div class="col s12">
-                <span title="Camiseta Tabajara Futebol Clube" class="truncate">Camiseta Tabajara Futebol Clube</span>
-            </div>
-            <div class="col s12 preco-produto">
-                <span>R$ 129,90</span>
-            </div>
-            <div class="col s12">
-                <button type="button" class="waves-effect waves-light btn botao-comprar" title="Comprar Camiseta Tabajara Futebol Clube">Comprar</button>
-            </div>
-        </div>
-    </div>
+    }
 </div>
-@Html.Partial("_DetalheProduto")
+
+<div id="modalDetalheProduto" class="modal modal-fixed-footer">
+    @Html.Partial("_DetalheProduto")
+</div>
 
 @Scripts.Render("~/Scripts/venda")

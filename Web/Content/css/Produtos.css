@@ -3,6 +3,11 @@
     background: #dbdbdb;
 }
 
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat
+{
+    margin: 6px;
+}
+
 div.produto-listagem-inner
 {
     padding: 5px 0px;

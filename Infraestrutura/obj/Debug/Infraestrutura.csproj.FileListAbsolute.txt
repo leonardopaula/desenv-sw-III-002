@@ -46,3 +46,15 @@ C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityF
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll.config
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.pdb
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.pdb
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.xml
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
+E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb

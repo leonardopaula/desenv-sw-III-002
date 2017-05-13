@@ -37,11 +37,11 @@ namespace Migrations
             context.Fornecedor.AddOrUpdate(lforn2[0]);
             context.Fornecedor.AddOrUpdate(lforn2[1]);
 
-            var prod = new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 };
+            var prod = new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, Preco = 199.0f, UrlImagem = "~/Images/Produtos/camiseta tabajara.jpg", QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 };
             context.Produto.AddOrUpdate(
-                new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
-                new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
-                new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 },
+                new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, Preco = 329.99f, UrlImagem = "~/Images/Produtos/Jaqueta.png", QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, Preco = 2000.0f, UrlImagem = "~/Images/Produtos/iphone.png", QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, Preco = 459.0f, UrlImagem = "~/Images/Produtos/mega-drive.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 },
                 prod
             );
 

@@ -1,4 +1,6 @@
-﻿using Infraestrutura.Util;
+﻿using Dominio;
+using Infraestrutura.Cadastros;
+using Infraestrutura.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +11,26 @@ namespace Web.Controllers
 {
     public class VendaController : Controller
     {
+        private ProdutoCadastro produtoCadastro;
+
+        public VendaController()
+        {
+            produtoCadastro = new ProdutoCadastro();
+        }
+
         // GET: Venda
         public ActionResult Index()
         {
+            ViewBag.Produtos = produtoCadastro.BuscarTodos();
+
             return View();
+        }
+
+        public PartialViewResult CarregarInfoProduto(long idProduto)
+        {
+            Produto p = produtoCadastro.BuscarPeloId(idProduto);
+
+            return PartialView("_DetalheProduto", p);
         }
 
         [HttpPost]
