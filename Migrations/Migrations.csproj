@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201704210545243_Alteracao_Compra.Designer.cs">
       <DependentUpon>201704210545243_Alteracao_Compra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705131930079_Alteracao_Produto.cs" />
+    <Compile Include="Migrations\201705131930079_Alteracao_Produto.Designer.cs">
+      <DependentUpon>201705131930079_Alteracao_Produto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704210545243_Alteracao_Compra.resx">
       <DependentUpon>201704210545243_Alteracao_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705131930079_Alteracao_Produto.resx">
+      <DependentUpon>201705131930079_Alteracao_Produto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

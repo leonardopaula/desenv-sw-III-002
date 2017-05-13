@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Compras Aguardando Recebimento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Relatorio de Compras Aguardando Recebimento</h2>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Número NF</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var compra in ViewBag.compras)
+            {
+            <tr>
+                <td>@compra.NumeroNF</td>
+                <td>@compra.Data</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

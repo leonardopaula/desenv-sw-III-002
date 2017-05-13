@@ -128,5 +128,11 @@ namespace Web.Controllers
 
             return View();
         }
+
+        public ActionResult ListagemNaoRecebidas()
+        {
+            ViewBag.compras = cc.BuscarTodosAguardandoRecebimento();
+            return View();
+        }
     }
 }

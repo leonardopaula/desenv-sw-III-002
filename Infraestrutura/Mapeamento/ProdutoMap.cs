@@ -14,6 +14,9 @@ namespace Infraestrutura.Mapeamento
             Property(c => c.QuantidadeEstoqueMinimo).IsRequired();
             Property(c => c.QuantidadeEstoqueMinimo).IsRequired();
             Property(c => c.Referencia).IsRequired();
+            Property(c => c.Peso).IsRequired();
+            Property(c => c.Preco).IsRequired();
+            Property(c => c.UrlImagem).IsOptional();
 
         }
     }
