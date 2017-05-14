@@ -134,5 +134,18 @@ namespace Web.Controllers
             ViewBag.compras = cc.BuscarTodosAguardandoRecebimento();
             return View();
         }
+
+        public ActionResult ConfirmarRecebimento(string idCompra)
+        {
+            cc.ConfirmarRecebimento(long.Parse(idCompra));
+            ViewBag.compras = cc.BuscarTodosAguardandoRecebimento();
+            return View("ListagemNaoRecebidas");
+        }
+
+        public ActionResult ReceberNotaFiscal(string idCompra)
+        {
+            ViewBag.compra = cc.BuscarCompra(long.Parse(idCompra));
+            return View("RecebimentoNF");
+        }
     }
 }

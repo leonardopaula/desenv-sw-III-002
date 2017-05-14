@@ -23,3 +23,8 @@ E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Dominio\obj\Debug\Dominio.dll
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Dominio\bin\Debug\Dominio.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Aline\Desktop\desenv-sw-III-002\Dominio\obj\Debug\Dominio.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Dominio\obj\Debug\Dominio.pdb

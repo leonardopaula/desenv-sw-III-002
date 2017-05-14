@@ -13,7 +13,7 @@ namespace Infraestrutura.Cadastros
             contexto = new EFContext();
         }
 
-        public Compra BuscarCompra(int IdCompra)
+        public Compra BuscarCompra(long IdCompra)
         {
             var res = contexto.Compra
                 .Include("Pedidos")
@@ -58,6 +58,13 @@ namespace Infraestrutura.Cadastros
         {
             contexto.Entry(compra).State = EntityState.Modified;
             contexto.SaveChanges();
+        }
+
+        public void ConfirmarRecebimento(long idCompra)
+        {
+            var compra = BuscarCompra(idCompra);
+            compra.Status = Dominio.Enums.StatusCompra.Recebido;
+            Editar(compra);
         }
 
     }

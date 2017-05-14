@@ -20,10 +20,12 @@ namespace Web
 
             bundles.Add(new ScriptBundle("~/Scripts/scripts").Include(
                 "~/Scripts/Site.js"));
-            bundles.Add(new ScriptBundle("~/Scripts/reporEstoque").Include(
-                "~/Scripts/Compra/index.js"));
-            bundles.Add(new ScriptBundle("~/Scripts/listagemNaoRecebidas").Include(
-                "~/Scripts/Compra/listagemNaoRecebidas.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/reporEstoque")
+                .Include("~/Scripts/Site.js")
+                .Include("~/Scripts/Compra/index.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/listagemNaoRecebidas")
+                .Include("~/Scripts/Site.js")
+                .Include("~/Scripts/Compra/listagemNaoRecebidas.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/venda").Include(
                 "~/Scripts/Venda/index.js"));
