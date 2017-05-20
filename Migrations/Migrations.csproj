@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201705131930079_Alteracao_Produto.Designer.cs">
       <DependentUpon>201705131930079_Alteracao_Produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705180251038_Inclusao_ExcecaoEmCompra.cs" />
+    <Compile Include="Migrations\201705180251038_Inclusao_ExcecaoEmCompra.Designer.cs">
+      <DependentUpon>201705180251038_Inclusao_ExcecaoEmCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705131930079_Alteracao_Produto.resx">
       <DependentUpon>201705131930079_Alteracao_Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705180251038_Inclusao_ExcecaoEmCompra.resx">
+      <DependentUpon>201705180251038_Inclusao_ExcecaoEmCompra.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

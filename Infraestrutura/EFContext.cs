@@ -65,7 +65,7 @@ namespace Infraestrutura
             modelBuilder.Configurations.Add(new NotaFiscalMap());
             modelBuilder.Configurations.Add(new PagamentoMap());
             modelBuilder.Configurations.Add(new PedidoClienteMap());
-            modelBuilder.Configurations.Add(new PedidoFornecedorMap());
+            modelBuilder.Configurations.Add(new ExcecaoNFMap());
             modelBuilder.Configurations.Add(new PedidoItemFornecedorMap());
             modelBuilder.Configurations.Add(new ProdutoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());

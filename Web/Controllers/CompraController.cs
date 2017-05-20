@@ -3,6 +3,7 @@ using Infraestrutura.Cadastros;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using Dominio;
 
 namespace Web.Controllers
 {
@@ -147,5 +148,42 @@ namespace Web.Controllers
             ViewBag.compra = cc.BuscarCompra(long.Parse(idCompra));
             return View("RecebimentoNF");
         }
+
+        public ActionResult GetProdutosDaCompra(string idCompra)
+        {
+            var compra = cc.BuscarCompra(long.Parse(idCompra));
+
+            List<Produto> produtos = new List<Produto>();
+            foreach (var pedido in compra.Pedidos)
+            {
+                produtos.Add(pedido.Produto);
+            }
+
+            var json = JsonConvert.SerializeObject(produtos, Formatting.Indented,
+                            new JsonSerializerSettings
+                            {
+                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            });
+            return Content(json, "application/json");
+        }
+
+        public ActionResult InformarDivergencia(string idCompra, string produto, string quantidadeEsperada, string quantidadeRecebida)
+        {
+            Dominio.ExcecaoNF excecao = new Dominio.ExcecaoNF();
+
+            excecao.Compra = cc.BuscarCompra(long.Parse(idCompra));
+            excecao.IdCompra = long.Parse(idCompra);
+            excecao.QuantidadeAguardada = int.Parse(quantidadeEsperada);
+            excecao.QuantidadeRecebida = int.Parse(quantidadeRecebida);
+            excecao.IdPedidoItemFornecedor = 0;
+                var json = JsonConvert.SerializeObject("", Formatting.Indented,
+                            new JsonSerializerSettings
+                            {
+                                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            });
+                return Content(json, "application/json");
+            
+        }
     }
+
 }

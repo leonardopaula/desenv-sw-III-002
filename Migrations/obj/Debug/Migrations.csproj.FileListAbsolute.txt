@@ -102,3 +102,4 @@ C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alterac
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_ExcecaoEmCompra.resources

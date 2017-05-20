@@ -56,12 +56,12 @@
     <Compile Include="Cadastros\ProdutoCadastro.cs" />
     <Compile Include="EFContext.cs" />
     <Compile Include="Mapeamento\ClienteMap.cs" />
+    <Compile Include="Mapeamento\ExcecaoNFMap.cs" />
     <Compile Include="Mapeamento\FaturamentoMap.cs" />
     <Compile Include="Mapeamento\FuncionarioMap.cs" />
     <Compile Include="Mapeamento\NotaFiscalMap.cs" />
     <Compile Include="Mapeamento\PagamentoMap.cs" />
     <Compile Include="Mapeamento\PedidoClienteMap.cs" />
-    <Compile Include="Mapeamento\PedidoFornecedorMap.cs" />
     <Compile Include="Mapeamento\PedidoItemFornecedorMap.cs" />
     <Compile Include="Mapeamento\ProdutoMap.cs" />
     <Compile Include="Mapeamento\CompraMap.cs" />

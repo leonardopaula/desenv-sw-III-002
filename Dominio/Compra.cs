@@ -13,5 +13,6 @@ namespace Dominio
         public DateTime Data { get; set; }
         public StatusCompra Status { get; set; }
         public List<PedidoItemFornecedor> Pedidos { get; set; }
+        public List<ExcecaoNF> Excecoes { get; set; }
     }
 }

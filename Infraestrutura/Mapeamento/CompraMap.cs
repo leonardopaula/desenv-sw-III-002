@@ -23,6 +23,7 @@ namespace Infraestrutura.Mapeamento
                  m.MapLeftKey("IdCompra"); // Mapeando a chave primária de Compra na coluna de chave estrangeira IdCompra em CompraProduto
                  m.MapRightKey("IdPedidoItemFornecedor");
              });
+
         }
     }
 }

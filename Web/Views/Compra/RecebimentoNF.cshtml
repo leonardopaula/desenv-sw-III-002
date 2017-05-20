@@ -30,7 +30,7 @@
         <br />
         <div>
             <a onclick="ListagemNaoRecebidas.confirmar_recebimento(@ViewBag.compra.IdCompra);" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">done</i>Confirmar</a>
-            <a onclick="ListagemNaoRecebidas.informar_divergencia();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">report problem</i>Informar divergência</a>
+            <a href="#modal-informar-divergencia" data-id="@ViewBag.compra.IdCompra" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">report problem</i>Informar divergência</a>
             <a onclick="ListagemNaoRecebidas.retornar_listagem();" href="javascript:void(0);" class="waves-effect btn-flat btn-gray mobile-button">Cancelar</a>
         </div>
     </form>
@@ -39,21 +39,31 @@
 <div id="modal-informar-divergencia" class="modal">
     <div class="modal-content">
         <h4>Informar Divergência</h4>
-        <div class="row">
-            <table class="striped">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Fornecedor</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+        
+            <form class="col s12" method="post" action="@Url.Action("InformarDivergencia", "Compra")">
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                       @Html.DropDownList("produtos", new SelectListItem[] {
+                    }, "Selecione uma opção")
+                        @Html.Label("Produto", new { @for = "produtos" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m6 l6">
+                        @Html.TextBox("quantidadeAguardada", "", new { @id = "quantidadeAguardada" })
+                        @Html.Label("Quantidade Aguardada", new { @for = "quantidadeAguardada" })
+                    </div>
+                    <div class="input-field col s6 m6 l6">
+                        @Html.TextBox("quantidadeRecebida", "", new { @id = "quantidadeRecebida" })
+                        @Html.Label("Quantidade Recebida", new { @for = "quantidadeRecebida" })
+                    </div>
+                </div>
+                <input id="inp-compra" type="hidden" value="" />
+            </form>
+        
+    
         <div class="modal-footer">
-            <a onclick="Compra.confirma_recebimento();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">done</i>Confirmar</a>
-            <a onclick="Compra.informar_divergencia();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">report problem</i>Informar divergência</a>
+            <a onclick="ListagemNaoRecebidas.informar_divergencia();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">report problem</i>Informar divergência</a>
             <a href="#!" class="modal-action modal-close waves-effect btn-flat btn-gray mobile-button">Cancelar</a>
         </div>
     </div>
