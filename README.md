@@ -5,7 +5,7 @@ Repositório central do projeto
 ## Projeto: *4Web & Tabajara*
 O presente projeto visa apresentar os casos de uso: 
 - [T] UC001 - Realizar Compra;
-- [D] UC002 - Receber Mercadoria;
+- [T] UC002 - Receber Mercadoria;
 - [D] UC003 - Realizar Venda;
 - [D] UC004 - Controlar Faturamento;
 - [A] UC005 - Gerar Ordem de Serviço;
