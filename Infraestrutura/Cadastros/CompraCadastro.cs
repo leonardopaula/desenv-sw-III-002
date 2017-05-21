@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -65,6 +66,33 @@ namespace Infraestrutura.Cadastros
             var compra = BuscarCompra(idCompra);
             compra.Status = Dominio.Enums.StatusCompra.Recebido;
             Editar(compra);
+        }
+
+        public bool AdicionarExcecao(long idCompra, long idProduto, int quantidadeAguardada, int quantidadeRecebida, out string mensagemRetorno)
+        {
+            Dominio.ExcecaoNF excecao = new Dominio.ExcecaoNF();
+            var compra = BuscarCompra(idCompra);
+            var pedido = compra.Pedidos.FirstOrDefault(p => p.IdProduto == idProduto);
+            excecao.Compra = compra;
+            excecao.IdCompra = idCompra;
+            excecao.QuantidadeAguardada = quantidadeAguardada;
+            excecao.QuantidadeRecebida = quantidadeRecebida;
+            excecao.IdPedidoItemFornecedor = pedido.IdPedidoItemFornecedor;
+            excecao.PedidoItemFornecedor = pedido;
+            compra.Excecoes.Add(excecao);
+
+            bool retorno = true;
+            mensagemRetorno = "";
+            try
+            {
+                Editar(compra);
+            }
+            catch (Exception e)
+            {
+                retorno = false;
+                mensagemRetorno = e.Message;
+            }
+            return retorno;
         }
 
     }

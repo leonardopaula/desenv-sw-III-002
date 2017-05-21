@@ -7,9 +7,10 @@
             $.getJSON(base_url + 'Compra/GetProdutosDaCompra/?idCompra=' + idCompra, function (json) {
                 $('#produtos option').remove();
                 $('#inp-compra').val(idCompra);
-
+                console.log("voltou ");
                 var options = '<option>Selecione</option>';
-                $.each(json.produtos, function (i, o) {
+                $.each(json, function (i, o) {
+                    console.log("produto " + o.IdProduto);
                     options += '<option value="' + o.IdProduto + '">' + o.Nome + '</option>';
                 });
 
@@ -33,17 +34,17 @@ ListagemNaoRecebidas = {
         var idCompra = $('#inp-compra').val();
         var qtdAguardada = $('#quantidadeAguardada').val();
         var qtdRecebida = $('#quantidadeRecebida').val();
-        var produtoSelecionado = $('#produtos option[value="' + $('#produtos').val() + '"]').html();
+        var produtoSelecionado = $('#produtos').val();
         $.post(base_url + 'Compra/InformarDivergencia'
               , {idCompra: idCompra, produto: produtoSelecionado, quantidadeEsperada: qtdAguardada, quantidadeRecebida: qtdRecebida}
               , function (json) {
-                  if (json.IdCompra != undefined) {
+                  if (json.Situacao) {
                       document.location = base_url + 'Compra/ListagemNaoRecebidas/';
                   } else {
 
                       var msg = 'Verifique:\n';
                       $.each(json, function (k, v) {
-                          msg += v.Referencia + ': ' + v.Mensagem;
+                          msg += v.Mensagem;
                       });
 
                       Materialize.toast(msg, 4000);
@@ -51,5 +52,4 @@ ListagemNaoRecebidas = {
                   }
               });
     }
-    //GetProdutosDaCompra
 }

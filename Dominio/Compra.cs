@@ -6,7 +6,7 @@ namespace Dominio
 {
     public class Compra
     {
-        public Compra() { }
+        public Compra() { Excecoes = new List<ExcecaoNF>(); Pedidos = new List<PedidoItemFornecedor>(); }
 
         public long IdCompra { get; set; }
         public int NumeroNF { get; set; }
