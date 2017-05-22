@@ -22,7 +22,6 @@ namespace Infraestrutura
         public DbSet<NotaFiscal> NotaFiscal { get; set; }
         public DbSet<Pagamento> Pagamento { get; set; }
         public DbSet<PedidoCliente> PedidoCliente { get; set; }
-        //public DbSet<PedidoFornecedor> PedidoFornecedor { get; set; }
         public DbSet<PedidoItemFornecedor> PedidoItemFornecedor { get; set; }
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
@@ -66,7 +65,7 @@ namespace Infraestrutura
             modelBuilder.Configurations.Add(new NotaFiscalMap());
             modelBuilder.Configurations.Add(new PagamentoMap());
             modelBuilder.Configurations.Add(new PedidoClienteMap());
-            modelBuilder.Configurations.Add(new PedidoFornecedorMap());
+            modelBuilder.Configurations.Add(new ExcecaoNFMap());
             modelBuilder.Configurations.Add(new PedidoItemFornecedorMap());
             modelBuilder.Configurations.Add(new ProdutoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());

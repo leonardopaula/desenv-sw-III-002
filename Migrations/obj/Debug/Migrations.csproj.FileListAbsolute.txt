@@ -84,3 +84,22 @@ E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll.config
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Migrations.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Dominio.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Dominio.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.xml
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csprojResolveAssemblyReference.cache
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Criacao_Banco.resources
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Produto.resources
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_ExcecaoEmCompra.resources

@@ -38,7 +38,7 @@ Compra = {
     relatorio: function () {
         tbl = '';
         $('table:eq(0) tbody tr').each(function (k, v) {
-            console.log($(v));
+            
             id = $(v).attr('id').replace('lin-', '');
             if ($('#forn-' + id).val() != "") {
                 tbl += '<tr>';

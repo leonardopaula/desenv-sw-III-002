@@ -44,12 +44,12 @@
     <Compile Include="Enums\MeioPagamento.cs" />
     <Compile Include="Enums\StatusPedido.cs" />
     <Compile Include="Enums\StatusCompra.cs" />
+    <Compile Include="ExcecaoNF.cs" />
     <Compile Include="Faturamento.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="NotaFiscal.cs" />
     <Compile Include="Pagamento.cs" />
     <Compile Include="PedidoCliente.cs" />
-    <Compile Include="PedidoFornecedor.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="PedidoItemFornecedor.cs" />

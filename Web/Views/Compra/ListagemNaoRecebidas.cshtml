@@ -4,13 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Relatorio de Compras Aguardando Recebimento</h2>
+<h4>Compras Aguardando Recebimento</h4>
 <br />
 <table>
     <thead>
         <tr>
             <th>Número NF</th>
             <th>Data</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -19,32 +20,17 @@
             <tr>
                 <td>@compra.NumeroNF</td>
                 <td>@compra.Data</td>
+                <td>
+                    <a data-id="@compra.IdCompra" class="waves-effect waves-light btn" onclick="ListagemNaoRecebidas.receber_notafiscal(@compra.IdCompra);">
+                        <i class="material-icons right">system_update_alt</i>
+                        Receber NF
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
 </table>
 
-<!-- Modal Relatorio -->
-<div id="modal-receber-notafiscal" class="modal">
-    <div class="modal-content">
-        <h4></h4>
-        <div class="row">
-            <table class="striped">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Fornecedor</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-        <div class="modal-footer">
-            <a onclick="Compra.salva_pedido();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">done</i>Salvar</a>
-            <a href="#!" class="modal-action modal-close waves-effect btn-flat btn-gray mobile-button">Cancelar</a>
-        </div>
-    </div>
-</div>
+
 
 @Scripts.Render("~/Scripts/listagemNaoRecebidas")
