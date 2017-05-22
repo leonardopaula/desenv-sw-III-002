@@ -2,7 +2,7 @@
     $('.botao-comprar').click(function () {
         //Chamar ajax para buscar as informações adicionais do produto
 
-        var idProduto = $(this).attr('IdProduto');
+        var idProduto = $(this).attr('IdProduto')
 
         $.ajax({
             url: base_url + 'Venda/CarregarInfoProduto',
@@ -15,20 +15,12 @@
 
         $('#modalDetalheProduto').modal('open');
     });
-});
 
-$(document).on('click', '.btn-detalhe-comprar', function () {
-    var idProduto = $(this).attr('IdProduto');
-
-    $.ajax({
-        url: base_url + 'Venda/ComprarProduto',
-        method: 'POST',
-        data: { idProduto: idProduto },
-        success: function (data) {
-            fecharModal();
-            Materialize.toast(data.Message, 6000);
-            animacaoCarrinho();
-        }
+    $('.btn-detalhe-comprar').click(function () {
+        $.ajax({
+            url: base_url + 'Venda/ComprarProduto',
+            method: 'POST'
+        });
     });
 });
 

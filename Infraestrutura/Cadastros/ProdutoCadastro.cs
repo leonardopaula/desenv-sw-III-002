@@ -26,13 +26,5 @@ namespace Infraestrutura.Cadastros
                                            select cliente;
             return clientes.ToList();
         }
-
-        public List<Produto> BuscarTodosComEstoque()
-        {
-            IQueryable<Produto> produtos = from p in contexto.Produto
-                                           where p.QuantidadeEmEstoque > 0
-                                           select p;
-            return produtos.ToList();
-        }
     }
 }

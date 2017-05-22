@@ -21,17 +21,6 @@ a.menu-shopping-cart {
     margin: 0px 18px;
 }
 
-a.menu-shopping-cart i
-{
-    -webkit-transition: color 1.0s ease-in-out;
-    -ms-transition:     color 1.0s ease-in-out;
-    transition:         color 1.0s ease-in-out;
-}
-
-.yellow-text i
-{
-    color: #f3f716 !important;
-}
 
 ul.select-dropdown li span {
     color: #8e24aa;

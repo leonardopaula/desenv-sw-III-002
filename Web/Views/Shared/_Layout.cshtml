@@ -22,17 +22,6 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/Scripts/scripts")
-
-    @if (Session["Carrinho"] != null && ((List<Dominio.Produto>)Session["Carrinho"]).Count > 0)
-    {
-        <text>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                animacaoCarrinho();
-            });
-        </script>
-        </text>
-    }
 </head>
 <body>
     <header>
