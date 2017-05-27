@@ -1,4 +1,8 @@
-﻿@model List<Dominio.Produto>
+﻿@model List<Dominio.Dinamico.ProdutoCarrinho>
+
+@{
+    ViewBag.Title = "Carrinho";
+}
 
 <h4>Carrinho</h4>
 
@@ -16,7 +20,7 @@
 else
 {
     <div class="col s12 m12 l12">
-        <span class="total-carrinho">Total: @Model.Sum(x => x.Preco).ToString("N2")</span>
+        <span class="total-carrinho">Total: @Model.Sum(x => (x.Quantidade * x.Produto.Preco)).ToString("N2")</span>
     </div>
 
     foreach (var item in Model)
@@ -25,10 +29,10 @@ else
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <p>@item.Nome - R$ @item.Preco.ToString("N2")</p>
+                        <p>@($"({item.Quantidade}x) {item.Produto.Nome} - R$ {@item.Produto.Preco.ToString("N2")}")</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Remover</a>
+                        <a href="javascript:removerProdutos(@item.Produto.IdProduto);">Remover</a>
                     </div>
                 </div>
             </div>
@@ -36,3 +40,5 @@ else
     }
 }
 </div>
+
+@Scripts.Render("~/Scripts/carrinho")

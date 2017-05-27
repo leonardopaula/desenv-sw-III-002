@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.Dinamico;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,25 @@ namespace Web.Controllers
         public ActionResult Index()
         {
             List<Produto> carrinho = Session["Carrinho"] as List<Produto> ?? new List<Produto>();
-            return View(carrinho);
+
+            List<ProdutoCarrinho> carrinhoGroup = carrinho
+                .GroupBy(x => x.IdProduto)
+                .Select(x => new ProdutoCarrinho
+                {
+                    Quantidade = x.Count(),
+                    Produto = x.FirstOrDefault()
+                }).ToList();
+
+            return View(carrinhoGroup);
+        }
+
+        public void RemoverProdutos(int idProduto)
+        {
+            List<Produto> carrinho = Session["Carrinho"] as List<Produto> ?? new List<Produto>();
+
+            carrinho = carrinho.Where(x => x.IdProduto != idProduto).ToList();
+
+            Session["Carrinho"] = carrinho;
         }
     }
 }

@@ -31,6 +31,10 @@ namespace Web.Controllers
         {
             Produto p = produtoCadastro.BuscarPeloId(idProduto);
 
+            List<Produto> carrinho = Session["Carrinho"] as List<Produto> ?? new List<Produto>();
+
+            p.QuantidadeEmEstoque -= (carrinho.Count(x => x.IdProduto == p.IdProduto));
+
             return PartialView("_DetalheProduto", p);
         }
 
@@ -40,6 +44,8 @@ namespace Web.Controllers
             Produto produto = produtoCadastro.BuscarPeloId(idProduto);
 
             List<Produto> produtosCarrinho = Session["Carrinho"] as List<Produto> ?? new List<Produto>();
+
+            produto.QuantidadeEmEstoque -= (produtosCarrinho.Count(x => x.IdProduto == produto.IdProduto));
 
             bool sucesso = true;
             string message = string.Empty;

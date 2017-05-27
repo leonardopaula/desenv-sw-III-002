@@ -167,6 +167,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Carrinho\index.js" />
     <Content Include="Scripts\Compra\index.js" />
     <Content Include="Scripts\Compra\listagemNaoRecebidas.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />

@@ -34,7 +34,7 @@
     }
 </div>
 <div class="modal-footer">
-    @if (Model != null)
+    @if (Model != null && Model.QuantidadeEmEstoque > 0)
     {
         <a IdProduto="@Model.IdProduto" class="modal-action waves-effect btn btn-detalhe-comprar">Comprar</a>
     }
