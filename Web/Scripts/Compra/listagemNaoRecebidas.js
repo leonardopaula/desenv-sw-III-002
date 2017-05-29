@@ -1,16 +1,16 @@
 ﻿$(document).ready(function () {
-    console.log("ta ok");
+    
     $('#modal-informar-divergencia').modal({
         ready: function (modal, trigger) {
-            console.log("chamou a funcao");
+            
             idCompra = $(trigger).data('id');
             $.getJSON(base_url + 'Compra/GetProdutosDaCompra/?idCompra=' + idCompra, function (json) {
                 $('#produtos option').remove();
                 $('#inp-compra').val(idCompra);
-                console.log("voltou ");
+               
                 var options = '<option>Selecione</option>';
                 $.each(json, function (i, o) {
-                    console.log("produto " + o.IdProduto);
+                    
                     options += '<option value="' + o.IdProduto + '">' + o.Nome + '</option>';
                 });
 

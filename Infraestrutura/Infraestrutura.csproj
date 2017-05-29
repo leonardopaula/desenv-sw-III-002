@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\ClienteCadastro.cs" />
     <Compile Include="Cadastros\CompraCadastro.cs" />
     <Compile Include="Cadastros\FornecedorCadastro.cs" />
     <Compile Include="Cadastros\ProdutoCadastro.cs" />
