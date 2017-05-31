@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h4>Cliente</h4>
+<div class="row">
+    <form method="post" action="@Url.Action("Salva", "Cliente")">
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                @Html.TextBox("Nome", "")
+                @Html.Label("Nome Completo", new { @for = "Nome" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                @Html.TextBox("Email", "")
+                @Html.Label("E-mail", new { @for = "Email" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                @Html.TextBox("Login", "")
+                @Html.Label("Login", new { @for = "Login" })
+            </div>
+            <div class="input-field col s12 m6 l6">
+                @Html.TextBox("Senha", "")
+                @Html.Label("Senha", new { @for = "Senha" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                @Html.TextBox("Rg", "")
+                @Html.Label("RG", new { @for = "Rg" })
+            </div>
+            <div class="input-field col s12 m6 l6">
+                @Html.TextBox("Cpf", "")
+                @Html.Label("CPF", new { @for = "Cpf" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s6">
+                <a class="waves-effect waves-light btn btn-gray mobile-button" onclick="CadastroCliente.cancelar()"><i class="material-icons right">report_problem</i>Cancelar</a>
+                <a class="waves-effect waves-light btn mobile-button" onclick="CadastroCliente.salvar_cliente()">Salvar<i class="material-icons right">send</i></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@Scripts.Render("~/Scripts/cliente")

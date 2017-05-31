@@ -150,6 +150,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CarrinhoController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VendaController.cs" />
@@ -168,6 +169,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\Carrinho\index.js" />
+    <Content Include="Scripts\Cliente\index.js" />
     <Content Include="Scripts\Compra\index.js" />
     <Content Include="Scripts\Compra\listagemNaoRecebidas.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -203,6 +205,7 @@
     <Content Include="Views\Compra\ListagemNaoRecebidas.cshtml" />
     <Content Include="Views\Compra\RecebimentoNF.cshtml" />
     <Content Include="Views\Carrinho\Index.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
