@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cidade.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Dinamico\ProdutoCarrinho.cs" />
+    <Compile Include="Endereco.cs" />
     <Compile Include="Enums\MeioPagamento.cs" />
     <Compile Include="Enums\StatusPedido.cs" />
     <Compile Include="Enums\StatusCompra.cs" />
+    <Compile Include="Estado.cs" />
     <Compile Include="ExcecaoNF.cs" />
     <Compile Include="Faturamento.cs" />
     <Compile Include="Funcionario.cs" />

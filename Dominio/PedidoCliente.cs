@@ -19,5 +19,7 @@ namespace Dominio
         public DateTime Data { get; set; }
 
         public Faturamento Faturamento { get; set; }
+        public Endereco EnderecoEntrega { get; set; }
+        public long IdEnderecoEntrega { get; set; }
     }
 }
