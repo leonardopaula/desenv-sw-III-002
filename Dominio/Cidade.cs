@@ -4,7 +4,6 @@
     {
         public long IdCidade { get; set; }
         public string Nome { get; set; }
-        public long CEP { get; set; }
         public Estado Estado { get; set; }
         public long IdEstado { get; set; }
     }

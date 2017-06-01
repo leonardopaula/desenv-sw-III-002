@@ -1,0 +1,28 @@
+INSERT INTO Estado(Nome, UF)VALUES('Acre', 'AC');
+INSERT INTO Estado(Nome, UF) VALUES('Alagoas', 'AL');
+INSERT INTO Estado(Nome, UF) VALUES('Amazonas', 'AM');
+INSERT INTO Estado(Nome, UF) VALUES('Amapá', 'AP');
+INSERT INTO Estado(Nome, UF) VALUES('Bahia', 'BA');
+INSERT INTO Estado(Nome, UF) VALUES('Ceará', 'CE');
+INSERT INTO Estado(Nome, UF) VALUES('Distrito Federal', 'DF');
+INSERT INTO Estado(Nome, UF) VALUES('Espírito Santo', 'ES');
+INSERT INTO Estado(Nome, UF) VALUES('Goiás', 'GO');
+INSERT INTO Estado(Nome, UF) VALUES('Maranhão', 'MA');
+INSERT INTO Estado(Nome, UF) VALUES('Minas Gerais', 'MG');
+INSERT INTO Estado(Nome, UF) VALUES('Mato Grosso do Sul', 'MS');
+INSERT INTO Estado(Nome, UF) VALUES('Mato Grosso', 'MT');
+INSERT INTO Estado(Nome, UF) VALUES('Pará', 'PA');
+INSERT INTO Estado(Nome, UF) VALUES('Paraíba', 'PB');
+INSERT INTO Estado(Nome, UF) VALUES('Pernambuco', 'PE');
+INSERT INTO Estado(Nome, UF) VALUES('Piauí', 'PI');
+INSERT INTO Estado(Nome, UF) VALUES('Paraná', 'PR');
+INSERT INTO Estado(Nome, UF) VALUES('Rio de Janeiro', 'RJ');
+INSERT INTO Estado(Nome, UF) VALUES('Rio Grande do Norte', 'RN');
+INSERT INTO Estado(Nome, UF) VALUES('Rondônia', 'RO');
+INSERT INTO Estado(Nome, UF) VALUES('Roraima', 'RR');
+INSERT INTO Estado(Nome, UF) VALUES('Rio Grande do Sul', 'RS');
+INSERT INTO Estado(Nome, UF) VALUES('Santa Catarina', 'SC');
+INSERT INTO Estado(Nome, UF) VALUES('Sergipe', 'SE');
+INSERT INTO Estado(Nome, UF) VALUES('São Paulo', 'SP');
+INSERT INTO Estado(Nome, UF) VALUES('Tocantins', 'TO');
+GO
