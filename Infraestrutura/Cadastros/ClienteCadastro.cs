@@ -25,6 +25,10 @@ namespace Infraestrutura.Cadastros
             contexto.SaveChanges();
         }
 
+        public Cliente ExisteUsuario(string login, string senha)
+        {
+            return contexto.Cliente.FirstOrDefault(x => x.Login == login && x.Senha == senha);
+        }
 
         public void Salvar(Cliente novoCliente)
         {

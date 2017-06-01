@@ -34,5 +34,26 @@ namespace Web.Controllers
 
             Session["Carrinho"] = carrinho;
         }
+
+        public ActionResult DadosCliente()
+        {
+            List<Produto> carrinho = Session["Carrinho"] as List<Produto> ?? new List<Produto>();
+
+            if (carrinho.Count == 0)
+            {
+                return RedirectToAction("Index", "Venda");
+            }
+            else if (carrinho.Count > 0 && Session["Cliente"] != null)
+            {
+                return RedirectToAction("Pedido");
+            }
+
+            return View();
+        }
+
+        public ActionResult Pedido()
+        {
+            return View();
+        }
     }
 }

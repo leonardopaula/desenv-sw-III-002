@@ -13,7 +13,24 @@ namespace Web.Controllers
         // GET: Cliente
         public ActionResult Index()
         {
+            if (Session["Cliente"] != null)
+                return RedirectToAction("Index", "Venda");
+
             return View();
+        }
+
+        [HttpPost]
+        public bool Login(string login, string senha)
+        {
+            Cliente cliente = cc.ExisteUsuario(login, senha);
+            
+            if (cliente != null)
+            {
+                Session["Cliente"] = cliente;
+                return true;
+            }
+
+            return false;
         }
 
         [HttpPost]
@@ -32,6 +49,7 @@ namespace Web.Controllers
             try
             {
                 cc.Salvar(novoCliente);
+                Session["Cliente"] = novoCliente;
             }catch(Exception e)
             {
                 retorno = false;

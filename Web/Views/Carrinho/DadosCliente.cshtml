@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Dados Cadastrais";
+}
+
+<h4>Dados Cadastrais</h4>
+
+<hr />
+
+<div class="row">
+    <div class="col s12 m6 l6">
+        <h4>Já sou cliente</h4>
+        <div class="row">
+            <div class="col input-field s12">
+                <input id="login" type="text">
+                <label for="login">Login</label>
+            </div>
+            <div class="col input-field s12">
+                <input id="senha" type="password">
+                <label for="senha">Senha</label>
+            </div>
+            <div class="col s12">
+                <button type="button" class="waves-effect waves-light btn botao-login" title="Realizar login">Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6 l6">
+        <h4>Ainda não sou cliente</h4>
+        <div class="row">
+            <div class="col s12">
+                <a href="@Url.Action("Index", "Cliente")" class="waves-effect waves-light btn" title="Cadastrar-me">Cadastrar-me</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/carrinho")

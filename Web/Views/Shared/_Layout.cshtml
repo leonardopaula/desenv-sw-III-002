@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Dominio.Cliente cliente = Session["Cliente"] as Dominio.Cliente;
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -41,7 +45,14 @@
                 <a href="@Url.Action("Index", "Home")" class="brand-logo center">Tabajara</a>
                 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
                 <a href="@Url.Action("Index", "Carrinho")" class="right menu-shopping-cart"><i class="material-icons">shopping_cart</i></a>
-                <a href="@Url.Action("Index", "Cliente")" class="right"><i class="material-icons">perm_identity</i></a>
+                @if (cliente != null)
+                {
+                    <span class="right">@cliente.Nome</span>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", "Cliente")" class="right"><i class="material-icons">perm_identity</i></a>
+                }
                 <ul class="left hide-on-med-and-down">
                     <li><a href="@Url.Action("Index", "Compra")">Repor Estoque</a></li>
                     <li><a href="@Url.Action("Index", "Venda")">Produtos</a></li>
