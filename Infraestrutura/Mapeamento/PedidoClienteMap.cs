@@ -23,6 +23,8 @@ namespace Infraestrutura.Mapeamento
                 m.MapLeftKey("IdPedidoCliente");
                 m.MapRightKey("IdProduto");
             });
+
+            HasRequired(p => p.EnderecoEntrega).WithMany().HasForeignKey(p => p.IdEnderecoEntrega);
         }
     }
 }

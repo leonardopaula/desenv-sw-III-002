@@ -29,6 +29,12 @@ namespace Web
 
             bundles.Add(new ScriptBundle("~/Scripts/venda").Include(
                 "~/Scripts/Venda/index.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/carrinho").Include(
+                "~/Scripts/Carrinho/index.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/cliente").Include(
+                "~/Scripts/Cliente/index.js"));
         }
     }
 }

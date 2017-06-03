@@ -51,11 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\ClienteCadastro.cs" />
     <Compile Include="Cadastros\CompraCadastro.cs" />
     <Compile Include="Cadastros\FornecedorCadastro.cs" />
     <Compile Include="Cadastros\ProdutoCadastro.cs" />
     <Compile Include="EFContext.cs" />
+    <Compile Include="Mapeamento\CidadeMap.cs" />
     <Compile Include="Mapeamento\ClienteMap.cs" />
+    <Compile Include="Mapeamento\EnderecoMap.cs" />
+    <Compile Include="Mapeamento\EstadoMap.cs" />
     <Compile Include="Mapeamento\ExcecaoNFMap.cs" />
     <Compile Include="Mapeamento\FaturamentoMap.cs" />
     <Compile Include="Mapeamento\FuncionarioMap.cs" />

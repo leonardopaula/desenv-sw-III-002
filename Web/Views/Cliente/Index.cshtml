@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h4>Login</h4>
+<div class="row">
+    <div class="col s12 l6 m6">
+        <div class="row">
+            <div class="col input-field s12">
+                <input id="login-u" type="text">
+                <label for="login-u">Login</label>
+            </div>
+            <div class="col input-field s12">
+                <input id="senha-u" type="password">
+                <label for="senha-u">Senha</label>
+            </div>
+            <div class="col s12">
+                <button type="button" class="waves-effect waves-light btn botao-login" title="Realizar login">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h4>Cadastrar</h4>
+<form method="post" action="@Url.Action("Salva", "Cliente")">
+    <div class="row">
+        <div class="input-field col s12 m6 l6">
+            @Html.TextBox("Nome", "")
+            @Html.Label("Nome Completo", new { @for = "Nome" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 l6">
+            @Html.TextBox("Email", "")
+            @Html.Label("E-mail", new { @for = "Email" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 l6">
+            @Html.TextBox("Login", "")
+            @Html.Label("Login", new { @for = "Login" })
+        </div>
+        <div class="input-field col s12 m6 l6">
+            @Html.TextBox("Senha", "", new { @type="password" })
+            @Html.Label("Senha", new { @for = "Senha" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 l6">
+            @Html.TextBox("Rg", "")
+            @Html.Label("RG", new { @for = "Rg" })
+        </div>
+        <div class="input-field col s12 m6 l6">
+            @Html.TextBox("Cpf", "")
+            @Html.Label("CPF", new { @for = "Cpf" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6 offset-s6">
+            <a class="waves-effect waves-light btn btn-gray mobile-button" onclick="CadastroCliente.cancelar()"><i class="material-icons right">report_problem</i>Cancelar</a>
+            <a class="waves-effect waves-light btn mobile-button" onclick="CadastroCliente.salvar_cliente()">Salvar<i class="material-icons right">send</i></a>
+        </div>
+    </div>
+</form>
+
+@Scripts.Render("~/Scripts/cliente")

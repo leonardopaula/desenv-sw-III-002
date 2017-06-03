@@ -149,6 +149,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarrinhoController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\FaturamentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -167,14 +169,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Carrinho\index.js" />
+    <Content Include="Scripts\Cliente\index.js" />
     <Content Include="Scripts\Compra\index.js" />
     <Content Include="Scripts\Compra\listagemNaoRecebidas.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\Venda\index.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -203,6 +205,10 @@
     <Content Include="Views\Venda\_DetalheProduto.cshtml" />
     <Content Include="Views\Compra\ListagemNaoRecebidas.cshtml" />
     <Content Include="Views\Compra\RecebimentoNF.cshtml" />
+    <Content Include="Views\Carrinho\Index.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Carrinho\DadosCliente.cshtml" />
+    <Content Include="Views\Carrinho\Pedido.cshtml" />
     <Content Include="Views\Faturamento\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
