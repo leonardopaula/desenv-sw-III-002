@@ -1,0 +1,100 @@
+﻿@using Web.Helpers
+@{
+    ViewBag.Title = "Reposição de Estoque";
+}
+
+<h4>Reposição de estoque</h4>
+<div class="row">
+    <form method="post" action="@Url.Action("Salva", "Compra")">
+        <div class="col s12 lista-produtos">
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <th colspan="2">Produto</th>
+                        <th>Estoque</th>
+                        <th>Requerido</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var product in ViewBag.produtos)
+                    {
+                        <tr id="lin-@product.IdProduto">
+                            <td>#@product.IdProduto</td>
+                            <td><img src="~/Content/images/produtos/notfound.png" /></td>
+                            <td>
+                                <span>@product.Nome</span>
+                            </td>
+                            <td>@product.QuantidadeEmEstoque</td>
+                            <td>0</td>
+                            <td>
+                                <a data-id="@product.IdProduto" class="waves-effect waves-light btn" href="#modal-fornecedor"><i class="material-icons right">queue</i>Repor</a>
+                                <input id="forn-@product.IdProduto" type="hidden" name="forn_@product.IdProduto" />
+                                <input id="fnome-@product.IdProduto" type="hidden" />
+                                <input id="qtde-@product.IdProduto" type="hidden" name="qtde_@product.IdProduto" />
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <hr /><br/><br/>
+        <div class="row">
+            <div class="col s6 offset-s6">
+                <a class="waves-effect waves-light btn btn-gray mobile-button"><i class="material-icons right">report_problem</i>Cancelar</a>
+                <a class="waves-effect waves-light btn mobile-button" href="#modal-relatorio">Finalizar<i class="material-icons right">send</i></a>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Modal Reposição -->
+<div id="modal-fornecedor" class="modal modal-fornecedor">
+    <div class="modal-content">
+        <h4></h4>
+        <div class="row">
+            <form class="col s12">
+                <div class="input-field col s12 m6 l6">
+                    @Html.TextBox("quantidade", "")
+                    @Html.Label("Quantidade necessária", new { @for = "quantidade" })
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    @Html.DropDownList("fornecedores", new SelectListItem[] {
+                    }, "Selecione uma opção")
+                    @Html.Label("Fornecedor", new { @for = "fornecedores" })
+                </div>
+                <input id="inp-produto" type="hidden" value=""/>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a onclick="Compra.pre_salva_item();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">done</i>Salvar</a>
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat btn-gray mobile-button">Cancelar</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Relatorio -->
+<div id="modal-relatorio" class="modal">
+    <div class="modal-content">
+        <h4></h4>
+        <div class="row">
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Fornecedor</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a onclick="Compra.salva_pedido();" href="javascript:void(0);" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">done</i>Salvar</a>
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat btn-gray mobile-button">Cancelar</a>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/reporEstoque")
