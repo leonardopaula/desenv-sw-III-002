@@ -45,6 +45,51 @@ namespace Migrations
                 Status = Dominio.Enums.StatusCompra.AguardandoRecebimento
             });
 
+            /* Cliente */
+            Dominio.Cliente cli1 = new Dominio.Cliente
+            {
+                Cpf = 83813827816,
+                Email = "leonardopaula@gmail.com",
+                Login = "LSP",
+                Nome = "Leonardo dos Santos Paula",
+                Rg = 01233312,
+                Senha = "lll"
+            };
+            context.Cliente.AddOrUpdate(cli1);
+
+            Dominio.Cidade ci = context.Cidade.Find(1);
+
+            /* Endereço */
+            Dominio.Endereco end = new Dominio.Endereco
+            {
+                CEP = 93115270,
+                Bairro = "Santos Dumont",
+                Cidade = ci,
+                Complemento = "B18 A31",
+                Numero = 36,
+                Rua = "Tomé de Souza"
+            };
+            context.Endereco.AddOrUpdate(end);
+
+            List<Dominio.Produto> lprod = new List<Dominio.Produto>();
+            lprod.Add(context.Produto.Find(1));
+            lprod.Add(context.Produto.Find(2));
+
+            /* PedidoCliente */
+            Dominio.PedidoCliente pc = new Dominio.PedidoCliente
+            {
+                Cliente = cli1,
+                CodigoRastreio = "AA123456789BR",
+                Data = DateTime.Now,
+                EnderecoEntrega = end,
+                NumDocPag = 1,
+                Numero = 234,
+                Status = Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento,
+                Produtos = lprod                
+            };
+            context.PedidoCliente.AddOrUpdate(pc);
+
+
 
             try
             {
