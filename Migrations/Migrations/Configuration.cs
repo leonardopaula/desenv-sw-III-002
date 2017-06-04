@@ -9,6 +9,7 @@ namespace Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            CommandTimeout = Int32.MaxValue; // PC do milhão
         }
 
         protected override void Seed(Infraestrutura.EFContext context)
@@ -43,6 +44,7 @@ namespace Migrations
                 Pedidos = pi,
                 Status = Dominio.Enums.StatusCompra.AguardandoRecebimento
             });
+
 
             try
             {

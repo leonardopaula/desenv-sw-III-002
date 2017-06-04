@@ -14,7 +14,11 @@ namespace Migrations
             AlterColumn("dbo.Estado", "Nome", c => c.String(nullable: false, maxLength: 150, unicode: false));
             AlterColumn("dbo.Estado", "UF", c => c.String(nullable: false, maxLength: 150, unicode: false));
             DropColumn("dbo.Cidade", "CEP");
+
+            // Estava inserindo a Cidade antes do estado
             var arquivos = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + "../../Arquivos/");
+            Array.Sort(arquivos);
+            Array.Reverse(arquivos);
             foreach (var arquivo in arquivos)
             {
                 SqlFile(arquivo);
