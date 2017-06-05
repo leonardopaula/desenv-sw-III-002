@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CartaoDeCreditoService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CartaoDeCreditoService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50022/ServiceCartaoDeCredito.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="RequisicaoSituacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdentificadorPagamento" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequisicaoSituacao" nillable="true" type="tns:RequisicaoSituacao" />
+  <xs:complexType name="RetornoRequisicaoSituacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Situacao" type="tns:SituacaoPagamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoRequisicaoSituacao" nillable="true" type="tns:RetornoRequisicaoSituacao" />
+  <xs:simpleType name="SituacaoPagamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EmAnalise">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Aprovado">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NaoAprovado">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SituacaoPagamento" nillable="true" type="tns:SituacaoPagamento" />
+</xs:schema>

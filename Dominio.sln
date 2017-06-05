@@ -9,12 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "Migrations\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{BAC6A4C4-CC8A-46F1-9385-68BAA6D3A6AD}"
 	ProjectSection(ProjectDependencies) = postProject
+		{940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF} = {940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF}
 		{06163FA2-EF4B-414D-8406-E59834EE855F} = {06163FA2-EF4B-414D-8406-E59834EE855F}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{BE2CF293-EABB-4ACA-8E41-3CBCCDEFC78B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FornecedorService", "FornecedorService\FornecedorService.csproj", "{06163FA2-EF4B-414D-8406-E59834EE855F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartaoDeCreditoService", "CartaoDeCreditoService\CartaoDeCreditoService.csproj", "{940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +45,10 @@ Global
 		{06163FA2-EF4B-414D-8406-E59834EE855F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06163FA2-EF4B-414D-8406-E59834EE855F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06163FA2-EF4B-414D-8406-E59834EE855F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940D868C-C3BE-4C7A-A64E-5AEB0DD6BAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

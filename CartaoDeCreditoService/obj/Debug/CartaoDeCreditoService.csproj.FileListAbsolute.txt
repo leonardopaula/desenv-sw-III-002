@@ -1,0 +1,6 @@
+C:\Users\Aline\Desktop\desenv-sw-III-002\CartaoDeCreditoService\bin\CartaoDeCreditoService.dll.config
+C:\Users\Aline\Desktop\desenv-sw-III-002\CartaoDeCreditoService\bin\CartaoDeCreditoService.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\CartaoDeCreditoService\bin\CartaoDeCreditoService.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\CartaoDeCreditoService\obj\Debug\CartaoDeCreditoService.csprojResolveAssemblyReference.cache
+C:\Users\Aline\Desktop\desenv-sw-III-002\CartaoDeCreditoService\obj\Debug\CartaoDeCreditoService.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\CartaoDeCreditoService\obj\Debug\CartaoDeCreditoService.pdb

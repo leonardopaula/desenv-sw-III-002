@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3966f88b-9680-4a71-8586-166b4cd5d983" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50022/ServiceCartaoDeCredito.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceCartaoDeCredito.disco" MetadataType="Disco" ID="cc84a550-73bf-4da2-8a3b-4c75b5b5de83" SourceId="1" SourceUrl="http://localhost:50022/ServiceCartaoDeCredito.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="d501cb80-51e9-46c7-92e2-8febea9eb4c7" SourceId="1" SourceUrl="http://localhost:50022/ServiceCartaoDeCredito.svc?wsdl" />
+    <MetadataFile FileName="ServiceCartaoDeCredito.xsd" MetadataType="Schema" ID="3a6ea6c3-7122-48d1-bfd3-f00e0375f094" SourceId="1" SourceUrl="http://localhost:50022/ServiceCartaoDeCredito.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceCartaoDeCredito1.xsd" MetadataType="Schema" ID="8b74ff7b-ef49-461c-99fe-f39f2c238e71" SourceId="1" SourceUrl="http://localhost:50022/ServiceCartaoDeCredito.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceCartaoDeCredito2.xsd" MetadataType="Schema" ID="3121cf06-a371-4985-8c85-427e2b5ed65d" SourceId="1" SourceUrl="http://localhost:50022/ServiceCartaoDeCredito.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
