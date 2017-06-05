@@ -128,3 +128,13 @@ textarea.materialize-textarea:focus:not([readonly])+label
 .lista-produtos tbody tr td img{
     float:left;
 }
+
+.collapsible-header {
+    background: #8e24aa;
+    color: white;
+}
+
+.dadosCartao
+{
+    margin-top: -2rem;
+}

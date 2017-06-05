@@ -1,1 +1,95 @@
 ﻿<h4>Pedido</h4>
+
+<div class="row">
+    <div class="col s12">
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">place</i>Endereço de entrega
+                </div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="col s8 m10 l10 input-field">
+                            <input id="endereco" type="text">
+                            <label for="endereco">Endereço</label>
+                        </div>
+                        <div class="col s4 m2 l2 input-field">
+                            <input id="numero" type="text">
+                            <label for="numero">Nº</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 m3 l3 input-field">
+                            <input id="cep" type="text" maxlength="8">
+                            <label for="cep">CEP</label>
+                        </div>
+                        <div class="col s6 m4 l4 input-field">
+                            <select id="formaEntrega">
+                                <option selected value="40010">Sedex</option>
+                                <option value="40215">Sedex 10</option>
+                                <option value="41106">PAC</option>
+                            </select>
+                            <label>Forma de Entrega</label>
+                        </div>
+                        <div class="col s12 m5 l5 input-field">
+                            <button id="btnCalcularFrete" type="button" class="waves-effect waves-light btn" title="Calcular frete">Calcular frete</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="hidden" id="valorFrete" />
+                            <span id="precoPrazo"></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">payment</i>Formas de Pagamento
+                </div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="col s12">
+                            <p>
+                                @Html.RadioButton("MeioPagamento", 1, true, new { @class = "with-gap", @id = "radCartao" })
+                                @Html.Label("Cartão de Crédito", new { @for = "radCartao" })
+                                @Html.RadioButton("MeioPagamento", 2, false, new { @class = "with-gap", @id = "radBoleto" })
+                                @Html.Label("Boleto", new { @for = "radBoleto" })
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row dadosCartao">
+                        <div class="col s12 input-field">
+                            <input id="numeroCartao" type="text">
+                            <label for="numeroCartao">Número</label>
+                        </div>
+                        <div class="col s4 m2 l2 input-field">
+                            <select id="mesValidade">
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    <option>@i.ToString().PadLeft(2, '0')</option>
+                                }
+                            </select>
+                            <label>Validade</label>
+                        </div>
+                        <div class="col s4 m2 l2 input-field">
+                            <select id="anoValidade">
+                                @for (int i = 0; i < 12; i++)
+                                {
+                                    <option>@DateTime.Now.AddYears(i).Year.ToString()</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col s4 m2 l2 input-field">
+                            <input id="codSeguranca" maxlength="3" type="text">
+                            <label for="codSeguranca">Cód. Segurança</label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+@Scripts.Render("~/Scripts/carrinho")

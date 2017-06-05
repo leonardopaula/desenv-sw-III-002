@@ -1,5 +1,6 @@
 ﻿using Dominio;
 using Dominio.Dinamico;
+using Infraestrutura.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,20 @@ namespace Web.Controllers
         public ActionResult Pedido()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult CalculaPrazo()
+        {
+            CorreiosService service = new CorreiosService("40010", "9586000", "1");
+
+            var frete = service.CalculaPrecoPrazo().Servicos.Select(x => new
+            {
+                preco = x.Valor,
+                prazo = x.PrazoEntrega
+            });
+
+            return Json(frete);
         }
     }
 }

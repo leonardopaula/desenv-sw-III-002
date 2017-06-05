@@ -2,6 +2,7 @@
     $(".button-collapse").sideNav();
     $('select').material_select();
     $('.modal').modal();
+    $('.collapsible').collapsible();
 });
 
 var animacaoRodando = false;
