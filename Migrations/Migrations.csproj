@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201706010122050_Inclusao_EnderecoAPedidoCliente.Designer.cs">
       <DependentUpon>201706010122050_Inclusao_EnderecoAPedidoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706010305482_Inclusao_EntidadesEndereco.cs" />
+    <Compile Include="Migrations\201706010305482_Inclusao_EntidadesEndereco.Designer.cs">
+      <DependentUpon>201706010305482_Inclusao_EntidadesEndereco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +106,13 @@
     <EmbeddedResource Include="Migrations\201706010122050_Inclusao_EnderecoAPedidoCliente.resx">
       <DependentUpon>201706010122050_Inclusao_EnderecoAPedidoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706010305482_Inclusao_EntidadesEndereco.resx">
+      <DependentUpon>201706010305482_Inclusao_EntidadesEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Arquivos\cidades.sql" />
+    <Content Include="Arquivos\estados.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

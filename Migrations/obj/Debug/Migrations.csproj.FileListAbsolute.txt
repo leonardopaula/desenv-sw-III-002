@@ -48,23 +48,6 @@ C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrat
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\leonardo\Source\Repos\dev\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
 C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll.config
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Migrations.pdb
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Dominio.dll
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.dll
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.dll
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Dominio.pdb
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.pdb
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.xml
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csprojResolveAssemblyReference.cache
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Criacao_Banco.resources
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
-C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\Aline\Documents\Unisinos\Desenvolvimento de Software III\Trabalho\Desenvolvimento\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Produto.resources
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll.config
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll
@@ -105,3 +88,25 @@ C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_ExcecaoEmCompra.resources
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_ExcecaoEmCompra.resources
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_EnderecoAPedidoCliente.resources
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_EntidadesEndereco.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll.config
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Migrations.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Migrations.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Dominio.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Dominio.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\Infraestrutura.pdb
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.xml
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csprojResolveAssemblyReference.cache
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Criacao_Banco.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Compra.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_Produto.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_ExcecaoEmCompra.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_EnderecoAPedidoCliente.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Inclusao_EntidadesEndereco.resources
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.csproj.GenerateResource.Cache
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
+C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb

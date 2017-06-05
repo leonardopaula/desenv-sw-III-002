@@ -25,6 +25,9 @@ namespace Infraestrutura
         public DbSet<PedidoItemFornecedor> PedidoItemFornecedor { get; set; }
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Estado> Estado { get; set; }
+        public DbSet<Cidade> Cidade { get; set; }
+        public DbSet<Endereco> Endereco { get; set; }
 
         /// <summary>
         /// Definições para todo o contexto
@@ -69,6 +72,9 @@ namespace Infraestrutura
             modelBuilder.Configurations.Add(new PedidoItemFornecedorMap());
             modelBuilder.Configurations.Add(new ProdutoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
+            modelBuilder.Configurations.Add(new EstadoMap());
+            modelBuilder.Configurations.Add(new CidadeMap());
+            modelBuilder.Configurations.Add(new EnderecoMap());
         }
 
 
