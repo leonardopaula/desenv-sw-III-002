@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Infraestrutura.Cadastros;
 using System.Web.Mvc;
-using Dominio;
-using Infraestrutura.Cadastros;
 
 namespace Web.Controllers
 {
@@ -15,8 +10,14 @@ namespace Web.Controllers
         // GET: Faturamento
         public ActionResult Index()
         {
-            ViewBag.Pedidos = fc.pedidosPendentesEnvio();
+            ViewBag.Pedidos = fc.ObterPedidosPagamentoPendente();
 
+            return View();
+        }
+
+        public ActionResult ListagemPendentesEnvio()
+        {
+            ViewBag.Pedidos = fc.ObterPedidosPendentesEnvio();
             return View();
         }
     }

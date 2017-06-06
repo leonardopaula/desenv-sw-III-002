@@ -14,86 +14,86 @@ namespace Migrations
 
         protected override void Seed(Infraestrutura.EFContext context)
         {
-            List<Dominio.Fornecedor> lforn1 = new List<Dominio.Fornecedor>();
-            List<Dominio.Fornecedor> lforn2 = new List<Dominio.Fornecedor>();
-            lforn1.Add(new Dominio.Fornecedor { Nome = "OAS S.A.", Email = "propina@oas.com.br" });
-            lforn1.Add(new Dominio.Fornecedor { Nome = "Odebrecht", Email = "comercial@cx2.com.br" });
-            context.Fornecedor.AddOrUpdate(lforn1[0]);
-            context.Fornecedor.AddOrUpdate(lforn1[1]);
+            //List<Dominio.Fornecedor> lforn1 = new List<Dominio.Fornecedor>();
+            //List<Dominio.Fornecedor> lforn2 = new List<Dominio.Fornecedor>();
+            //lforn1.Add(new Dominio.Fornecedor { Nome = "OAS S.A.", Email = "propina@oas.com.br" });
+            //lforn1.Add(new Dominio.Fornecedor { Nome = "Odebrecht", Email = "comercial@cx2.com.br" });
+            //context.Fornecedor.AddOrUpdate(lforn1[0]);
+            //context.Fornecedor.AddOrUpdate(lforn1[1]);
 
-            lforn2.Add(new Dominio.Fornecedor { Nome = "ANDRADE GUTIERREZ", Email = "c2@ag.com.br" });
-            lforn2.Add(new Dominio.Fornecedor { Nome = "UTC", Email = "utc@utc.com.br" });
-            context.Fornecedor.AddOrUpdate(lforn2[0]);
-            context.Fornecedor.AddOrUpdate(lforn2[1]);
+            //lforn2.Add(new Dominio.Fornecedor { Nome = "ANDRADE GUTIERREZ", Email = "c2@ag.com.br" });
+            //lforn2.Add(new Dominio.Fornecedor { Nome = "UTC", Email = "utc@utc.com.br" });
+            //context.Fornecedor.AddOrUpdate(lforn2[0]);
+            //context.Fornecedor.AddOrUpdate(lforn2[1]);
 
-            var prod = new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, Preco = 199.0f, UrlImagem = "~/Images/Produtos/camiseta tabajara.jpg", QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 };
-            context.Produto.AddOrUpdate(
-                new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, Preco = 329.99f, UrlImagem = "~/Images/Produtos/Jaqueta.png", QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
-                new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, Preco = 2000.0f, UrlImagem = "~/Images/Produtos/iphone.png", QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
-                new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, Preco = 459.0f, UrlImagem = "~/Images/Produtos/mega-drive.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 },
-                prod
-            );
+            //var prod = new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, Preco = 199.0f, UrlImagem = "~/Images/Produtos/camiseta tabajara.jpg", QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 };
+            //context.Produto.AddOrUpdate(
+            //    new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, Preco = 329.99f, UrlImagem = "~/Images/Produtos/Jaqueta.png", QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
+            //    new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, Preco = 2000.0f, UrlImagem = "~/Images/Produtos/iphone.png", QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
+            //    new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, Preco = 459.0f, UrlImagem = "~/Images/Produtos/mega-drive.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 },
+            //    prod
+            //);
 
-            List<Dominio.PedidoItemFornecedor> pi = new List<Dominio.PedidoItemFornecedor>();
-            pi.Add(new Dominio.PedidoItemFornecedor { Fornecedor = lforn1[0], Produto = prod, Quantidade = 100, DataPrevista = DateTime.Now.Date });
+            //List<Dominio.PedidoItemFornecedor> pi = new List<Dominio.PedidoItemFornecedor>();
+            //pi.Add(new Dominio.PedidoItemFornecedor { Fornecedor = lforn1[0], Produto = prod, Quantidade = 100, DataPrevista = DateTime.Now.Date });
 
-            context.Compra.AddOrUpdate(new Dominio.Compra
-            {
-                Data = DateTime.Now.Date,
-                NumeroNF = 952287,
-                Pedidos = pi,
-                Status = Dominio.Enums.StatusCompra.AguardandoRecebimento
-            });
+            //context.Compra.AddOrUpdate(new Dominio.Compra
+            //{
+            //    Data = DateTime.Now.Date,
+            //    NumeroNF = 952287,
+            //    Pedidos = pi,
+            //    Status = Dominio.Enums.StatusCompra.AguardandoRecebimento
+            //});
 
             /* Cliente */
-            Dominio.Cliente cli1 = new Dominio.Cliente
-            {
-                Cpf = 83813827816,
-                Email = "leonardopaula@gmail.com",
-                Login = "LSP",
-                Nome = "Leonardo dos Santos Paula",
-                Rg = 01233312,
-                Senha = "lll"
-            };
-            context.Cliente.AddOrUpdate(cli1);
+            //Dominio.Cliente cli1 = new Dominio.Cliente
+            //{
+            //    Cpf = 83813827816,
+            //    Email = "leonardopaula@gmail.com",
+            //    Login = "LSP",
+            //    Nome = "Leonardo dos Santos Paula",
+            //    Rg = 01233312,
+            //    Senha = "lll"
+            //};
+            //context.Cliente.AddOrUpdate(cli1);
 
-            Dominio.Cidade ci = context.Cidade.Find(1);
+            //Dominio.Cidade ci = context.Cidade.Find(1);
 
-            /* Endereço */
-            Dominio.Endereco end = new Dominio.Endereco
-            {
-                CEP = 93115270,
-                Bairro = "Santos Dumont",
-                Cidade = ci,
-                Complemento = "B18 A31",
-                Numero = 36,
-                Rua = "Tomé de Souza"
-            };
-            context.Endereco.AddOrUpdate(end);
+            ///* Endereço */
+            //Dominio.Endereco end = new Dominio.Endereco
+            //{
+            //    CEP = 93115270,
+            //    Bairro = "Santos Dumont",
+            //    Cidade = ci,
+            //    Complemento = "B18 A31",
+            //    Numero = 36,
+            //    Rua = "Tomé de Souza"
+            //};
+            //context.Endereco.AddOrUpdate(end);
 
-            List<Dominio.Produto> lprod = new List<Dominio.Produto>();
-            lprod.Add(context.Produto.Find(1));
-            lprod.Add(context.Produto.Find(2));
+            //List<Dominio.Produto> lprod = new List<Dominio.Produto>();
+            //lprod.Add(context.Produto.Find(1));
+            //lprod.Add(context.Produto.Find(2));
 
-            /* PedidoCliente */
-            Dominio.PedidoCliente pc = new Dominio.PedidoCliente
-            {
-                Cliente = cli1,
-                CodigoRastreio = "AA123456789BR",
-                Data = DateTime.Now,
-                EnderecoEntrega = end,
-                NumDocPag = 1,
-                Numero = 234,
-                Status = Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento,
-                Produtos = lprod                
-            };
-            context.PedidoCliente.AddOrUpdate(pc);
+            ///* PedidoCliente */
+            //Dominio.PedidoCliente pc = new Dominio.PedidoCliente
+            //{
+            //    Cliente = cli1,
+            //    CodigoRastreio = "AA123456789BR",
+            //    Data = DateTime.Now,
+            //    EnderecoEntrega = end,
+            //    NumDocPag = 1,
+            //    Numero = 234,
+            //    Status = Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento,
+            //    Produtos = lprod                
+            //};
+            //context.PedidoCliente.AddOrUpdate(pc);
 
 
 
             try
             {
-                context.SaveChanges();
+               // context.SaveChanges();
             }catch(System.Data.Entity.Validation.DbEntityValidationException e)
             {
                 string mensagem = string.Empty;

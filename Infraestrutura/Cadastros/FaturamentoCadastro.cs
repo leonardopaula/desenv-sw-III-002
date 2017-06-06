@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Dominio;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dominio;
 
 namespace Infraestrutura.Cadastros
 {
@@ -15,12 +12,22 @@ namespace Infraestrutura.Cadastros
             contexto = new EFContext();
         }
 
-        public List<PedidoCliente> pedidosPendentesEnvio()
+        public List<PedidoCliente> ObterPedidosPagamentoPendente()
         {
             IQueryable<PedidoCliente> pc = contexto.PedidoCliente
                 .Include("Cliente")
                 .Include("Produtos")
                 .Where(pec => pec.Status == Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento);
+
+            return pc.ToList();
+        }
+
+        public List<PedidoCliente> ObterPedidosPendentesEnvio()
+        {
+            IQueryable<PedidoCliente> pc = contexto.PedidoCliente
+                .Include("Cliente")
+                .Include("Produtos")
+                .Where(pec => pec.Status == Dominio.Enums.StatusPedido.PendenteEnvio);
 
             return pc.ToList();
         }

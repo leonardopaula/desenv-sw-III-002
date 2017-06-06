@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Cadastros\ClienteCadastro.cs" />
     <Compile Include="Cadastros\CompraCadastro.cs" />
+    <Compile Include="Cadastros\FaturamentoCadastro.cs" />
     <Compile Include="Cadastros\FornecedorCadastro.cs" />
     <Compile Include="Cadastros\ProdutoCadastro.cs" />
     <Compile Include="EFContext.cs" />

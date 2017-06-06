@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Pedidos pendentes de envio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Pedidos pendentes de envio</h4>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Número NF</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pedido in ViewBag.Pedidos)
+            {
+            <tr>
+                <td><input type="checkbox" id="@pedido.IdPedidoCliente" /></td>
+                <td>@pedido.Numero</td>
+                <td>@pedido.Data</td>
+            </tr>
+        }
+        <tr>
+            <td>
+                <a onclick="ListagemPendentesEnvio.enviar();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Enviar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

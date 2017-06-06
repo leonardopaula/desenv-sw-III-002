@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201706010305482_Inclusao_EntidadesEndereco.Designer.cs">
       <DependentUpon>201706010305482_Inclusao_EntidadesEndereco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706062226128_Ajuste_RelacionamentoFornecedorProduto.cs" />
+    <Compile Include="Migrations\201706062226128_Ajuste_RelacionamentoFornecedorProduto.Designer.cs">
+      <DependentUpon>201706062226128_Ajuste_RelacionamentoFornecedorProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706010305482_Inclusao_EntidadesEndereco.resx">
       <DependentUpon>201706010305482_Inclusao_EntidadesEndereco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706062226128_Ajuste_RelacionamentoFornecedorProduto.resx">
+      <DependentUpon>201706062226128_Ajuste_RelacionamentoFornecedorProduto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

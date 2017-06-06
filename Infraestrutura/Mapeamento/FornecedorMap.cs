@@ -16,8 +16,8 @@ namespace Infraestrutura.Mapeamento
             .WithMany(f => f.Fornecedores)
             .Map(m =>
             {
-                m.MapLeftKey("IdProduto");
-                m.MapRightKey("IdFornecedor");
+                m.MapLeftKey("IdFornecedor");
+                m.MapRightKey("IdProduto");
                 m.ToTable("FornecedorProduto");
             });
         }

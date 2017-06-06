@@ -210,6 +210,7 @@
     <Content Include="Views\Carrinho\DadosCliente.cshtml" />
     <Content Include="Views\Carrinho\Pedido.cshtml" />
     <Content Include="Views\Faturamento\Index.cshtml" />
+    <Content Include="Views\Faturamento\ListagemPendentesEnvio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
