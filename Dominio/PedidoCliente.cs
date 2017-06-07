@@ -13,7 +13,7 @@ namespace Dominio
         public String CodigoRastreio { get; set; }
         public StatusPedido Status { get; set; }
         public int Numero { get; set; }
-        public int NumDocPag { get; set; }
+        public int? NumDocPag { get; set; }
         public long IdCliente { get; set; }
         public Cliente Cliente { get; set; }
         public DateTime Data { get; set; }

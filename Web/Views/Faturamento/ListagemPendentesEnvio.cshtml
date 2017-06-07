@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Web.Helpers
+@{
     ViewBag.Title = "Pedidos pendentes de envio";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -8,6 +9,7 @@
 <table>
     <thead>
         <tr>
+            <th>Selecionar</th>
             <th>Número NF</th>
             <th>Data</th>
             <th></th>
@@ -17,15 +19,20 @@
         @foreach (var pedido in ViewBag.Pedidos)
             {
             <tr>
-                <td><input type="checkbox" id="@pedido.IdPedidoCliente" /></td>
+                <td>
+                    @Html.CheckBoxSimple("selecionar", new { @class = "filled-in", value = @pedido.IdPedidoCliente })
+                    @Html.Label(" ", new { @for = "selecionar" })
+                </td>
                 <td>@pedido.Numero</td>
                 <td>@pedido.Data</td>
             </tr>
         }
         <tr>
             <td>
-                <a onclick="ListagemPendentesEnvio.enviar();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Enviar</a>
+                <a onclick="ListagemPendentesDeEnvio.enviar();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Enviar</a>
             </td>
         </tr>
     </tbody>
 </table>
+
+@Scripts.Render("~/Scripts/listagemPendentesEnvio")

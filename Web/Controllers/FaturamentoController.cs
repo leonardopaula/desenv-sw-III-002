@@ -1,4 +1,5 @@
 ﻿using Infraestrutura.Cadastros;
+using System;
 using System.Web.Mvc;
 
 namespace Web.Controllers
@@ -19,6 +20,21 @@ namespace Web.Controllers
         {
             ViewBag.Pedidos = fc.ObterPedidosPendentesEnvio();
             return View();
+        }
+
+        public ActionResult Enviar(string pedidos)
+        {
+            string[] idsPedidos = pedidos.Split(',');
+            bool retorno = true;
+            string mensagem = string.Empty;
+            try
+            {
+                fc.EnviarPedidos(idsPedidos);
+            }catch(Exception e)
+            {
+                mensagem = e.Message;
+            }
+            return Json(new { Situacao = retorno, Mensagem = retorno ? "Pedidos enviados com sucesso" : mensagem }); ;
         }
     }
 }

@@ -35,6 +35,9 @@ namespace Web
 
             bundles.Add(new ScriptBundle("~/Scripts/cliente").Include(
                 "~/Scripts/Cliente/index.js"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/listagemPendentesEnvio").Include(
+                "~/Scripts/Faturamento/listagemPendentesDeEnvio.js"));
         }
     }
 }

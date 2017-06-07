@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,6 +31,41 @@ namespace Infraestrutura.Cadastros
                 .Where(pec => pec.Status == Dominio.Enums.StatusPedido.PendenteEnvio);
 
             return pc.ToList();
+        }
+
+        public void EnviarPedidos(string[] idPedidos)
+        {
+            string cepUnisinos = "93022750";
+            var servicoEmail = new Util.EmailService();
+            var servicoCorreios = new Correios.CalcPrecoPrazoWSSoapClient("CalcPrecoPrazoWSSoap");
+            foreach (var id in idPedidos)
+            {
+                if (!string.IsNullOrEmpty(id))
+                {
+                    long idPesquisa = Convert.ToInt64(id);
+                    var pedido = contexto.PedidoCliente
+                        .Include("Cliente")
+                        .Include("EnderecoEntrega")
+                        .FirstOrDefault(p => p.IdPedidoCliente == idPesquisa);
+                    servicoCorreios.Open();
+                    var retorno = servicoCorreios.CalcPrazoData(
+                        "41106", // PAC Varejo
+                        cepUnisinos,
+                        pedido.EnderecoEntrega.CEP.ToString(),
+                        DateTime.Now.ToString("dd/MM/yyyy"));
+
+                    if (retorno.Servicos.Count() > 0)
+                    {
+                        servicoEmail.SendEmail(
+                        new List<string>() { pedido.Cliente.Email },
+                        "Envio",
+                        "Olá " + pedido.Cliente.Nome +
+                        ", \n Seu pedido será enviado em breve." +
+                        "O prazo de entrega de seu pedido pelos correios é " + retorno.Servicos.FirstOrDefault().PrazoEntrega + " dias.");
+                    }
+                }
+            }
+            
         }
     }
 }

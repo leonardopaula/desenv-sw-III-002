@@ -173,6 +173,7 @@
     <Content Include="Scripts\Cliente\index.js" />
     <Content Include="Scripts\Compra\index.js" />
     <Content Include="Scripts\Compra\listagemNaoRecebidas.js" />
+    <Content Include="Scripts\Faturamento\listagemPendentesDeEnvio.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\Venda\index.js" />
