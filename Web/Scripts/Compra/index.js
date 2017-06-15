@@ -28,7 +28,7 @@ Compra = {
     pre_salva_item: function () {
         var fornecedor = $('#fornecedores').val();
         var quantidade = $('#quantidade').val();
-        
+
         if (quantidade != '' && fornecedor != 'Selecione') {
             var prod = $('#inp-produto').val();
             $('#qtde-' + prod).val(quantidade);
@@ -36,8 +36,8 @@ Compra = {
             $('#lin-' + prod + ' td:eq(4)').html($('#quantidade').val());
             $('#fnome-' + prod).val($('#fornecedores option[value="' + $('#fornecedores').val() + '"]').html());
         } else {
-            var msg = 'Verifique: se você digitou uma quantidade válida e se selecionou um fornecedor.';
-            
+            var msg = 'Verifique: se você digitou uma quantidade válida e/ou se selecionou um fornecedor.';
+
             Materialize.toast(msg, 4000);
         }
         $('.modal-fornecedor').modal('close');
@@ -45,18 +45,31 @@ Compra = {
 
     relatorio: function () {
         tbl = '';
+        var totalProdutos = $('table:eq(0) tbody tr').length;
+        var totalNaoSelecionados = 0;
         $('table:eq(0) tbody tr').each(function (k, v) {
-            
+
             id = $(v).attr('id').replace('lin-', '');
-            if ($('#forn-' + id).val() != "") {
+            if ($('#forn-' + id).val() != "" &&
+                $('#qtde-' + id).val() != "" &&
+                $('#fnome-' + id).val() != "") {
                 tbl += '<tr>';
                 tbl += '<td>' + $('#lin-' + id + ' td:eq(2)').html() + '</td>';
                 tbl += '<td>' + $('#qtde-' + id).val() + '</td>';
                 tbl += '<td>' + $('#fnome-' + id).val() + '</td>';
                 tbl += '</tr>';
+            } else {
+                totalNaoSelecionados++;
             }
         });
-        $('#modal-relatorio table tbody').html(tbl);
+        if (totalNaoSelecionados == totalProdutos) {
+            var msg = 'Nenhuma compra foi efetuada.\n Selecione uma quantidade e um fornecedor para os produtos que deseja repor o estoque.';
+
+            Materialize.toast(msg, 4000);
+            $('#modal-relatorio').modal('close');
+        } else {
+            $('#modal-relatorio table tbody').html(tbl);
+        }
     },
 
     salva_pedido: function () {
