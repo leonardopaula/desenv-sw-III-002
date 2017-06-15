@@ -26,12 +26,20 @@
 
 Compra = {
     pre_salva_item: function () {
-        var prod = $('#inp-produto').val();
-        $('#qtde-' + prod).val($('#quantidade').val());
-        $('#forn-' + prod).val($('#fornecedores').val());
-        $('#lin-' + prod + ' td:eq(4)').html($('#quantidade').val());
-        $('#fnome-' + prod).val($('#fornecedores option[value="' + $('#fornecedores').val() + '"]').html());
-
+        var fornecedor = $('#fornecedores').val();
+        var quantidade = $('#quantidade').val();
+        
+        if (quantidade != '' && fornecedor != 'Selecione') {
+            var prod = $('#inp-produto').val();
+            $('#qtde-' + prod).val(quantidade);
+            $('#forn-' + prod).val(fornecedor);
+            $('#lin-' + prod + ' td:eq(4)').html($('#quantidade').val());
+            $('#fnome-' + prod).val($('#fornecedores option[value="' + $('#fornecedores').val() + '"]').html());
+        } else {
+            var msg = 'Verifique: se você digitou uma quantidade válida e se selecionou um fornecedor.';
+            
+            Materialize.toast(msg, 4000);
+        }
         $('.modal-fornecedor').modal('close');
     },
 
