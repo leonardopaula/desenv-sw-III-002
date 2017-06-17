@@ -1,6 +1,7 @@
 ﻿using Dominio;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Infraestrutura.Cadastros
@@ -33,6 +34,23 @@ namespace Infraestrutura.Cadastros
             return pc.ToList();
         }
 
+        public List<PedidoCliente> ObterPedidosAguardandoColeta()
+        {
+            IQueryable<PedidoCliente> pc = contexto.PedidoCliente
+                .Include("Cliente")
+                .Include("Produtos")
+                .Where(pec => pec.Status == Dominio.Enums.StatusPedido.AguardandoColeta);
+
+            return pc.ToList();
+        }
+
+        public void AlterarStatusParaAguardandoColeta(PedidoCliente pedido)
+        {
+            pedido.Status = Dominio.Enums.StatusPedido.AguardandoColeta;
+            contexto.Entry(pedido).State = EntityState.Modified;
+            contexto.SaveChanges();
+        }
+
         public void EnviarPedidos(string[] idPedidos)
         {
             string cepUnisinos = "93022750";
@@ -63,6 +81,7 @@ namespace Infraestrutura.Cadastros
                         }
                         else
                         {
+                            AlterarStatusParaAguardandoColeta(pedido);
                             servicoEmail.SendEmail(
                                 new List<string>() { pedido.Cliente.Email },
                                 "Envio",

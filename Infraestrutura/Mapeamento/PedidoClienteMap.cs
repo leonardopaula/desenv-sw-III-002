@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Infraestrutura.Mapeamento
@@ -9,7 +10,8 @@ namespace Infraestrutura.Mapeamento
         {
             ToTable("PedidoCliente");
             HasKey(p => p.IdPedidoCliente);
-            
+            Property(p => p.IdPedidoCliente).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
             Property(p => p.Status).IsRequired();
             Property(p => p.Numero).IsRequired();
             Property(p => p.Data).IsRequired();
@@ -18,12 +20,6 @@ namespace Infraestrutura.Mapeamento
             Property(p => p.NumDocPag).IsOptional();
 
             HasRequired(p => p.Cliente).WithMany().HasForeignKey(p => p.IdCliente);
-            HasMany(p => p.Produtos).WithMany().Map(m => {
-                m.ToTable("PedidoCliente_Produtos");
-                m.MapLeftKey("IdPedidoCliente");
-                m.MapRightKey("IdProduto");
-            });
-
             HasRequired(p => p.EnderecoEntrega).WithMany().HasForeignKey(p => p.IdEnderecoEntrega);
         }
     }

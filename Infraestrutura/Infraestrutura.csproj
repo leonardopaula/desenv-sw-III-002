@@ -67,6 +67,7 @@
     <Compile Include="Mapeamento\NotaFiscalMap.cs" />
     <Compile Include="Mapeamento\PagamentoMap.cs" />
     <Compile Include="Mapeamento\PedidoClienteMap.cs" />
+    <Compile Include="Mapeamento\PedidoClienteProdutoMap.cs" />
     <Compile Include="Mapeamento\PedidoItemFornecedorMap.cs" />
     <Compile Include="Mapeamento\ProdutoMap.cs" />
     <Compile Include="Mapeamento\CompraMap.cs" />

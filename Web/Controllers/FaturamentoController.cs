@@ -37,5 +37,16 @@ namespace Web.Controllers
             }
             return Json(new { Situacao = retorno, Mensagem = retorno ? "Pedidos enviados com sucesso" : mensagem }); ;
         }
+
+        public ActionResult ListagemEmissaoDocTransporte()
+        {
+            ViewBag.Pedidos = fc.ObterPedidosAguardandoColeta();
+            return View();
+        }
+
+        public ActionResult EmitirDocumentos(string idPedidos)
+        {
+            return View();
+        }
     }
 }

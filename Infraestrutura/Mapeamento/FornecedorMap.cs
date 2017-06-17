@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Infraestrutura.Mapeamento
@@ -9,6 +10,7 @@ namespace Infraestrutura.Mapeamento
         {
             ToTable("Fornecedor");
             HasKey(f => f.IdFornecedor);
+            Property(f => f.IdFornecedor).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(f => f.Nome).HasMaxLength(150).IsRequired();
             Property(f => f.Email).HasMaxLength(100).IsRequired();
 

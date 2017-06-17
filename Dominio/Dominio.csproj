@@ -56,6 +56,7 @@
     <Compile Include="PedidoCliente.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="Fornecedor.cs" />
+    <Compile Include="PedidoClienteProduto.cs" />
     <Compile Include="PedidoItemFornecedor.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

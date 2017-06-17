@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Infraestrutura.Mapeamento
@@ -9,6 +10,7 @@ namespace Infraestrutura.Mapeamento
         {
             ToTable("NotaFiscal");
             HasKey(n => n.IdNotaFiscal);
+            Property(n => n.IdNotaFiscal).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(n => n.Impostos).HasPrecision(10, 3).IsRequired();
             Property(n => n.ValorTotal).HasPrecision(10, 3).IsRequired();
             HasRequired(n => n.Faturamento).WithOptional(p => p.NotaFiscal);

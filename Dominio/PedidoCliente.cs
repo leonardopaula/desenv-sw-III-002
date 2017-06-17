@@ -9,7 +9,7 @@ namespace Dominio
         public PedidoCliente() { }
 
         public long IdPedidoCliente { get; set; }
-        public List<Produto> Produtos {get; set; }
+        public List<PedidoClienteProduto> Produtos {get; set; }
         public String CodigoRastreio { get; set; }
         public StatusPedido Status { get; set; }
         public int Numero { get; set; }

@@ -1,10 +1,10 @@
 ﻿@using Web.Helpers
 @{
-    ViewBag.Title = "Pedidos pendentes de envio";
+    ViewBag.Title = "Emissão de documento de transporte";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h4>Pedidos pendentes de envio</h4>
+<h4>Emissão de documento de transporte</h4>
 <div class="row">
     <table>
         <thead>
@@ -29,11 +29,9 @@
             }
             <tr>
                 <td>
-                    <a onclick="ListagemPendentesDeEnvio.enviar();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Enviar</a>
+                    <a onclick="ListagemEmitirDocTransp.emitir();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Emitir documentos</a>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
-@Scripts.Render("~/Scripts/listagemPendentesEnvio")
