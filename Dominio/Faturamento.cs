@@ -12,7 +12,7 @@
         public long IdPagamento { get; set; }
         public Pagamento Pagamento { get; set; }
 
-        public long IdNotaFiscal { get; set; }
+        public long? IdNotaFiscal { get; set; }
         public NotaFiscal NotaFiscal { get; set; }
     }
 }

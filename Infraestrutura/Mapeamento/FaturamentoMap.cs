@@ -9,7 +9,6 @@ namespace Infraestrutura.Mapeamento
         {
             ToTable("Faturamento");
             HasKey(f => f.IdFaturamento);
-            HasRequired(f => f.NotaFiscal).WithOptional(n => n.Faturamento);
             HasRequired(f => f.PedidoCliente).WithOptional(p => p.Faturamento);
             HasRequired(f => f.Pagamento).WithOptional(p => p.Faturamento);
         }

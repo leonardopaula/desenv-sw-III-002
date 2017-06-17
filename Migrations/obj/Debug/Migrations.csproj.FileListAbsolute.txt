@@ -111,3 +111,4 @@ C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.dll
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Ajuste_RelacionamentoFornecedorProduto.resources
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Alteracao_RelacionamentoFaturamentoNotaFiscal.resources

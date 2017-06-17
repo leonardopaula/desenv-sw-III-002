@@ -77,6 +77,10 @@
     <Compile Include="Migrations\201706062226128_Ajuste_RelacionamentoFornecedorProduto.Designer.cs">
       <DependentUpon>201706062226128_Ajuste_RelacionamentoFornecedorProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706170012385_Alteracao_RelacionamentoFaturamentoNotaFiscal.cs" />
+    <Compile Include="Migrations\201706170012385_Alteracao_RelacionamentoFaturamentoNotaFiscal.Designer.cs">
+      <DependentUpon>201706170012385_Alteracao_RelacionamentoFaturamentoNotaFiscal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -115,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706062226128_Ajuste_RelacionamentoFornecedorProduto.resx">
       <DependentUpon>201706062226128_Ajuste_RelacionamentoFornecedorProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170012385_Alteracao_RelacionamentoFaturamentoNotaFiscal.resx">
+      <DependentUpon>201706170012385_Alteracao_RelacionamentoFaturamentoNotaFiscal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
