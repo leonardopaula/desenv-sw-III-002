@@ -6,8 +6,7 @@
         for (var i = 0; i < pedidosSelecionados.length; i++) {
             idsPedidos = idsPedidos + "," + pedidosSelecionados[i].value;
         }
-        console.log(idsPedidos);
-
+        
         $.post(base_url + 'Faturamento/Enviar'
               , { pedidos: idsPedidos }
               , function (json) {
@@ -15,11 +14,8 @@
                       document.location = base_url + 'Faturamento/ListagemPendentesEnvio/';
                   } else {
 
-                      var msg = 'Verifique:\n';
-                      $.each(json, function (k, v) {
-                          msg += v.Mensagem;
-                      });
-
+                      var msg = 'Verifique:\n ' + json.Mensagem;
+                     
                       Materialize.toast(msg, 4000);
                   }
               });

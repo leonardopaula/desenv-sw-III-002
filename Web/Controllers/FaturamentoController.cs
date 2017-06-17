@@ -32,6 +32,7 @@ namespace Web.Controllers
                 fc.EnviarPedidos(idsPedidos);
             }catch(Exception e)
             {
+                retorno = false;
                 mensagem = e.Message;
             }
             return Json(new { Situacao = retorno, Mensagem = retorno ? "Pedidos enviados com sucesso" : mensagem }); ;

@@ -56,16 +56,25 @@ namespace Infraestrutura.Cadastros
 
                     if (retorno.Servicos.Count() > 0)
                     {
-                        servicoEmail.SendEmail(
-                        new List<string>() { pedido.Cliente.Email },
-                        "Envio",
-                        "Olá " + pedido.Cliente.Nome +
-                        ", \n Seu pedido será enviado em breve." +
-                        "O prazo de entrega de seu pedido pelos correios é " + retorno.Servicos.FirstOrDefault().PrazoEntrega + " dias.");
+                        if (!string.IsNullOrEmpty(retorno.Servicos.FirstOrDefault().Erro) ||
+                            !string.IsNullOrEmpty(retorno.Servicos.FirstOrDefault().MsgErro))
+                        {
+                            throw new Exception(retorno.Servicos.FirstOrDefault().Erro + " - " + retorno.Servicos.FirstOrDefault().MsgErro);
+                        }
+                        else
+                        {
+                            servicoEmail.SendEmail(
+                                new List<string>() { pedido.Cliente.Email },
+                                "Envio",
+                                "Olá " + pedido.Cliente.Nome +
+                                ", \n Seu pedido será enviado em breve." +
+                                "O prazo de entrega de seu pedido pelos correios é " + retorno.Servicos.FirstOrDefault().PrazoEntrega + " dias.");
+                        }
+
                     }
                 }
             }
-            
+
         }
     }
 }
