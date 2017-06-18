@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.Dinamico;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,6 +34,44 @@ namespace Infraestrutura.Cadastros
                                            where p.QuantidadeEmEstoque > 0
                                            select p;
             return produtos.ToList();
+        }
+
+        public FinalizarPedidoRetorno FinalizarPedido(List<Produto> carrinho)
+        {
+            FinalizarPedidoRetorno resultadoFinalizacao = new FinalizarPedidoRetorno();
+
+
+            return resultadoFinalizacao;
+        }
+
+        public bool ValidaQuantidade(long idProduto, int count)
+        {
+            return (from p in contexto.Produto where p.IdProduto == idProduto && ((p.QuantidadeEmEstoque - count) > 0) select p).Any();
+        }
+
+        public bool ValidaQuantidadeEstoque(List<Produto> carrinho)
+        {
+            List<ProdutoCarrinho> carrinhoGroup = carrinho
+                .GroupBy(x => x.IdProduto)
+                .Select(x => new ProdutoCarrinho
+                {
+                    Quantidade = x.Count(),
+                    Produto = x.FirstOrDefault()
+                }).ToList();
+
+
+            bool quantidadeValida = true;
+
+            foreach (ProdutoCarrinho item in carrinhoGroup)
+            {
+                if (!ValidaQuantidade(item.Produto.IdProduto, item.Quantidade))
+                {
+                    quantidadeValida = false;
+                    break;
+                }
+            }
+
+            return quantidadeValida;
         }
     }
 }

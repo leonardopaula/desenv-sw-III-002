@@ -151,3 +151,11 @@ textarea.materialize-textarea:focus:not([readonly])+label
 {
     margin-top: -2rem;
 }
+
+#precoPrazo {
+    margin: 0px;
+}
+
+.autocomplete-content {
+    position: absolute !important;
+}

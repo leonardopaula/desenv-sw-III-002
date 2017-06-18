@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Cidade.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Dinamico\DadosPedido.cs" />
+    <Compile Include="Dinamico\FinalizarPedidoRetorno.cs" />
     <Compile Include="Dinamico\ProdutoCarrinho.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Enums\MeioPagamento.cs" />

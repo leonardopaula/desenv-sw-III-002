@@ -39,7 +39,7 @@ namespace Infraestrutura.Util
             sCepDestino = cepDestino;
             nVlPeso = peso;
             nCdFormato = 1;
-            nVlComprimento = nVlAltura = nVlLargura = nVlDiametro = 50.0m;
+            nVlComprimento = nVlAltura = nVlLargura = nVlDiametro = 20.0m;
             sCdMaoPropria = "N";
             nVlValorDeclarado = 0.0m;
             sCdAvisoRecebimento = "N";
