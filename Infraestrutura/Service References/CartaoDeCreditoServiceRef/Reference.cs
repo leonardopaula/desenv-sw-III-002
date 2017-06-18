@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Infraestrutura.CartaoDeCreditoService {
+namespace Infraestrutura.CartaoDeCreditoServiceRef {
     using System.Runtime.Serialization;
     using System;
     
@@ -68,7 +68,7 @@ namespace Infraestrutura.CartaoDeCreditoService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Infraestrutura.CartaoDeCreditoService.SituacaoPagamento SituacaoField;
+        private Infraestrutura.CartaoDeCreditoServiceRef.SituacaoPagamento SituacaoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -81,7 +81,7 @@ namespace Infraestrutura.CartaoDeCreditoService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Infraestrutura.CartaoDeCreditoService.SituacaoPagamento Situacao {
+        public Infraestrutura.CartaoDeCreditoServiceRef.SituacaoPagamento Situacao {
             get {
                 return this.SituacaoField;
             }
@@ -118,23 +118,23 @@ namespace Infraestrutura.CartaoDeCreditoService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CartaoDeCreditoService.IServiceCartaoDeCredito")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CartaoDeCreditoServiceRef.IServiceCartaoDeCredito")]
     public interface IServiceCartaoDeCredito {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCartaoDeCredito/ObterSituacaoPagamento", ReplyAction="http://tempuri.org/IServiceCartaoDeCredito/ObterSituacaoPagamentoResponse")]
-        Infraestrutura.CartaoDeCreditoService.RetornoRequisicaoSituacao ObterSituacaoPagamento(Infraestrutura.CartaoDeCreditoService.RequisicaoSituacao requisicao);
+        Infraestrutura.CartaoDeCreditoServiceRef.RetornoRequisicaoSituacao ObterSituacaoPagamento(Infraestrutura.CartaoDeCreditoServiceRef.RequisicaoSituacao requisicao);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceCartaoDeCredito/ObterSituacaoPagamento", ReplyAction="http://tempuri.org/IServiceCartaoDeCredito/ObterSituacaoPagamentoResponse")]
-        System.Threading.Tasks.Task<Infraestrutura.CartaoDeCreditoService.RetornoRequisicaoSituacao> ObterSituacaoPagamentoAsync(Infraestrutura.CartaoDeCreditoService.RequisicaoSituacao requisicao);
+        System.Threading.Tasks.Task<Infraestrutura.CartaoDeCreditoServiceRef.RetornoRequisicaoSituacao> ObterSituacaoPagamentoAsync(Infraestrutura.CartaoDeCreditoServiceRef.RequisicaoSituacao requisicao);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceCartaoDeCreditoChannel : Infraestrutura.CartaoDeCreditoService.IServiceCartaoDeCredito, System.ServiceModel.IClientChannel {
+    public interface IServiceCartaoDeCreditoChannel : Infraestrutura.CartaoDeCreditoServiceRef.IServiceCartaoDeCredito, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceCartaoDeCreditoClient : System.ServiceModel.ClientBase<Infraestrutura.CartaoDeCreditoService.IServiceCartaoDeCredito>, Infraestrutura.CartaoDeCreditoService.IServiceCartaoDeCredito {
+    public partial class ServiceCartaoDeCreditoClient : System.ServiceModel.ClientBase<Infraestrutura.CartaoDeCreditoServiceRef.IServiceCartaoDeCredito>, Infraestrutura.CartaoDeCreditoServiceRef.IServiceCartaoDeCredito {
         
         public ServiceCartaoDeCreditoClient() {
         }
@@ -155,11 +155,11 @@ namespace Infraestrutura.CartaoDeCreditoService {
                 base(binding, remoteAddress) {
         }
         
-        public Infraestrutura.CartaoDeCreditoService.RetornoRequisicaoSituacao ObterSituacaoPagamento(Infraestrutura.CartaoDeCreditoService.RequisicaoSituacao requisicao) {
+        public Infraestrutura.CartaoDeCreditoServiceRef.RetornoRequisicaoSituacao ObterSituacaoPagamento(Infraestrutura.CartaoDeCreditoServiceRef.RequisicaoSituacao requisicao) {
             return base.Channel.ObterSituacaoPagamento(requisicao);
         }
         
-        public System.Threading.Tasks.Task<Infraestrutura.CartaoDeCreditoService.RetornoRequisicaoSituacao> ObterSituacaoPagamentoAsync(Infraestrutura.CartaoDeCreditoService.RequisicaoSituacao requisicao) {
+        public System.Threading.Tasks.Task<Infraestrutura.CartaoDeCreditoServiceRef.RetornoRequisicaoSituacao> ObterSituacaoPagamentoAsync(Infraestrutura.CartaoDeCreditoServiceRef.RequisicaoSituacao requisicao) {
             return base.Channel.ObterSituacaoPagamentoAsync(requisicao);
         }
     }

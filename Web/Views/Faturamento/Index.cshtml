@@ -10,16 +10,26 @@
         <tr>
             <th>Número</th>
             <th>Cliente</th>
+            <th>Status</th>
             <th>Valor</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var pedido in ViewBag.Pedidos)
         {
             <tr>
-                <th>@pedido.Numero</th>
-                <th>@pedido.Cliente.Nome</th>
+                <td>@pedido.Numero</td>
+                <td>@pedido.Cliente.Nome</td>
+                
+                    @if (pedido.Status == Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento)
+                    {
+                        <td>Aguardando Confirmação de Pagamento</td>
+                    }
+                    else
+                    {
+                        <td>Pendente de Envio</td>
+                    }
+                
                 @{
                     var total = 0;
                     foreach (var produto in pedido.Produtos)
@@ -27,8 +37,7 @@
                         total += produto.Quantidade * produto.Produto.Preco;
                     }
                 }
-                <th>R$ @total.ToString("N")</th>
-                <th></th>
+                <td>R$ @total.ToString("N")</td>
             </tr>
         }
     </tbody>

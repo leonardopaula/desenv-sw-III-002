@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="qAYIcRWOczx9hEaIP8qTYzz2hLM=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="rcHxWDDJ+dTrRcXg+4BGe6IBAzw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServiceCartaoDeCredito">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IServiceCartaoDeCredito" contract="CartaoDeCreditoService.IServiceCartaoDeCredito" bindingType="basicHttpBinding" address="http://localhost:50022/ServiceCartaoDeCredito.svc" bindingConfiguration="BasicHttpBinding_IServiceCartaoDeCredito">
+    <endpoint name="BasicHttpBinding_IServiceCartaoDeCredito" contract="CartaoDeCreditoServiceRef.IServiceCartaoDeCredito" bindingType="basicHttpBinding" address="http://localhost:50022/ServiceCartaoDeCredito.svc" bindingConfiguration="BasicHttpBinding_IServiceCartaoDeCredito">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:50022/ServiceCartaoDeCredito.svc</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IServiceCartaoDeCredito</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CartaoDeCreditoService.IServiceCartaoDeCredito</serializedValue>
+          <serializedValue>CartaoDeCreditoServiceRef.IServiceCartaoDeCredito</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

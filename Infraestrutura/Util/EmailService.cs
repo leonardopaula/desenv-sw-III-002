@@ -50,7 +50,7 @@ namespace Infraestrutura.Util
                 smtpClient.EnableSsl = SslSMTP;
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential(userSMTP, passwordSMTP, domainSMTP);
+                smtpClient.Credentials = new NetworkCredential(userSMTP, passwordSMTP);
 
                 smtpClient.Send(mail);
             }
