@@ -44,7 +44,22 @@ namespace Infraestrutura.Cadastros
             return pc.ToList();
         }
 
-        public void AlterarStatusParaAguardandoColeta(PedidoCliente pedido)
+        public PedidoCliente ObterPedidosPorId(string idPedido)
+        {
+            long id = Convert.ToInt64(idPedido);
+            IQueryable<PedidoCliente> pc = contexto.PedidoCliente
+                .Include("Cliente")
+                .Include("Produtos")
+                .Include("Produtos.Produto")
+                .Include("EnderecoEntrega")
+                .Include("EnderecoEntrega.Cidade")
+                .Include("EnderecoEntrega.Cidade.Estado")
+                .Where(pec => pec.IdPedidoCliente == id);
+
+            return pc.FirstOrDefault();
+        }
+
+        private void AlterarStatusParaAguardandoColeta(PedidoCliente pedido)
         {
             pedido.Status = Dominio.Enums.StatusPedido.AguardandoColeta;
             contexto.Entry(pedido).State = EntityState.Modified;

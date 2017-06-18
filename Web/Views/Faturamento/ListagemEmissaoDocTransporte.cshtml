@@ -9,7 +9,6 @@
     <table>
         <thead>
             <tr>
-                <th>Selecionar</th>
                 <th>Número NF</th>
                 <th>Data</th>
                 <th></th>
@@ -19,19 +18,14 @@
             @foreach (var pedido in ViewBag.Pedidos)
             {
                 <tr>
-                    <td>
-                        @Html.CheckBoxSimple("selecionar", new { @class = "filled-in", value = @pedido.IdPedidoCliente })
-                        @Html.Label(" ", new { @for = "selecionar" })
-                    </td>
                     <td>@pedido.Numero</td>
                     <td>@pedido.Data</td>
+                    <td>
+                        <a href="@Url.Action("EmitirDocumentos", "Faturamento")?idPedido=@pedido.IdPedidoCliente" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Emitir documento</a>
+                    </td>
                 </tr>
             }
-            <tr>
-                <td>
-                    <a onclick="ListagemEmitirDocTransp.emitir();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Emitir documentos</a>
-                </td>
-            </tr>
+            
         </tbody>
     </table>
 </div>

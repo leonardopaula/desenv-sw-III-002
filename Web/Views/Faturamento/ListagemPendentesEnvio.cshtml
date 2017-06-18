@@ -27,11 +27,17 @@
                     <td>@pedido.Data</td>
                 </tr>
             }
-            <tr>
-                <td>
-                    <a onclick="ListagemPendentesDeEnvio.enviar();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Enviar</a>
-                </td>
-            </tr>
+            @if (ViewBag.Pedidos != null)
+            {
+                if (ViewBag.Pedidos.Count > 0)
+                {
+                    <tr>
+                        <td>
+                            <a onclick="ListagemPendentesDeEnvio.enviar();" class="waves-effect waves-light btn mobile-button"><i class="material-icons right">send</i>Enviar</a>
+                        </td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

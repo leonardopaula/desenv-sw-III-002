@@ -1,4 +1,4 @@
-﻿
+﻿@model Dominio.PedidoCliente
 @{
     Layout = null;
 }
@@ -11,10 +11,75 @@
     <title>Documento De Transporte</title>
 </head>
 <body>
-    <div class="row"> 
-        <div class="col-md-12">
-            @*ViewBag.Pedido*@
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td colspan="4">
+                <b>Cliente:</b> @Model.Cliente.Nome
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>E-mail:</b>
+                @Model.Cliente.Email
+            </td>
+            <td>
+                <b>Documento:</b>
+                @Model.Cliente.Cpf
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Endereço:</b> @Model.EnderecoEntrega.Rua , @Model.EnderecoEntrega.Numero
+            </td>
+            <td>
+                @Model.EnderecoEntrega.Complemento - @Model.EnderecoEntrega.CEP
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                @Model.EnderecoEntrega.Bairro,   @Model.EnderecoEntrega.Cidade.Nome / @Model.EnderecoEntrega.Cidade.Estado.UF
+            </td>
+        </tr>
+    </table>
+    <br />
+    <b>Produtos</b>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <b>Referência</b>
+                </th>
+                <th>
+                    <b>Quantidade</b>
+                </th>
+                <th>
+                    <b>Peso</b>
+                </th>
+                <th>
+                    <b>Produto</b>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produto in Model.Produtos)
+            {
+                <tr>
+                    <td>
+                        @produto.Produto.Referencia
+                    </td>
+                    <td>
+                        @produto.Quantidade
+                    </td>
+                    <td>
+                        @produto.Produto.Peso
+                    </td>
+                    <td>
+                        @produto.Produto.Nome
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>
