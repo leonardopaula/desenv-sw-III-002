@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Infraestrutura.Util;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,9 +10,11 @@ namespace Infraestrutura.Cadastros
     public class FaturamentoCadastro
     {
         private EFContext contexto;
+        private EmailService servicoEmail;
         public FaturamentoCadastro()
         {
             contexto = new EFContext();
+            servicoEmail = new EmailService();
         }
 
         public List<PedidoCliente> ObterPedidosPagamentoPendente()
@@ -19,9 +22,54 @@ namespace Infraestrutura.Cadastros
             IQueryable<PedidoCliente> pc = contexto.PedidoCliente
                 .Include("Cliente")
                 .Include("Produtos")
+                .Include("Produtos.Produto")
+                .Include("EnderecoEntrega")
+                .Include("EnderecoEntrega.Cidade")
                 .Where(pec => pec.Status == Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento);
 
             return pc.ToList();
+        }
+
+        public List<PedidoCliente> ObterPedidosComStatusPagamento()
+        {
+            var servicoCartao = new CartaoDeCreditoService();
+
+            var pedidos = ObterPedidosPagamentoPendente();
+            foreach (var pedidoAtual in pedidos)
+            {
+                var retorno = servicoCartao.ObterSituacaoPagamento(pedidoAtual.IdPedidoCliente);
+                if (retorno.Situacao == CartaoDeCreditoServiceRef.SituacaoPagamento.Aprovado)
+                {
+                    AlterarStatusParaPendenteDeEnvio(pedidoAtual);
+                }
+                else
+                {
+                    if (retorno.Situacao == CartaoDeCreditoServiceRef.SituacaoPagamento.NaoAprovado ||
+                        DateTime.Today.Subtract(pedidoAtual.Data).Days > 3)
+                    {
+                        AlterarStatusParaCancelado(pedidoAtual);
+                    }
+                }
+            }
+            return pedidos;
+        }
+
+        public void EnviarEmailComNotaFiscal(string notaFiscal, PedidoCliente pedido)
+        {
+            servicoEmail.SendEmail(
+                new List<string>() { pedido.Cliente.Email },
+                "Pagamento",
+                "Olá " + pedido.Cliente.Nome +
+                ", \n O pagamento do seu pedido de número " + pedido.Numero + " foi confirmado. Segue nota fiscal do mesmo:" + notaFiscal);
+        }
+
+        public void EnviarEmailPedidoCancelado(PedidoCliente pedido)
+        {
+            servicoEmail.SendEmail(
+                new List<string>() { pedido.Cliente.Email },
+                "Pagamento",
+                "Olá " + pedido.Cliente.Nome +
+                ", \n O pagamento do seu pedido de número " + pedido.Numero + " não foi confirmado, por isso seu pedido foi cancelado.");
         }
 
         public List<PedidoCliente> ObterPedidosPendentesEnvio()
@@ -57,6 +105,20 @@ namespace Infraestrutura.Cadastros
                 .Where(pec => pec.IdPedidoCliente == id);
 
             return pc.FirstOrDefault();
+        }
+
+        public void AlterarStatusParaPendenteDeEnvio(PedidoCliente pedido)
+        {
+            pedido.Status = Dominio.Enums.StatusPedido.PendenteEnvio;
+            contexto.Entry(pedido).State = EntityState.Modified;
+            contexto.SaveChanges();
+        }
+
+        public void AlterarStatusParaCancelado(PedidoCliente pedido)
+        {
+            pedido.Status = Dominio.Enums.StatusPedido.Cancelado;
+            contexto.Entry(pedido).State = EntityState.Modified;
+            contexto.SaveChanges();
         }
 
         private void AlterarStatusParaAguardandoColeta(PedidoCliente pedido)

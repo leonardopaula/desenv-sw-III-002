@@ -1,0 +1,84 @@
+﻿@model Dominio.PedidoCliente
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nota Fiscal Tabajara</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    Tabajara LTDA
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Av. Unisinos, 950
+                    Bairro Cristo Rei
+                    São Leopoldo/RS
+                    CEP: 93.022-750
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cliente: @Model.Cliente.Nome
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Endereço: <b>Endereço:</b> @Model.EnderecoEntrega.Rua , @Model.EnderecoEntrega.Numero. @Model.EnderecoEntrega.Complemento - @Model.EnderecoEntrega.CEP
+                    @Model.EnderecoEntrega.Bairro,   @Model.EnderecoEntrega.Cidade.Nome 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    NOTA FISCAL DE VENDA AO CONSUMIDOR
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Data de emissão: @DateTime.Now.ToString("dd/MM/yyyy")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Quantidade
+                </td>
+                <td>
+                    Produto
+                </td>
+                <td>
+                    Preço Unitário
+                </td>
+                <td>
+                   Total
+                </td>
+            </tr>
+            @foreach (var produto in Model.Produtos)
+            {
+                <tr>
+                    <td>
+                        @produto.Quantidade
+                    </td>
+                    <td>
+                        @produto.Produto.Nome
+                    </td>
+                    <td>
+                        @produto.Produto.Preco
+                    </td>
+                    <td>
+                        @produto.Quantidade * @produto.Produto.Preco
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

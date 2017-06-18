@@ -19,8 +19,18 @@ namespace Web.Controllers
         // GET: Faturamento
         public ActionResult Index()
         {
-            ViewBag.Pedidos = fc.ObterPedidosPagamentoPendente();
-
+            var pedidos = fc.ObterPedidosComStatusPagamento();
+            foreach (var pedido in pedidos)
+            {
+                if (pedido.Status == Dominio.Enums.StatusPedido.Cancelado)
+                    fc.EnviarEmailPedidoCancelado(pedido);
+                else if (pedido.Status == Dominio.Enums.StatusPedido.PendenteEnvio)
+                {
+                    string notaFiscal = RenderViewToString("_NotaFiscal", pedido);
+                    fc.EnviarEmailComNotaFiscal(notaFiscal, pedido);
+                }
+            }
+            ViewBag.Pedidos = pedidos;
             return View();
         }
 
@@ -54,15 +64,15 @@ namespace Web.Controllers
         }
 
         public ActionResult EmitirDocumentos(string idPedido)
-        {            
+        {
             var pedido = fc.ObterPedidosPorId(idPedido);
 
             string htmlText = RenderViewToString("_DocumentoDeTransporte", pedido);
-                        
+
             byte[] buffer = RenderPDF(htmlText);
 
             return File(buffer, "application/PDF");
-            }
+        }
 
         private byte[] RenderPDF(string htmlText)
         {

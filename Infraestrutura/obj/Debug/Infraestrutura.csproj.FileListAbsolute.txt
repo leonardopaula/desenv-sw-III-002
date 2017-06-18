@@ -46,18 +46,6 @@ E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
 E:\Documentos\Unisinos\Desenvolvimento de Software III\Sistema\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll.config
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.pdb
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.dll
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.dll
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.pdb
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.xml
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
-C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll.config
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.pdb
@@ -70,3 +58,15 @@ C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityF
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
 C:\Users\Lonardo\Source\Repos\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll.config
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Infraestrutura.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\Dominio.pdb
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.xml
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.dll
+C:\Users\Aline\Desktop\desenv-sw-III-002\Infraestrutura\obj\Debug\Infraestrutura.pdb

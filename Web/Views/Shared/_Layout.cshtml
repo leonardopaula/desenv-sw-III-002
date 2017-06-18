@@ -43,12 +43,12 @@
         <ul id="dropdown-menu" class="dropdown-content dropdown-menu">
             <li><a href="@Url.Action("Index", "Compra")">Repor Estoque</a></li>
             <li><a href="@Url.Action("ListagemNaoRecebidas", "Compra")">Compras não recebidas</a></li>
-            <li><a href="@Url.Action("Index", "Faturamento")">Faturamento</a></li>
+            <li><a href="@Url.Action("Index", "Faturamento")">Pagamento Pendente</a></li>
             <li><a href="@Url.Action("ListagemPendentesEnvio", "Faturamento")">Pendentes de envio</a></li>
         </ul>
         <nav>
             <div class="nav-wrapper">
-                <a href="@Url.Action("Index", "Home")" class="brand-logo center">Tabajara</a>
+                <a href="@Url.Action("Index", "Venda")" class="brand-logo center">Tabajara</a>
                 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
                 <a href="@Url.Action("Index", "Carrinho")" class="right menu-shopping-cart"><i class="material-icons">shopping_cart</i></a>
                 @if (cliente != null)
@@ -67,7 +67,7 @@
                     <li><a href="@Url.Action("Index", "Venda")">Produtos</a></li>
                     <li><a href="@Url.Action("Index", "Compra")">Repor Estoque</a></li>
                     <li><a href="@Url.Action("ListagemNaoRecebidas", "Compra")">Compras não recebidas</a></li>
-                    <li><a href="@Url.Action("Index", "Faturamento")">Faturamento</a></li>
+                    <li><a href="@Url.Action("Index", "Faturamento")">Pagamento Pendente</a></li>
                     <li><a href="@Url.Action("ListagemPendentesEnvio", "Faturamento")">Pendentes de envio</a></li>
                 </ul>
             </div>

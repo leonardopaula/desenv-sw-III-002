@@ -1,38 +1,43 @@
 ﻿
 @{
-    ViewBag.Title = "Pedidos Pendentes";
+    ViewBag.Title = "Pedidos com Pagamento Pendente";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h4>Pedidos Pendentes</h4>
+<h4>Pedidos com Pagamento Pendente</h4>
 <br />
 <table>
     <thead>
         <tr>
             <th>Número</th>
             <th>Cliente</th>
-            <th>Rastreio</th>
             <th>Status</th>
             <th>Valor</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var pedido in ViewBag.Pedidos)
         {
             <tr>
-                <th>@pedido.Numero</th>
-                <th>@pedido.Cliente.Nome</th>
-                <th>@pedido.CodigoRastreio</th>
-                <th>@pedido.Status</th>
+                <td>@pedido.Numero</td>
+                <td>@pedido.Cliente.Nome</td>
+                
+                    @if (pedido.Status == Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento)
+                    {
+                        <td>Aguardando Confirmação de Pagamento</td>
+                    }
+                    else
+                    {
+                        <td>Pendente de Envio</td>
+                    }
+                
                 @{
                     var total = 0;
-                    foreach (var produtos in pedido.Produtos)
+                    foreach (var produto in pedido.Produtos)
                     {
-                        total += produtos.Preco;
+                        total += produto.Quantidade * produto.Produto.Preco;
                     }
                 }
-                <th>R$ @total.ToString("N")</th>
-                <th></th>
+                <td>R$ @total.ToString("N")</td>
             </tr>
         }
     </tbody>
