@@ -3,6 +3,7 @@
     $('select').material_select();
     $('.modal').modal();
     $('.collapsible').collapsible();
+    $(".dropdown-button").dropdown();
 });
 
 var animacaoRodando = false;

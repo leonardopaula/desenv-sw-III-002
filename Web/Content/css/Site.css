@@ -12,9 +12,22 @@ nav {
     background: #8e24aa;
 }
 
-div.nav-wrapper a, div.nav-wrapper i
-{
+div.nav-wrapper a, div.nav-wrapper i {
     color: #ffffff;
+}
+
+ul.dropdown-menu {
+    top: 64px !important;
+    width: 250px !important; 
+}
+
+.dropdown-menu li {
+    background: #8e24aa;
+    color: #fff;
+}
+
+.dropdown-menu li:hover {
+    background: #8e24aa;
 }
 
 a.menu-shopping-cart {
