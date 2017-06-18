@@ -19,6 +19,7 @@ namespace Infraestrutura.Cadastros
             IQueryable<PedidoCliente> pc = contexto.PedidoCliente
                 .Include("Cliente")
                 .Include("Produtos")
+                .Include("Produtos.Produto")
                 .Where(pec => pec.Status == Dominio.Enums.StatusPedido.AguardandoConfirmacaoPagamento);
 
             return pc.ToList();

@@ -1,17 +1,15 @@
 ﻿
 @{
-    ViewBag.Title = "Pedidos Pendentes";
+    ViewBag.Title = "Pedidos com Pagamento Pendente";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h4>Pedidos Pendentes</h4>
+<h4>Pedidos com Pagamento Pendente</h4>
 <br />
 <table>
     <thead>
         <tr>
             <th>Número</th>
             <th>Cliente</th>
-            <th>Rastreio</th>
-            <th>Status</th>
             <th>Valor</th>
             <th></th>
         </tr>
@@ -22,13 +20,11 @@
             <tr>
                 <th>@pedido.Numero</th>
                 <th>@pedido.Cliente.Nome</th>
-                <th>@pedido.CodigoRastreio</th>
-                <th>@pedido.Status</th>
                 @{
                     var total = 0;
-                    foreach (var produtos in pedido.Produtos)
+                    foreach (var produto in pedido.Produtos)
                     {
-                        total += produtos.Preco;
+                        total += produto.Quantidade * produto.Produto.Preco;
                     }
                 }
                 <th>R$ @total.ToString("N")</th>
