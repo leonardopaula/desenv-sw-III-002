@@ -89,6 +89,14 @@
     <Compile Include="Migrations\201706200115412_Ajuste_MapeamentoClienteFuncionario.Designer.cs">
       <DependentUpon>201706200115412_Ajuste_MapeamentoClienteFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706200329133_Ajuste.cs" />
+    <Compile Include="Migrations\201706200329133_Ajuste.Designer.cs">
+      <DependentUpon>201706200329133_Ajuste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706200334089_Ajuste_Relacionamento.cs" />
+    <Compile Include="Migrations\201706200334089_Ajuste_Relacionamento.Designer.cs">
+      <DependentUpon>201706200334089_Ajuste_Relacionamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706200115412_Ajuste_MapeamentoClienteFuncionario.resx">
       <DependentUpon>201706200115412_Ajuste_MapeamentoClienteFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200329133_Ajuste.resx">
+      <DependentUpon>201706200329133_Ajuste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200334089_Ajuste_Relacionamento.resx">
+      <DependentUpon>201706200334089_Ajuste_Relacionamento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

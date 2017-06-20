@@ -11,8 +11,8 @@ namespace Infraestrutura.Mapeamento
             ToTable("Faturamento");
             HasKey(f => f.IdFaturamento);
             Property(f => f.IdFaturamento).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            HasRequired(f => f.PedidoCliente).WithOptional(p => p.Faturamento);
-            HasRequired(f => f.Pagamento).WithOptional(p => p.Faturamento);
+            
+            HasOptional(p => p.NotaFiscal).WithRequired(n => n.Faturamento).Map(m => { m.MapKey("FaturamentoId"); });
         }
     }
 }

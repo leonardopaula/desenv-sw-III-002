@@ -12,6 +12,8 @@ namespace Infraestrutura.Mapeamento
             Property(p => p.Data).IsRequired();
             Property(p => p.MeioPagamento).IsRequired();
             Property(p => p.Origem).IsRequired();
+
+            HasOptional(p => p.Faturamento).WithRequired(f => f.Pagamento).Map(m => { m.MapKey("PagamentoId"); });
         }
     }
 }

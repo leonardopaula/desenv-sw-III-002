@@ -21,6 +21,8 @@ namespace Infraestrutura.Mapeamento
 
             HasRequired(p => p.Cliente).WithMany().HasForeignKey(p => p.IdCliente);
             HasRequired(p => p.EnderecoEntrega).WithMany().HasForeignKey(p => p.IdEnderecoEntrega);
+
+            HasOptional(p => p.Faturamento).WithRequired(f => f.PedidoCliente).Map(m => { m.MapKey("PedidoClienteId"); });
         }
     }
 }

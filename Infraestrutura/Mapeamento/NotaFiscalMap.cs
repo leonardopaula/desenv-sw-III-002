@@ -13,7 +13,7 @@ namespace Infraestrutura.Mapeamento
             Property(n => n.IdNotaFiscal).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(n => n.Impostos).HasPrecision(10, 3).IsRequired();
             Property(n => n.ValorTotal).HasPrecision(10, 3).IsRequired();
-            HasRequired(n => n.Faturamento).WithOptional(p => p.NotaFiscal);
+            
         }
     }
 }

@@ -10,7 +10,6 @@ namespace Dominio
         public decimal Impostos { get; set; }
         public decimal ValorTotal { get; set; }
 
-        public long IdFaturamento { get; set; }
         public Faturamento Faturamento { get; set; }
     }
 }
