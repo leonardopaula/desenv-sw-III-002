@@ -85,8 +85,13 @@
     <Compile Include="Migrations\201706172048556_Inclusao_PedidoClienteProduto.Designer.cs">
       <DependentUpon>201706172048556_Inclusao_PedidoClienteProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706200115412_Ajuste_MapeamentoClienteFuncionario.cs" />
+    <Compile Include="Migrations\201706200115412_Ajuste_MapeamentoClienteFuncionario.Designer.cs">
+      <DependentUpon>201706200115412_Ajuste_MapeamentoClienteFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Data\EntityState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -129,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706172048556_Inclusao_PedidoClienteProduto.resx">
       <DependentUpon>201706172048556_Inclusao_PedidoClienteProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200115412_Ajuste_MapeamentoClienteFuncionario.resx">
+      <DependentUpon>201706200115412_Ajuste_MapeamentoClienteFuncionario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
