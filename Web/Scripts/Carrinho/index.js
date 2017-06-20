@@ -86,6 +86,9 @@ $(document).on('click', '#btnCalcularFrete', function () {
 
 $(document).on('click', '#btnFinalizarCompra', function (e) {
     e.preventDefault();
+
+    $('#btnFinalizarCompra').attr('disabled', 'disabled');
+    $('#btnFinalizarCompra').addClass('disabled');
     
     if (!validaCamposEndereco()) {
         Materialize.toast('Preencher os dados de entrega', 3000);
@@ -128,18 +131,16 @@ $(document).on('click', '#btnFinalizarCompra', function (e) {
             },
             success: function (data) {
                 if (data.CodRetorno == 'sucesso') {
-                    $('#btnFinalizarCompra').attr('disabled', 'disabled');
-                    $('#btnFinalizarCompra').addClass('disabled');
                     Materialize.toast(data.Mensagem, 4000, '', function () { window.location.href = base_url + 'Carrinho/Resumo'; });
                 }
                 else if (data.CodRetorno == 'aviso')
                 {
+                    $('#btnFinalizarCompra').removeAttr('disabled');
+                    $('#btnFinalizarCompra').removeClass('disabled');
                     Materialize.toast(data.Mensagem, 4000);
                 }
                 else
                 {
-                    $('#btnFinalizarCompra').attr('disabled', 'disabled');
-                    $('#btnFinalizarCompra').addClass('disabled');
                     Materialize.toast(data.Mensagem, 4000, '', function () { window.location.href = base_url; });
                 }
             }
@@ -148,13 +149,22 @@ $(document).on('click', '#btnFinalizarCompra', function (e) {
 });
 
 $(document).on('click', '#btnConfirmaCompra', function () {
+
+    $('#btnConfirmaCompra').attr('disabled', 'disabled');
+    $('#btnConfirmaCompra').addClass('disabled');
+
     $.ajax({
-        url: url_base + 'Carrinho/ConfirmarCompra',
+        url: base_url + 'Carrinho/ConfirmarCompra',
         type: 'POST',
         success: function (data) {
-            $('#btnConfirmaCompra').attr('disabled', 'disabled');
-            $('#btnConfirmaCompra').addClass('disabled');
-            Materialize.toast('Compra efetuada com sucesso', 4000, '', function () { window.location.href = base_url; });
+            if (data == true)
+            {
+                Materialize.toast('Compra efetuada com sucesso', 4000, '', function () { window.location.href = base_url; });
+            }
+            else
+            {
+                Materialize.toast('Um erro fatal ocorreu durante a compra', 4000, '', function () { window.location.href = base_url; });
+            }
         }
     });
 });
@@ -173,7 +183,7 @@ function validaCamposEndereco() {
 function validaCamposPagamento() {
     var meioPagamento = $('input[name=MeioPagamento]:checked').val();
 
-    if (meioPagamento == '1') {
+    if (meioPagamento == '2') {
         var numeroCartao = $('#numeroCartao').val();
         var mesValidade = $('#mesValidade').val();
         var anoValidade = $('#anoValidade').val();

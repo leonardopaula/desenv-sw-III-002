@@ -164,14 +164,26 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public void ConfirmarCompra()
+        public bool ConfirmarCompra()
         {
             ProdutoCadastro produtoNeg = new ProdutoCadastro();
 
             DadosPedido dadosPedido = Session["DadosPedido"] as DadosPedido;
             PedidoCliente pedidoCliente = Session["PedidoCliente"] as PedidoCliente;
 
-            produtoNeg.RealizaVenda(pedidoCliente, dadosPedido);
+            Session["Carrinho"] = null;
+            Session["DadosPedido"] = null;
+            Session["PedidoCliente"] = null;
+
+            try
+            {
+                produtoNeg.RealizaVenda(pedidoCliente, dadosPedido);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
