@@ -106,8 +106,8 @@ namespace Infraestrutura.Cadastros
                     contexto.Pagamento.Add(pagamento);
                     contexto.SaveChanges();
 
-                    faturamento.IdPagamento = pagamento.IdPagamento;
-                    faturamento.IdPedidoCliente = pedidoCliente.IdPedidoCliente;
+                    faturamento.Pagamento = pagamento;
+                    faturamento.PedidoCliente = pedidoCliente;
                     contexto.Faturamento.Add(faturamento);
                     contexto.SaveChanges();
 
