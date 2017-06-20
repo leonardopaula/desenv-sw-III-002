@@ -65,9 +65,9 @@
                     <div class="row">
                         <div class="col s12">
                             <p>
-                                @Html.RadioButton("MeioPagamento", 1, true, new { @class = "with-gap", @id = "radCartao" })
+                                @Html.RadioButton("MeioPagamento", 2, true, new { @class = "with-gap", @id = "radCartao" })
                                 @Html.Label("Cartão de Crédito", new { @for = "radCartao" })
-                                @Html.RadioButton("MeioPagamento", 2, false, new { @class = "with-gap", @id = "radBoleto" })
+                                @Html.RadioButton("MeioPagamento", 1, false, new { @class = "with-gap", @id = "radBoleto" })
                                 @Html.Label("Boleto", new { @for = "radBoleto" })
                             </p>
                         </div>

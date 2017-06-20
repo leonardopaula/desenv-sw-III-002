@@ -109,6 +109,7 @@ namespace Web.Controllers
             enderecoEntrega.Bairro = pedido.Bairro;
 
             Session["ValorFrete"] = pedido.ValorFrete;
+            Session["DadosPedido"] = pedido;
 
             CidadeCadastro cidadeNeg = new CidadeCadastro();
 
@@ -156,9 +157,21 @@ namespace Web.Controllers
             else
             {
                 Session["Carrinho"] = null;
+                Session["DadosPedido"] = null;
                 Session["PedidoCliente"] = null;
                 return Json(new { CodRetorno = "erro", Mensagem = "Os produtos não estão mais disponíveis" });
             }
+        }
+
+        [HttpPost]
+        public void ConfirmarCompra()
+        {
+            ProdutoCadastro produtoNeg = new ProdutoCadastro();
+
+            DadosPedido dadosPedido = Session["DadosPedido"] as DadosPedido;
+            PedidoCliente pedidoCliente = Session["PedidoCliente"] as PedidoCliente;
+
+            produtoNeg.RealizaVenda(pedidoCliente, dadosPedido);
         }
     }
 }

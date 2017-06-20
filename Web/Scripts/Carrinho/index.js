@@ -147,6 +147,18 @@ $(document).on('click', '#btnFinalizarCompra', function (e) {
     }
 });
 
+$(document).on('click', '#btnConfirmaCompra', function () {
+    $.ajax({
+        url: url_base + 'Carrinho/ConfirmarCompra',
+        type: 'POST',
+        success: function (data) {
+            $('#btnConfirmaCompra').attr('disabled', 'disabled');
+            $('#btnConfirmaCompra').addClass('disabled');
+            Materialize.toast('Compra efetuada com sucesso', 4000, '', function () { window.location.href = base_url; });
+        }
+    });
+});
+
 function validaCamposEndereco() {
     var formaEntrega = $('#formaEntrega').val();
     var cep = $('#cep').val();

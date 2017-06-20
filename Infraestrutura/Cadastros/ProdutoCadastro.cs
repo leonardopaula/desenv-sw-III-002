@@ -1,5 +1,6 @@
 ﻿using Dominio;
 using Dominio.Dinamico;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -72,6 +73,35 @@ namespace Infraestrutura.Cadastros
             }
 
             return quantidadeValida;
+        }
+
+        public void RealizaVenda(PedidoCliente pedidoCliente, DadosPedido dadosPedido)
+        {
+            pedidoCliente.IdCliente = pedidoCliente.Cliente.Id;
+            pedidoCliente.Cliente = null;
+
+            pedidoCliente.CodigoRastreio = "4WEB" + (new Random().Next(0, 1000000)).ToString().PadLeft(8, '0');
+
+            pedidoCliente.Numero = (new Random().Next(0, 1000000));
+
+            Faturamento faturamento = new Faturamento();
+            Pagamento pagamento = new Pagamento();
+            pagamento.Data = DateTime.Now;
+            pagamento.MeioPagamento = (Dominio.Enums.MeioPagamento)dadosPedido.MeioPagamento;
+            pagamento.Origem = pedidoCliente.IdCliente;
+            faturamento.Pagamento = pagamento;
+
+            pedidoCliente.Faturamento = faturamento;
+
+            contexto.PedidoCliente.Add(pedidoCliente);
+            contexto.SaveChanges();
+
+            foreach (var item in pedidoCliente.Produtos)
+            {
+                Produto p = contexto.Produto.FirstOrDefault(x => x.IdProduto == item.IdProduto);
+                p.QuantidadeEmEstoque -= item.Quantidade;
+                contexto.SaveChanges();
+            }
         }
     }
 }
