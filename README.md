@@ -7,8 +7,8 @@ O presente projeto visa apresentar os casos de uso:
 - [T] UC001 - Realizar Compra;
 - [T] UC002 - Receber Mercadoria;
 - [D] UC003 - Realizar Venda;
-- [D] UC004 - Controlar Faturamento;
-- [A] UC005 - Gerar Ordem de Serviço;
+- [T] UC004 - Controlar Faturamento;
+- [T] UC005 - Gerar Ordem de Serviço;
 
 *A = Aguardando, T = Teste, D = Desenvolvimento, E = Entregue*
 
