@@ -77,30 +77,47 @@ namespace Infraestrutura.Cadastros
 
         public void RealizaVenda(PedidoCliente pedidoCliente, DadosPedido dadosPedido)
         {
-            pedidoCliente.IdCliente = pedidoCliente.Cliente.Id;
-            pedidoCliente.Cliente = null;
-
-            pedidoCliente.CodigoRastreio = "4WEB" + (new Random().Next(0, 1000000)).ToString().PadLeft(8, '0');
-
-            pedidoCliente.Numero = (new Random().Next(0, 1000000));
-
-            Faturamento faturamento = new Faturamento();
-            Pagamento pagamento = new Pagamento();
-            pagamento.Data = DateTime.Now;
-            pagamento.MeioPagamento = (Dominio.Enums.MeioPagamento)dadosPedido.MeioPagamento;
-            pagamento.Origem = pedidoCliente.IdCliente;
-            faturamento.Pagamento = pagamento;
-
-            pedidoCliente.Faturamento = faturamento;
-
-            contexto.PedidoCliente.Add(pedidoCliente);
-            contexto.SaveChanges();
-
-            foreach (var item in pedidoCliente.Produtos)
+            using (var transaction = contexto.Database.BeginTransaction())
             {
-                Produto p = contexto.Produto.FirstOrDefault(x => x.IdProduto == item.IdProduto);
-                p.QuantidadeEmEstoque -= item.Quantidade;
-                contexto.SaveChanges();
+                try
+                {
+                    pedidoCliente.CodigoRastreio = "4WEB" + (new Random().Next(0, 1000000)).ToString().PadLeft(8, '0');
+
+                    pedidoCliente.Numero = (new Random().Next(0, 1000000));
+
+                    foreach (var item in pedidoCliente.Produtos)
+                    {
+                        item.IdProduto = item.Produto.IdProduto;
+                        Produto p = contexto.Produto.FirstOrDefault(x => x.IdProduto == item.IdProduto);
+                        p.QuantidadeEmEstoque -= item.Quantidade;
+                        contexto.Entry(p).State = System.Data.Entity.EntityState.Modified;
+
+                        item.Produto = null;
+                    }
+
+                    contexto.PedidoCliente.Add(pedidoCliente);
+                    contexto.SaveChanges();
+
+                    Faturamento faturamento = new Faturamento();
+                    Pagamento pagamento = new Pagamento();
+                    pagamento.Data = DateTime.Now;
+                    pagamento.MeioPagamento = (Dominio.Enums.MeioPagamento)dadosPedido.MeioPagamento;
+                    pagamento.Origem = pedidoCliente.IdCliente;
+                    contexto.Pagamento.Add(pagamento);
+                    contexto.SaveChanges();
+
+                    faturamento.IdPagamento = pagamento.IdPagamento;
+                    faturamento.IdPedidoCliente = pedidoCliente.IdPedidoCliente;
+                    contexto.Faturamento.Add(faturamento);
+                    contexto.SaveChanges();
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
             }
         }
     }
