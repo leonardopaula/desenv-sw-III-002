@@ -6,3 +6,4 @@
 /Web/bin
 /Infraestrutura/obj/Debug
 /Dominio/obj/Debug
+*.pdb
