@@ -97,6 +97,10 @@
     <Compile Include="Migrations\201706200334089_Ajuste_Relacionamento.Designer.cs">
       <DependentUpon>201706200334089_Ajuste_Relacionamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706210413165_Ajuste_ChaveFaturamento.cs" />
+    <Compile Include="Migrations\201706210413165_Ajuste_ChaveFaturamento.Designer.cs">
+      <DependentUpon>201706210413165_Ajuste_ChaveFaturamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -150,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706200334089_Ajuste_Relacionamento.resx">
       <DependentUpon>201706200334089_Ajuste_Relacionamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706210413165_Ajuste_ChaveFaturamento.resx">
+      <DependentUpon>201706210413165_Ajuste_ChaveFaturamento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

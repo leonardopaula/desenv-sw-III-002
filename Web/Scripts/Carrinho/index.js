@@ -157,14 +157,14 @@ $(document).on('click', '#btnConfirmaCompra', function () {
         url: base_url + 'Carrinho/ConfirmarCompra',
         type: 'POST',
         success: function (data) {
-            console.log(data);
+            
             if (data == 'True')
             {
                 Materialize.toast('Compra efetuada com sucesso', 4000, '', function () { window.location.href = base_url; });
             }
             else
             {
-                Materialize.toast('Um erro fatal ocorreu durante a compra', 4000, '', function () { window.location.href = base_url; });
+                Materialize.toast('12333Um erro fatal ocorreu durante a compra', 4000, '', function () { window.location.href = base_url; });
             }
         }
     });

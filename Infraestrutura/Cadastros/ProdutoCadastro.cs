@@ -98,7 +98,7 @@ namespace Infraestrutura.Cadastros
                     contexto.PedidoCliente.Add(pedidoCliente);
                     contexto.SaveChanges();
 
-                    /*Faturamento faturamento = new Faturamento();
+                    Faturamento faturamento = new Faturamento();
                     Pagamento pagamento = new Pagamento();
                     pagamento.Data = DateTime.Now;
                     pagamento.MeioPagamento = (Dominio.Enums.MeioPagamento)dadosPedido.MeioPagamento;
@@ -109,7 +109,7 @@ namespace Infraestrutura.Cadastros
                     faturamento.Pagamento = pagamento;
                     faturamento.PedidoCliente = pedidoCliente;
                     contexto.Faturamento.Add(faturamento);
-                    contexto.SaveChanges();*/
+                    contexto.SaveChanges();
 
                     transaction.Commit();
                 }
