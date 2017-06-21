@@ -65,7 +65,7 @@ namespace Web.Controllers
 
         public ActionResult EmitirDocumentos(string idPedido)
         {
-            var pedido = fc.ObterPedidosPorId(idPedido);
+            var pedido = fc.Enviar(Convert.ToInt64(idPedido));
 
             string htmlText = RenderViewToString("_DocumentoDeTransporte", pedido);
 

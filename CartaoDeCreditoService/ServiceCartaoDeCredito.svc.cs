@@ -12,15 +12,12 @@ namespace CartaoDeCreditoService
                 throw new ArgumentNullException("Requisição");
             }
 
-            if (requisicao.IdentificadorPagamento < 10)
+             
+            if (requisicao.IdentificadorPagamento % 2 == 0)
             {
-                return new RetornoRequisicaoSituacao() { Situacao = SituacaoPagamento.EmAnalise };
-            }else 
-            if (requisicao.IdentificadorPagamento < 20)
-            {
-                return new RetornoRequisicaoSituacao() { Situacao = SituacaoPagamento.NaoAprovado };
+                return new RetornoRequisicaoSituacao() { Situacao = SituacaoPagamento.Aprovado };
             }
-            return new RetornoRequisicaoSituacao() { Situacao = SituacaoPagamento.Aprovado };
+            return new RetornoRequisicaoSituacao() { Situacao = SituacaoPagamento.NaoAprovado };
         }
     }
 }

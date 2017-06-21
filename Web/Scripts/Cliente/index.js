@@ -35,7 +35,7 @@ CadastroCliente = {
               , { nome: nomeCliente, email: emailCliente, login: loginCliente, senha: senhaCliente, rg: rgCliente, cpf: cpfCliente }
               , function (json) {
                   if (json.Situacao) {
-                      document.location = base_url + 'Home/Index/';
+                      document.location = base_url + 'Venda/Index/';
                   } else {
 
                       var msg = 'Verifique:\n';

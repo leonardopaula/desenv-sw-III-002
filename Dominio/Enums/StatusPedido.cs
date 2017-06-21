@@ -11,6 +11,8 @@ namespace Dominio.Enums
         [Description("Cancelado")]
         Cancelado = 3,
         [Description("Aguardando coleta")]
-        AguardandoColeta = 4
+        AguardandoColeta = 4,
+        [Description("Enviado")]
+        Enviado = 5
     }
 }

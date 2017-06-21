@@ -128,6 +128,13 @@ namespace Infraestrutura.Cadastros
             contexto.SaveChanges();
         }
 
+        private void AlterarStatusParaEnviado(PedidoCliente pedido)
+        {
+            pedido.Status = Dominio.Enums.StatusPedido.Enviado;
+            contexto.Entry(pedido).State = EntityState.Modified;
+            contexto.SaveChanges();
+        }
+
         public void EnviarPedidos(string[] idPedidos)
         {
             string cepUnisinos = "93022750";
@@ -144,7 +151,7 @@ namespace Infraestrutura.Cadastros
                         .FirstOrDefault(p => p.IdPedidoCliente == idPesquisa);
                     servicoCorreios.Open();
                     var retorno = servicoCorreios.CalcPrazoData(
-                        "41106", // PAC Varejo
+                        "40010", // sedex
                         cepUnisinos,
                         pedido.EnderecoEntrega.CEP.ToString(),
                         DateTime.Now.ToString("dd/MM/yyyy"));
@@ -163,7 +170,7 @@ namespace Infraestrutura.Cadastros
                                 new List<string>() { pedido.Cliente.Email },
                                 "Envio",
                                 "Olá " + pedido.Cliente.Nome +
-                                ", \n Seu pedido será enviado em breve." +
+                                ", \n Seu pedido será enviado em breve.\n" +
                                 "O prazo de entrega de seu pedido pelos correios é " + retorno.Servicos.FirstOrDefault().PrazoEntrega + " dias.");
                         }
 
@@ -171,6 +178,24 @@ namespace Infraestrutura.Cadastros
                 }
             }
 
+        }
+
+        public PedidoCliente Enviar(long idPedido)
+        {
+            IQueryable<PedidoCliente> pc = contexto.PedidoCliente
+                .Include("Cliente")
+                .Include("Produtos")
+                .Include("Produtos.Produto")
+                .Include("EnderecoEntrega")
+                .Include("EnderecoEntrega.Cidade")
+                .Include("EnderecoEntrega.Cidade.Estado")
+                .Where(pec => pec.IdPedidoCliente == idPedido);
+
+            var pedido = pc.FirstOrDefault();
+
+            AlterarStatusParaEnviado(pedido);
+
+            return pedido;
         }
     }
 }
