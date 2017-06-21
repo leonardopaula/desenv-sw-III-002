@@ -116,3 +116,4 @@ C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.pdb
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Ajuste_MapeamentoClienteFuncionario.resources
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Ajuste.resources
 C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Ajuste_Relacionamento.resources
+C:\Users\Aline\Desktop\desenv-sw-III-002\Migrations\obj\Debug\Migrations.Ajuste_ChaveFaturamento.resources
