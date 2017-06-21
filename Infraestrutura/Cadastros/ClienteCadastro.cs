@@ -1,4 +1,6 @@
 ﻿using Dominio;
+using Infraestrutura.Util;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -43,6 +45,10 @@ namespace Infraestrutura.Cadastros
             }else
             {
                 Adicionar(novoCliente);
+                EmailService email = new EmailService();
+
+                email.SendEmail(new List<string>() { novoCliente.Email }, "4WEB - Usuário cadastrado",
+                    $"<h1><b>Bem-Vindo, {novoCliente.Nome}.</b></h1> Seu usuário foi cadastrado com sucesso");
             }
         }
     }
