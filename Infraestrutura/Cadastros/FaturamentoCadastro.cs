@@ -132,7 +132,7 @@ namespace Infraestrutura.Cadastros
         {
             string cepUnisinos = "93022750";
             var servicoEmail = new Util.EmailService();
-            var servicoCorreios = new Correios.CalcPrecoPrazoWSSoapClient("CalcPrecoPrazoWSSoap");
+            var servicoCorreios = new Correios.CalcPrecoPrazoWSSoapClient("CalcPrecoPrazoWSSoap12");
             foreach (var id in idPedidos)
             {
                 if (!string.IsNullOrEmpty(id))
