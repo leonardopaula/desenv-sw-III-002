@@ -157,7 +157,8 @@ $(document).on('click', '#btnConfirmaCompra', function () {
         url: base_url + 'Carrinho/ConfirmarCompra',
         type: 'POST',
         success: function (data) {
-            if (data == true)
+            console.log(data);
+            if (data == 'True')
             {
                 Materialize.toast('Compra efetuada com sucesso', 4000, '', function () { window.location.href = base_url; });
             }
