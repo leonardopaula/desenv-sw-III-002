@@ -17,7 +17,17 @@ namespace Migrations
         {
             List<Dominio.Fornecedor> lforn1 = new List<Dominio.Fornecedor>();
             List<Dominio.Fornecedor> lforn2 = new List<Dominio.Fornecedor>();
-            lforn1.Add(new Dominio.Fornecedor { Nome = "OAS S.A.", Email = "propina@oas.com.br" });
+
+
+            Dominio.Fornecedor umbro = new Dominio.Fornecedor { Nome = "Umbro", Email = "comercial@umbro.com.br" };
+            Dominio.Fornecedor nike = new Dominio.Fornecedor { Nome = "Nike", Email = "comercial@nike.com.br" };
+            Dominio.Fornecedor apple = new Dominio.Fornecedor { Nome = "Apple", Email = "sales@apple.com.br" };
+            Dominio.Fornecedor samsung = new Dominio.Fornecedor { Nome = "Samsung", Email = "sales@samsung.com.br" };
+
+            List<Dominio.Fornecedor> lforn3 = new List<Dominio.Fornecedor>() { apple };
+
+            lforn1.Add(umbro);
+            lforn1.Add(nike);
             lforn1.Add(new Dominio.Fornecedor { Nome = "Odebrecht", Email = "comercial@cx2.com.br" });
             context.Fornecedor.AddOrUpdate(lforn1[0]);
             context.Fornecedor.AddOrUpdate(lforn1[1]);
@@ -27,12 +37,37 @@ namespace Migrations
             context.Fornecedor.AddOrUpdate(lforn2[0]);
             context.Fornecedor.AddOrUpdate(lforn2[1]);
 
-            var prod = new Dominio.Produto { Nome = "Camiseta", QuantidadeEmEstoque = 2, Preco = 199.0f, UrlImagem = "~/Images/Produtos/camiseta tabajara.jpg", QuantidadeEstoqueMinimo = 1, Referencia = "CI001", Peso = 20.0f, Fornecedores = lforn1 };
+            var prod = new Dominio.Produto
+            {
+                Nome = "Camiseta",
+                QuantidadeEmEstoque = 2,
+                Preco = 199.0f,
+                UrlImagem = "~/Images/Produtos/camiseta tabajara.jpg",
+                QuantidadeEstoqueMinimo = 1,
+                Referencia = "CI001",
+                Peso = 1.0f,
+                Fornecedores = lforn1
+            };
+            var prodChape = new Dominio.Produto
+            {
+                Nome = "Camiseta Chape",
+                QuantidadeEmEstoque = 2,
+                Preco = 199.0f,
+                UrlImagem = "~/Images/Produtos/chapecoense.jpg",
+                QuantidadeEstoqueMinimo = 1,
+                Referencia = "CI002",
+                Peso = 1.0f,
+                Fornecedores = new List<Dominio.Fornecedor>() { umbro }
+            };
             context.Produto.AddOrUpdate(
-                new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, Preco = 329.99f, UrlImagem = "~/Images/Produtos/Jaqueta.png", QuantidadeEstoqueMinimo = 5, Referencia = "CI002", Peso = 100.0f, Fornecedores = lforn1 },
-                new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, Preco = 2000.0f, UrlImagem = "~/Images/Produtos/iphone.png", QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Jaqueta", QuantidadeEmEstoque = 2, Preco = 329.99f, UrlImagem = "~/Images/Produtos/Jaqueta.png", QuantidadeEstoqueMinimo = 5, Referencia = "CI005", Peso = 100.0f, Fornecedores = lforn1 },
+                new Dominio.Produto { Nome = "Iphone 5s", QuantidadeEmEstoque = 5, Preco = 2000.0f, UrlImagem = "~/Images/Produtos/iphone.png", QuantidadeEstoqueMinimo = 10, Referencia = "CI003", Peso = 1500.0f, Fornecedores = lforn3 },
                 new Dominio.Produto { Nome = "Mega Drive III", QuantidadeEmEstoque = 10, Preco = 459.0f, UrlImagem = "~/Images/Produtos/mega-drive.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI004", Peso = 1000.0f, Fornecedores = lforn2 },
-                prod
+                new Dominio.Produto { Nome = "Camiseta Grêmio", QuantidadeEmEstoque = 10, Preco = 219.0f, UrlImagem = "~/Images/Produtos/gremio.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI006", Peso = 1000.0f, Fornecedores = new List<Dominio.Fornecedor>() { umbro } },
+                new Dominio.Produto { Nome = "Camiseta Internacional", QuantidadeEmEstoque = 10, Preco = 159.0f, UrlImagem = "~/Images/Produtos/internacional.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI007", Peso = 1000.0f, Fornecedores = new List<Dominio.Fornecedor>() { nike } },
+                new Dominio.Produto { Nome = "Samsung Galaxy j5 duos", QuantidadeEmEstoque = 10, Preco = 1459.0f, UrlImagem = "~/Images/Produtos/samsung.jpg", QuantidadeEstoqueMinimo = 20, Referencia = "CI008", Peso = 1000.0f, Fornecedores = new List<Dominio.Fornecedor>() { samsung } },
+                prod,
+                prodChape
             );
 
             List<Dominio.PedidoItemFornecedor> pi = new List<Dominio.PedidoItemFornecedor>();
@@ -47,7 +82,7 @@ namespace Migrations
             });
 
             /* Cliente */
-            
+
 
             Dominio.Cliente cli2 = new Dominio.Cliente
             {
@@ -78,7 +113,7 @@ namespace Migrations
             var lprod = new List<Dominio.PedidoClienteProduto>();
 
             var produtoPedido = context.Produto.FirstOrDefault();
-            if(produtoPedido != null)
+            if (produtoPedido != null)
             {
                 lprod.Add(new Dominio.PedidoClienteProduto()
                 {
@@ -89,7 +124,7 @@ namespace Migrations
             }
 
             var camisetaProd = context.Produto.FirstOrDefault(p => p.Nome == "Camiseta");
-            if(camisetaProd != null)
+            if (camisetaProd != null)
             {
                 lprod.Add(new Dominio.PedidoClienteProduto()
                 {
@@ -97,7 +132,7 @@ namespace Migrations
                     Produto = camisetaProd,
                     Quantidade = 1
                 });
-            }            
+            }
 
             /* PedidoCliente */
             Dominio.PedidoCliente pc = new Dominio.PedidoCliente
@@ -118,14 +153,15 @@ namespace Migrations
             try
             {
                 context.SaveChanges();
-            }catch(System.Data.Entity.Validation.DbEntityValidationException e)
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException e)
             {
                 string mensagem = string.Empty;
                 foreach (var validationErrors in e.EntityValidationErrors)
                 {
                     foreach (var validationError in validationErrors.ValidationErrors)
                     {
-                        mensagem += String.Format( "Property: {0} Error: {1}",
+                        mensagem += String.Format("Property: {0} Error: {1}",
                                                 validationError.PropertyName,
                                                 validationError.ErrorMessage);
                     }
@@ -133,8 +169,8 @@ namespace Migrations
                 throw new Exception(mensagem);
             }
 
-            
+
         }
-        
+
     }
 }
