@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -158,4 +159,12 @@ textarea.materialize-textarea:focus:not([readonly])+label
 
 .autocomplete-content {
     position: absolute !important;
+}
+
+.autocomplete-content li span {
+    color: #000 !important;
+}
+
+.autocomplete-content li span .highlight {
+    color: #8e24aa !important;
 }
