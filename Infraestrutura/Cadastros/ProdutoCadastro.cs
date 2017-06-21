@@ -1,7 +1,9 @@
 ﻿using Dominio;
 using Dominio.Dinamico;
+using Infraestrutura.Util;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 
 namespace Infraestrutura.Cadastros
@@ -47,7 +49,7 @@ namespace Infraestrutura.Cadastros
 
         public bool ValidaQuantidade(long idProduto, int count)
         {
-            return (from p in contexto.Produto where p.IdProduto == idProduto && ((p.QuantidadeEmEstoque - count) > 0) select p).Any();
+            return (from p in contexto.Produto where p.IdProduto == idProduto && ((p.QuantidadeEmEstoque - count) >= 0) select p).Any();
         }
 
         public bool ValidaQuantidadeEstoque(List<Produto> carrinho)
@@ -81,6 +83,8 @@ namespace Infraestrutura.Cadastros
             {
                 try
                 {
+                    EmailService emailService = new EmailService();
+
                     pedidoCliente.CodigoRastreio = "4WEB" + (new Random().Next(0, 1000000)).ToString().PadLeft(8, '0');
 
                     pedidoCliente.Numero = (new Random().Next(0, 1000000));
@@ -91,6 +95,15 @@ namespace Infraestrutura.Cadastros
                         Produto p = contexto.Produto.FirstOrDefault(x => x.IdProduto == item.IdProduto);
                         p.QuantidadeEmEstoque -= item.Quantidade;
                         contexto.Entry(p).State = System.Data.Entity.EntityState.Modified;
+
+                        if (p.QuantidadeEmEstoque < p.QuantidadeEstoqueMinimo)
+                        {
+                            try
+                            {
+                                string email = ConfigurationManager.AppSettings["emailResponsavel"]?.ToString();
+                                emailService.SendEmail(new List<string> { email }, "Produto em falta", $"O produto {p.Nome} encontra-se com baixa quantidade em estoque. Repor imediatamente.");
+                            } catch { }
+                        }
 
                         item.Produto = null;
                     }

@@ -50,8 +50,6 @@ namespace Web.Controllers
             bool sucesso = true;
             string message = string.Empty;
 
-            string email = ConfigurationManager.AppSettings["emailResponsavel"]?.ToString();
-
             if (produto.QuantidadeEmEstoque == 0)
             {
                 sucesso = false;
