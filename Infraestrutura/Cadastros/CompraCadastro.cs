@@ -58,6 +58,15 @@ namespace Infraestrutura.Cadastros
         public void Editar(Compra compra)
         {
             contexto.Entry(compra).State = EntityState.Modified;
+
+            List<PedidoItemFornecedor> pif = compra.Pedidos;
+
+            foreach (PedidoItemFornecedor p in pif)
+            {
+                var produto = BuscarDetalhesProduto(p.IdProduto);
+                produto.QuantidadeEmEstoque += p.Quantidade;
+            }
+
             contexto.SaveChanges();
         }
 
