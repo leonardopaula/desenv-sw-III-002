@@ -28,8 +28,8 @@ Compra = {
     pre_salva_item: function () {
         var fornecedor = $('#fornecedores').val();
         var quantidade = $('#quantidade').val();
-
-        if (quantidade != '' && fornecedor != 'Selecione') {
+        console.log(parseInt(quantidade));
+        if (quantidade != '' && fornecedor != 'Selecione' && parseInt(quantidade) > 0) {
             var prod = $('#inp-produto').val();
             $('#qtde-' + prod).val(quantidade);
             $('#forn-' + prod).val(fornecedor);

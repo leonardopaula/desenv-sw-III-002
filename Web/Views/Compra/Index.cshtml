@@ -56,7 +56,7 @@
         <div class="row">
             <form class="col s12">
                 <div class="input-field col s12 m6 l6">
-                    @Html.TextBox("quantidade", "")
+                    <input type="number" id="quantidade" name="quantidade" min="1" max="100" />
                     @Html.Label("Quantidade necessária", new { @for = "quantidade" })
                 </div>
                 <div class="input-field col s12 m6 l6">
